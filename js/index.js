@@ -31,8 +31,19 @@ function displayOnHover(objectLocation){
          
             if(cityNameFromObject===city) {
                 locationsContainer.style.animation="locationsAnimation 0.5s forwards"
-              
-            
+                
+                const imgElement =  location.querySelector(".city-img");
+                const allImagesLocation = document.querySelectorAll(".city-img");
+
+                allImagesLocation.forEach(img=>img.classList.remove("city-img-active"))
+                setTimeout(() => {
+                    imgElement.classList.add("city-img-active")
+                }, 1);
+
+               
+                
+             
+
                 setTimeout(() => {
                     mapContainer.style.display="block";
                     
