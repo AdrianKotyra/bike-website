@@ -747,7 +747,81 @@ font-weight: 600;
  bottom: -300px;
  right: -20px;
 }
+.slide::before{
+  top: 0;
+  background-size: cover;
+  text-align: center;
+
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 100%;
+  font-size: var(--h3-wide-screen);
+  opacity: 60%;
+}
+.slide-1::before{
+  content: "Model A";
+}
+.slide-2::before{
+  content: "Model B";
+}
+.slide-3::before{
+  content: "Model C";
+}
+.slide-4::before{
+  content: "Model D";
+}
+.slide-5::before{
+  content: "Model E";
+}
+.slide-6::before{
+  content: "Model F";
+}
+.slide-7::before{
+  content: "Model G";
+}
+.slide-8::before{
+  content: "Model H";
+}
+.slide-9::before{
+  content: "Model J";
+}
+.slide-1 {
+
+
+  background-image: url("../imgs/helmet-trimmed.png");
+}
+.slide-2 {
+  background-image: url("../imgs/helmet-trimmed1.png");
+}
+.slide-3{
+  background-image: url("../imgs/accessories-helmet.png");
+}
+.slide-4{
+  background-image: url("../imgs/white-helmet.png");
+}
+.slide-5{
+  background-image: url("../imgs/gray-helmet.png");
+}
+
+.slide-6{
+  background-size: 100% !important;
+  background-image: url("../imgs/bike-top-3.png");
+}
+.slide-7{
+  background-size: 100% !important;
+  background-image: url("../imgs/Cycle.png");
+}
+.slide-8{
+  background-size: 100% !important;
+  background-image: url("../imgs/bike-top.png");
+}
+.slide-9{
+  background-size: 100% !important;
+  background-image: url("../imgs/bbb.png");
+}
 .img-grid-1 {
+  
   margin-right: 10%;
   object-fit: contain;
   float: right;
@@ -779,12 +853,16 @@ font-weight: 600;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .text-section-top, .text-mid-container {
   text-align: left;
   margin-left: 10%;
   padding-top: 22%;
   margin-right: 15%;
+  padding-bottom: 5vh;
 }
+.text-mid-container {  padding-top: 12%;}
+
 .text-feed-col span {
   opacity: 60%;
 }
@@ -1758,6 +1836,10 @@ html {
 
 
 @media screen and (max-width: 1050px) {
+  .slide, .slider-list, .slider {
+   
+    width: 100% !important;
+  }
 
   .service-icon {
     width: 50px;
@@ -2297,3 +2379,69 @@ html {
   }
 }
 
+.slider {
+  position: relative;
+  width: 50%;
+  height: 400px;
+  margin: 50px auto 50px;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slider img {
+  poiner-events: none;
+}
+
+.slider-list {
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slider-list.grab {
+  cursor: grab;
+}
+
+.slider-list.grabbing{
+  cursor: grabbing;
+}
+
+.slider-track {
+  display: flex;
+}
+
+.slide {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 50%;
+  background-position: center;
+  width: 700px;
+  height: 400px;
+  flex-shrink: 0;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.slider-arrows{
+  padding-bottom: 5vh;
+  text-align: center;
+}
+
+.next,
+.prev {
+  color: var(--red-main);
+  background: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.next.disabled,
+.prev.disabled {
+  opacity: .25;
+  pointer-events: none;
+}
