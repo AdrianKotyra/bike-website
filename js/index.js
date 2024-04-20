@@ -632,3 +632,60 @@ function displayMobile(){
 displayMobile()
 
 
+
+
+function newsLetterModal(){
+    
+    const InputValue = document.querySelector(".newsLetterInput").value;
+    const newsLetter = `
+    <div class="newsletter-modal">
+        <img class="icon-cross exit-window"src="./imgs/cross.svg" alt="">
+        <div class="newsletter-modal-container col">
+        
+            <img src="./imgs/letter.svg" alt="">
+            <div class="text-letter">
+            <h1>Thank you for your subscription !</h1>
+            <h1> ${InputValue} </h1>
+          
+            <button class="btn-custom exit-window">OK</button>
+            </div>
+
+
+            </div>
+        </div>
+    `
+    const modalContainer = document.querySelector(".modal-container");
+    const body = document.querySelector("body");
+    body.style.overflowY="hidden";
+    modalContainer.innerHTML=newsLetter;
+    modalContainer.style.display="block";
+    const crossCloseModal = document.querySelectorAll(".exit-window");
+    crossCloseModal.forEach(element => {
+        element.addEventListener("click", function(){
+            modalContainer.style.display="none"
+            body.style.overflowY="scroll";
+        })
+        
+    });
+}
+
+const triggerNewLetter = document.querySelector(".submit_newsletter");
+
+triggerNewLetter.addEventListener("click", function(event){
+    letterRequired = /@/;
+    const info = document.querySelector(".info-news");
+    event.preventDefault()
+    const InputValue = document.querySelector(".newsLetterInput").value;
+    if(InputValue.length>=4 &&  letterRequired.test(InputValue) && !info.classList.contains("subscribed")) {
+
+        newsLetterModal()
+        info.innerHTML="You have Subscribed"
+        info.classList.add("subscribed")
+    }
+    else if (info.classList.contains("subscribed")) {
+        info.innerHTML="You have Subscribed"
+    }
+    else {
+        info.innerHTML="Please enter valid email at least 4 letters and cotnains '@'"
+    }
+})
