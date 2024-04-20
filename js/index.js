@@ -689,3 +689,41 @@ triggerNewLetter.addEventListener("click", function(event){
         info.innerHTML="Please enter valid email at least 4 letters and cotnains '@'"
     }
 })
+
+function BikeRepair(){
+    
+    function offOnContent(trigger, content){
+        trigger.addEventListener("mouseover", function(){
+            content.style.animation="bikeRepairAniamtion 0.5s forwards"
+            content.style.display="block"
+        })
+        trigger.addEventListener("mouseout", function(){
+            content.style.animation="bikeRepairAniamtionBackwards 0.5s forwards"
+         
+            
+        })
+    }
+    const saddleTrigger = document.querySelector(".saddle-trigger");
+    const saddleContent = document.querySelector(".saddle-container")
+    offOnContent(saddleTrigger, saddleContent )
+   
+    const frameTrigger = document.querySelector(".frame-trigger");
+    const frameContent = document.querySelector(".frame-container")
+    offOnContent(frameTrigger, frameContent )
+
+    const brakesTrigger = document.querySelector(".brakes-trigger");
+    const brakesContent = document.querySelector(".brakes-container")
+ 
+    offOnContent(brakesTrigger, brakesContent )
+
+    const handlesTrigger = document.querySelector(".handles-trigger");
+    const handlesContent = document.querySelector(".handles-container")
+ 
+    offOnContent(handlesTrigger, handlesContent )
+
+    const railsTrigger = document.querySelector(".rails-trigger");
+    const railsContent = document.querySelector(".rails-container")
+ 
+    offOnContent(railsTrigger, railsContent )
+}
+BikeRepair()

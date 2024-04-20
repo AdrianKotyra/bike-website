@@ -10,7 +10,114 @@
   --paragraph-small-wide-screen : 1.2rem;
   --paragraph-very-small-wide-screen : 0.8rem;
 }
+.img-container-service-repair-bike {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 1000px;
+  height: 600px;
+}
+.bike-service-repair-section img{
+  width: 1000px;
+  height: 600px;
+  display: block;
+  margin: auto;
+}
+.trigger-bike-elements:hover {
+  filter: brightness(0.5);
+  transition: 0.3s;
+}
+.bikeComponentsTitle {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  text-align: center !important;
+}
+.bikesCompenentParagraph {
+  text-align: left;
+}
+.trigger-bike-elements {
+  z-index: 2;
+  transition: 0.3s;
+  filter: brightness(0.7);
+  background-color: #ffffff46;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+}
+.display-bike-elements {
+  font-size:var(--paragraph-small-wide-screen);
+  width: 400px;
+  color: white;
+  animation: bikeRepairAniamtion 0.5s forwards;
+  display: none;
+  background-color: var(--red-main);
+  position: absolute;
+  border-radius: 20px
+}
+.saddle-container {
+ 
+  
+  top: 30px;
+  left: 100px;
+  padding: 50px;
+}
 
+
+
+.saddle-trigger {
+  top: 30px;
+  left: 300px;
+  padding: 50px;
+}
+.frame-container {
+ 
+  top: 30%;
+  right: -30%;
+  padding: 50px;
+}
+
+
+.frame-trigger {
+  top: 200px;
+  left: 500px;
+  padding: 70px;
+}
+.brakes-container {
+ 
+  top: 30%;
+  left: 10%;
+  padding: 50px;
+}
+.brakes-trigger {
+  top: 300px;
+    left: 300px;
+    padding: 100px;
+}
+
+
+.handles-container {
+ 
+  top: 0%;
+  right: -40%;
+  padding: 50px;
+}
+.handles-trigger {
+  top: 0;
+  left: 600px;
+  padding: 70px;
+}
+.rails-trigger {
+  top: 300px;
+    left: 650px;
+    padding: 100px;
+}
+.rails-container {
+ 
+  top: 30%;
+  right: -40%;
+  padding: 50px;
+}
 .info-row {
   justify-content: space-between;
 }
@@ -1866,6 +1973,20 @@ html {
 
 
 @media screen and (max-width: 1050px) {
+  .saddle-trigger {
+    transform: translateX(-100px) !important;
+  }
+  .trigger-bike-elements {
+    transform: translateX(-200px);
+  }
+  .bike-service-repair-section img, .img-container-service-repair-bike{
+    width: 700px;
+  }
+  .display-bike-elements {
+    left: 50% !important;
+    top: 30%!important;
+    transform: translate(-50%, -30%)!important;
+  }
   .slide, .slider-list, .slider {
    
     width: 100% !important;
@@ -2117,6 +2238,14 @@ html {
 }
 
 @media screen and (max-width: 705px) {
+  .bike-service-repair-section img, .img-container-service-repair-bike {
+    width: 100%;
+    object-fit: cover;
+  }
+  .trigger-bike-elements {
+    display: none;
+  }
+
   .about-community img, .row-2-comm img {
     height: 300px;
     width: 100%;
@@ -2387,7 +2516,30 @@ html {
     opacity: 100%;
   }
 }
-
+@keyframes bikeRepairAniamtion{
+  0%{
+    
+    transform: translate(-50%, 20%) ;
+    opacity: 0%;
+  }
+  100%{
+  
+    transform: translate(-50%, -20%) ;
+    opacity: 100%;
+  }
+}
+@keyframes bikeRepairAniamtionBackwards{
+  100%{
+    
+    transform: translate(-50%, 20%);
+    opacity: 0%;
+  }
+  0%{
+  
+    transform: translate(-50%, -20%) ;
+    opacity: 100%;
+  }
+}
 @keyframes modalFade{
   0%{
     transform: translate(-50%, 20%);
