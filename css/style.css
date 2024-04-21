@@ -37,6 +37,7 @@
   text-align: left;
 }
 .trigger-bike-elements {
+  padding: 50px !important;
   z-index: 2;
   transition: 0.3s;
   filter: brightness(0.7);
@@ -103,7 +104,7 @@
   padding: 50px;
 }
 .handles-trigger {
-  top: 0;
+  top: 40px;
   left: 600px;
   padding: 70px;
 }
@@ -541,7 +542,19 @@ body {
 .form-container, .top-contact h1 {
   width: 50%;
 }
-
+.info-row p {
+  color: var(--red-main);
+}
+.visible-service {
+  animation: serviceAnimation 0.7s forwards;
+}
+.hidden {
+  
+  opacity: 0%;
+}
+.serive-para-hidden {
+  width: 50%;
+}
 .form-container label {
   margin-bottom: 10px;
   color: var(--red-main);
@@ -550,7 +563,12 @@ body {
 .visit-col {
   margin-right: 20%;
 }
-
+.icon-service-components {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  filter: invert(15%) sepia(66%) saturate(4818%) hue-rotate(354deg) brightness(88%) contrast(103%);
+}
 .text-section-top h1 {
   line-height: 1.5rem !important;
 }
@@ -2351,6 +2369,9 @@ html {
  
 }
 @media screen and (max-width: 605px) {
+  .serive-para-hidden {
+    width: 100%;
+  }
   .newsletter-modal {
     width: 100%;
     height: 100%;
@@ -2443,10 +2464,19 @@ html {
     
   }
 }
-
+@keyframes serviceAnimation {
+  0%{
+    height: 0%;
+    opacity: 0%;
+  }
+  100%{
+    height: 100%;
+    opacity: 100%;
+  }
+}
 @keyframes mapAnimation {
   0%{
-    
+   
     opacity: 0%;
   }
   100%{
@@ -2519,24 +2549,24 @@ html {
 @keyframes bikeRepairAniamtion{
   0%{
     
-    transform: translate(-50%, 20%) ;
+    transform: translate(-50%, 0%) ;
     opacity: 0%;
   }
   100%{
   
-    transform: translate(-50%, -20%) ;
+    transform: translate(-50%, 0%) ;
     opacity: 100%;
   }
 }
 @keyframes bikeRepairAniamtionBackwards{
   100%{
     
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, 0%);
     opacity: 0%;
   }
   0%{
   
-    transform: translate(-50%, -20%) ;
+    transform: translate(-50%, 0%) ;
     opacity: 100%;
   }
 }

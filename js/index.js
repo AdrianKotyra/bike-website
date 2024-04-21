@@ -1,4 +1,45 @@
-
+const BikesTopSliderObjects = [
+    {   imageBike: "./imgs/cycle.png",
+        speedBike: "90km",
+        kmphdBike: "30 KMPH",
+        speedBikeHours: "4HOURS",
+        speedBikeWeight: "18KG",
+        titleBike: "Model A",
+    
+    },
+    {   imageBike: "./imgs/bike-top-4.png",
+        speedBike: "80km",
+        kmphdBike: "28 KMPH",
+        speedBikeHours: "3HOURS",
+        speedBikeWeight: "16KG",
+        titleBike: "Model B",
+    
+    },
+    {   imageBike: "./imgs/bike-top-2.png",
+        speedBike: "50km",
+        kmphdBike: "29 KMPH",
+        speedBikeHours: "2HOURS",
+        speedBikeWeight: "19KG",
+        titleBike: "Model C",
+    
+    },
+    {   imageBike: "./imgs/bike-top-3.png",
+        speedBike: "40km",
+        kmphdBike: "33 KMPH",
+        speedBikeHours: "3HOURS",
+        speedBikeWeight: "12KG",
+        titleBike: "Model D",
+    
+    },
+    {   imageBike: "./imgs/top-bike-7.png",
+        speedBike: "42km",
+        kmphdBike: "30 KMPH",
+        speedBikeHours: "3HOURS",
+        speedBikeWeight: "19KG",
+        titleBike: "Model E",
+    
+    },
+    ]
 
 const locationObject = [
     {   
@@ -105,6 +146,7 @@ const readMore = [
     },
 ]
 
+// ------------------------------DISPLAY MORE ON CLICK---------------------------------
 
 
 function displayeReadMore(readMoreObject) {
@@ -379,7 +421,7 @@ vests to practical additions such as bike racks and panniers for carrying your e
 
 
 
-
+// ------------------------------RENDER FEEDBACKS ON CLICK MAP OBJECT---------------------------------
 
 
 
@@ -439,48 +481,8 @@ triggerFeedbacks? triggerFeedbacks.addEventListener("click", function(){
 
 
 
-const BikesTopSliderObjects = [
-{   imageBike: "./imgs/cycle.png",
-    speedBike: "90km",
-    kmphdBike: "30 KMPH",
-    speedBikeHours: "4HOURS",
-    speedBikeWeight: "18KG",
-    titleBike: "Model A",
 
-},
-{   imageBike: "./imgs/bike-top-4.png",
-    speedBike: "80km",
-    kmphdBike: "28 KMPH",
-    speedBikeHours: "3HOURS",
-    speedBikeWeight: "16KG",
-    titleBike: "Model B",
-
-},
-{   imageBike: "./imgs/bike-top-2.png",
-    speedBike: "50km",
-    kmphdBike: "29 KMPH",
-    speedBikeHours: "2HOURS",
-    speedBikeWeight: "19KG",
-    titleBike: "Model C",
-
-},
-{   imageBike: "./imgs/bike-top-3.png",
-    speedBike: "40km",
-    kmphdBike: "33 KMPH",
-    speedBikeHours: "3HOURS",
-    speedBikeWeight: "12KG",
-    titleBike: "Model D",
-
-},
-{   imageBike: "./imgs/top-bike-7.png",
-    speedBike: "42km",
-    kmphdBike: "30 KMPH",
-    speedBikeHours: "3HOURS",
-    speedBikeWeight: "19KG",
-    titleBike: "Model E",
-
-},
-]
+// ------------------------------DROPDOWN NAV---------------------------------
 
 
 function dropDownTrigger(){
@@ -507,6 +509,7 @@ function dropDownTrigger(){
     
   
 dropDownTrigger() 
+// ------------------------------INDEX SLIDER BIKES---------------------------------
 
 function topSliderBikes(objects, timeout) {
     const imageBike = document.querySelector(".top-bike-img");
@@ -539,6 +542,7 @@ topSliderBikes(BikesTopSliderObjects, 3000)
 
 
 
+// ------------------------------MODAL HIRE BIKES---------------------------------
 
 
 function hireBikeModal(modal){
@@ -565,6 +569,7 @@ triggerRentBike? triggerRentBike.addEventListener("click", function(){
 : null
 
 
+// ------------------------------MODAL ACCESSORIES---------------------------------
 
 function buyAccessoriesModal(modal){
    
@@ -589,6 +594,7 @@ triggerbuyAccessories? triggerbuyAccessories.addEventListener("click", function(
 
 
 
+// ------------------------------MOBILE NAV---------------------------------
 function mobileDropDowns(dropDownContainer, dropDownTrigger) {
 
     dropDownTrigger.addEventListener("click", function(){
@@ -620,7 +626,7 @@ mobileDropDowns(hireMobileDropdown, hireMobileTriggerDropdown )
 const mobileNav = document.querySelector(".mobile-nav");
 mobileNav.style.display="none"
 
-
+// ------------------------------MOBILE NAV---------------------------------
 function displayMobile(){
    
     
@@ -632,7 +638,7 @@ function displayMobile(){
 displayMobile()
 
 
-
+// ------------------------------NEWSLETTER---------------------------------
 
 function newsLetterModal(){
     
@@ -689,19 +695,21 @@ triggerNewLetter.addEventListener("click", function(event){
         info.innerHTML="Please enter valid email at least 4 letters and cotnains '@'"
     }
 })
-
+// ------------------------------SHOW BIKES ELEMENTS---------------------------------
 function BikeRepair(){
     
     function offOnContent(trigger, content){
+        trigger? 
         trigger.addEventListener("mouseover", function(){
             content.style.animation="bikeRepairAniamtion 0.5s forwards"
             content.style.display="block"
-        })
+        }) : null
+        trigger? 
         trigger.addEventListener("mouseout", function(){
             content.style.animation="bikeRepairAniamtionBackwards 0.5s forwards"
          
             
-        })
+        }) :null
     }
     const saddleTrigger = document.querySelector(".saddle-trigger");
     const saddleContent = document.querySelector(".saddle-container")
@@ -727,3 +735,47 @@ function BikeRepair(){
     offOnContent(railsTrigger, railsContent )
 }
 BikeRepair()
+
+// ------------------------------INTERSECTION ELE(ELEMENT TO DISPPLAY) TRIGGER (INTERSECTED ELEMENT)---------------------------------
+
+function ShowEle(ele, trigger) {
+    function ObsCallback (entries) {
+        const [entry] = entries
+        if(entry.isIntersecting===true) {
+            ele.classList.add("visible-service")
+        }
+    }
+    const ObsOptions = {
+        root:null,
+        threshold: 0,
+        rootMargin: '-100px'
+    }
+    const observer = new IntersectionObserver(ObsCallback, ObsOptions)
+    
+    observer.observe(trigger)
+}
+
+
+
+
+
+const intersectedElement1 = document.querySelector(".hidden-service-para1");
+const trigger1 = document.querySelector(".trigger-hidden1");
+const intersectedElement2 = document.querySelector(".hidden-service-para2");
+const trigger2 = document.querySelector(".trigger-hidden2");
+const intersectedElement3 = document.querySelector(".hidden-service-para3");
+const trigger3 = document.querySelector(".trigger-hidden3");
+const intersectedElement4 = document.querySelector(".hidden-service-para4");
+const trigger4= document.querySelector(".trigger-hidden4");
+const intersectedElement5 = document.querySelector(".hidden-service-para5");
+const trigger5 = document.querySelector(".trigger-hidden5");
+const intersectedElement6 = document.querySelector(".hidden-service-para6");
+const trigger6 = document.querySelector(".trigger-hidden6");
+
+ShowEle(intersectedElement1, trigger1 )
+ShowEle(intersectedElement2, trigger2 )
+ShowEle(intersectedElement3, trigger3 )
+ShowEle(intersectedElement4, trigger4 )
+ShowEle(intersectedElement5, trigger5 )
+ShowEle(intersectedElement6, trigger6 )
+
