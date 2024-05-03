@@ -2,13 +2,49 @@
 :root{
   --shadow-box: -3px 8px 15px 0px rgba(0,0,0,0.34);
   --red-main: #bb0909;
-  --bg-gray : #f5f5f5;
+  --bg-gray : #f6f1f1;
+  --header-fontsize :  4.5rem;
   --h1-fontsize :  2.5rem;
 
   --h3-wide-screen : 1.8rem;
   --paragraph-wide-screen : 1.5rem;
   --paragraph-small-wide-screen : 1.2rem;
   --paragraph-very-small-wide-screen : 0.8rem;
+}
+html {
+ 
+}
+
+.material-symbols-outlined {
+  margin-right: 20px;
+  font-size: 60px !important;
+  filter: invert(18%) sepia(58%) saturate(4755%) hue-rotate(354deg) brightness(82%) contrast(103%);
+}
+
+.bottom-mid-section .col {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+}
+.bottom-mid-section h3 {
+  opacity: 0%;
+  display: flex;
+}
+.col-50 {
+  width: 50%;
+}
+.bottom-mid-section {
+ padding: 5%;
+}
+.bottom-mid-section img {
+  width: 50%;
+  height: 100%;
+
+ object-fit: cover;
+
+}
+.cursive {
+  font-style: italic;
 }
 .img-container-service-repair-bike {
   display: block;
@@ -17,6 +53,7 @@
   width: 1000px;
   height: 600px;
 }
+
 .bike-service-repair-section img{
   width: 1000px;
   height: 600px;
@@ -230,6 +267,7 @@ span {
   color: white;
 }
 .video-text {
+  opacity: 0%;
   z-index: 3;
   color: white;
   text-align: center;
@@ -387,9 +425,12 @@ input[type]:checked ~ span.middle {
  
   
 }
+.videoTextAnimation {
+  animation: videoTextAnimation 0.5s forwards;
+}
 .hire-bikes-top img {
   animation: subPagesAnimationImg 0.8s forwards;
-  box-shadow: var(--shadow-box);
+
   height: 500px;
   object-fit: cover;
   border-radius: 30px;
@@ -518,7 +559,7 @@ body {
 .btn-custom{
   transition: 0.3s;
   z-index: 2;
-  width: 180px;
+  width: 140px;
   box-shadow: var(--shadow-box);
   height: 40px;
   cursor: pointer;
@@ -827,11 +868,12 @@ a {
   background-color: var(--red-main);
 }
 nav {
+  background-color: var(--bg-gray);
   top: 0;
   box-shadow: -3px 8px 15px 0px rgba(0,0,0,0.34);
   -webkit-box-shadow: -3px 8px 15px 0px rgba(0,0,0,0.34);
   -moz-box-shadow: -3px 8px 15px 0px rgba(0,0,0,0.34);
-  background-color: white;
+  
 font-weight: 600;
   z-index: 999;
   margin: auto;
@@ -987,7 +1029,14 @@ font-weight: 600;
   justify-content: center;
   flex-wrap: wrap;
 }
-
+.text-section-top {
+  padding-top: 10% !important;
+}
+.text-section-top h1, .text-section-top span  {
+  
+ font-size: var(--header-fontsize) !important;
+ line-height: 4.5rem !important;
+}
 .text-section-top, .text-mid-container {
   text-align: left;
   margin-left: 10%;
@@ -1991,6 +2040,13 @@ html {
 
 
 @media screen and (max-width: 1050px) {
+  .text-section-top {
+    padding-top: 4% !important;
+  }
+  .text-section-top h1 {
+    line-height: 3rem !important;
+
+  }
   .saddle-trigger {
     transform: translateX(-100px) !important;
   }
@@ -2119,8 +2175,9 @@ html {
     --shadow-box: -3px 8px 15px 0px rgba(0,0,0,0.34);
     --red-main: #bb0909;
     --bg-gray : #f5f5f5;
+    --header-fontsize: 3rem;
     --h1-fontsize :  2.5rem;
-  
+    --header-fontsize: 3rem;
     --h3-wide-screen : 1.5rem;
     --paragraph-wide-screen : 1.3rem;
     --paragraph-small-wide-screen : 1rem;
@@ -2247,6 +2304,9 @@ html {
   }
 }
 @media screen and (max-width: 850px) {
+  .bottom-mid-section .col {
+    width: 100%;
+  }
   .hamburger {
     display: block;
   }
@@ -2464,13 +2524,23 @@ html {
     
   }
 }
-@keyframes serviceAnimation {
+@keyframes videoTextAnimation {
   0%{
-    height: 0%;
+    transform: translate(-50%, -20%);
     opacity: 0%;
   }
   100%{
-    height: 100%;
+    transform: translate(-50%, -40%);
+    opacity: 100%;
+  }
+}
+@keyframes serviceAnimation {
+  0%{
+    transform: translateY(10vh);
+    opacity: 0%;
+  }
+  100%{
+    transform: translateY(0vh);
     opacity: 100%;
   }
 }

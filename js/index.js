@@ -738,12 +738,13 @@ BikeRepair()
 
 // ------------------------------INTERSECTION ELE(ELEMENT TO DISPPLAY) TRIGGER (INTERSECTED ELEMENT)---------------------------------
 
-function ShowEle(ele, trigger) {
+function ShowEle(ele, trigger, animationClass) {
     function ObsCallback (entries) {
         const [entry] = entries
         if(entry.isIntersecting===true) {
-            ele.classList.add("visible-service")
+            ele.classList.add(animationClass)
         }
+        
     }
     const ObsOptions = {
         root:null,
@@ -751,11 +752,9 @@ function ShowEle(ele, trigger) {
         rootMargin: '-100px'
     }
     const observer = new IntersectionObserver(ObsCallback, ObsOptions)
-    
-    observer.observe(trigger)
+    trigger?  observer.observe(trigger) : null;
+   
 }
-
-
 
 
 
@@ -772,10 +771,30 @@ const trigger5 = document.querySelector(".trigger-hidden5");
 const intersectedElement6 = document.querySelector(".hidden-service-para6");
 const trigger6 = document.querySelector(".trigger-hidden6");
 
-ShowEle(intersectedElement1, trigger1 )
-ShowEle(intersectedElement2, trigger2 )
-ShowEle(intersectedElement3, trigger3 )
-ShowEle(intersectedElement4, trigger4 )
-ShowEle(intersectedElement5, trigger5 )
-ShowEle(intersectedElement6, trigger6 )
 
+
+ShowEle(intersectedElement1, trigger1, "visible-service")
+ShowEle(intersectedElement2, trigger2 , "visible-service")
+ShowEle(intersectedElement3, trigger3 , "visible-service")
+ShowEle(intersectedElement4, trigger4, "visible-service" )
+ShowEle(intersectedElement5, trigger5 , "visible-service")
+ShowEle(intersectedElement6, trigger6 , "visible-service")
+
+const videoText = document.querySelector(".video-text");
+const videoTextTrigger = document.querySelector(".anchor_video");
+ShowEle(videoText, videoTextTrigger, "videoTextAnimation")
+
+
+const aboutHeader1 = document.querySelector(".about-header1");
+const aboutHeader2 = document.querySelector(".about-header2");
+const aboutHeader3 = document.querySelector(".about-header3");
+const aboutHeader4 = document.querySelector(".about-header4");
+
+const aboutHeaderTrigger1 = document.querySelector(".about-header1-trigger");
+const aboutHeaderTrigger2 = document.querySelector(".about-header2-trigger");
+const aboutHeaderTrigger3 = document.querySelector(".about-header3-trigger");
+const aboutHeaderTrigger4 = document.querySelector(".about-header4-trigger");
+ShowEle(aboutHeader1, aboutHeaderTrigger1, "visible-service")
+ShowEle(aboutHeader2, aboutHeaderTrigger2, "visible-service")
+ShowEle(aboutHeader3, aboutHeaderTrigger3, "visible-service")
+ShowEle(aboutHeader4, aboutHeaderTrigger4, "visible-service")

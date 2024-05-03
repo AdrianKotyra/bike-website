@@ -582,7 +582,7 @@ function RenderAllAccesories(accesory, see_more_number){
                     </div>
                 
                     <div class="price-btn-container row">
-                        <p class="price price-bike">${accesoryCard.price}</p>
+                        <p class="price price-bike">${accesoryCard.price}£</p>
                         <button class="btn-custom">buy</button>
                     </div>
                 </div>
@@ -634,7 +634,7 @@ function RenderAllAccesories(accesory, see_more_number){
         <div class="product-desc-container">
           <h1 class="prod-title">${name}</h1>
           <p class="prod-desc">${type}</p>
-          <p class="prod-desc">${price}</p>
+          <p class="prod-desc">${price}£</p>
           <p class="prod-desc description-modal">${desc}</p>
           <div class="btn-more-cont modal-button">
             <button class="btn-custom">Buy</button>
@@ -716,7 +716,7 @@ function displayModal(accessory){
     <div class="product-desc-container">
       <h1 class="prod-title">${name}</h1>
       <p class="prod-desc">${type}</p>
-      <p class="prod-desc">${price}</p>
+      <p class="prod-desc">${price}£</p>
       <p class="prod-desc description-modal">${desc}</p>
       <div class="btn-more-cont modal-button">
         <button class="btn-custom">Buy</button>
