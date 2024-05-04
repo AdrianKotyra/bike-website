@@ -441,8 +441,8 @@ input[type]:checked ~ span.middle {
   animation: subPagesAnimationImg 0.8s forwards;
 
   height: 500px;
-  object-fit: cover;
-  border-radius: 30px;
+  object-fit: contain;
+  
 }
 .hire-bikes-top >* {
   width: 50%;
@@ -742,7 +742,7 @@ body {
 }
 .bootom-text-top1-second {
   position: absolute;
-  right: 5%;
+  right: 0%;
   bottom: 10%;
   font-weight: 800;
 }
@@ -774,10 +774,11 @@ body {
   bottom: 10%;
 }
 .top-bike-img {
- transform: translateX(-20%);
-  bottom: 13%;
+  object-fit: contain;
+ transform: translateX(0%);
+  bottom: 23%;
   position: absolute;
-  width: 850px;
+  width: 550px;
   height: 450px;
   z-index: 2;
 
@@ -840,7 +841,7 @@ body{
 }
 .title-bike {
   position: absolute;
-  top: 20%;
+  top: 0;
   right: 20%;
 }
 .products-dropdown-container, .bikes-dropdown-container {
@@ -1051,9 +1052,7 @@ font-weight: 600;
   justify-content: center;
   flex-wrap: wrap;
 }
-.text-section-top {
-  padding-top: 10% !important;
-}
+
 .text-section-top h1, .text-section-top span  {
   
  font-size: var(--header-fontsize) !important;
@@ -1065,6 +1064,9 @@ font-weight: 600;
   padding-top: 22%;
   margin-right: 15%;
   padding-bottom: 5vh;
+}
+.text-section-top{
+  padding-top: 0%;
 }
 .text-mid-container {  padding-top: 12%;}
 
@@ -1103,9 +1105,9 @@ align-self: flex-end !important;
  
 }
 .hire-bike-part-1 img {
-  box-shadow: var(--shadow-box);
-  border-radius: 30px;
-  object-fit: cover;
+  /* box-shadow: var(--shadow-box); */
+ 
+  object-fit: contain;
   width: 600px;
   height: 100%;
 }
@@ -1991,11 +1993,10 @@ html {
   position: relative;
 }
 .hire-bike-section-img-container span{
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+ 
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   color: wheat;
   background-color: var(--red-main);
  padding: 30px;

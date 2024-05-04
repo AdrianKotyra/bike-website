@@ -1,6 +1,6 @@
 const BikesFat = [
     {
-      img: "./imgs/hire-fat-bikes/fat-bike (1).jpg",
+      img: "./imgs/bikes-transparent/bike-top (1).png",
       name: "Model A",
       location: "edinburgh",
       price: 30.99,
@@ -9,7 +9,7 @@ const BikesFat = [
       speed: 64,
     },
     {
-      img: "./imgs/hire-fat-bikes/fat-bike (2).jpg",
+      img: "./imgs/bikes-transparent/bike-top (2).png",
       name: "Trailblazer X",
       location: "Edinburgh",
       price: 35.50,
@@ -18,7 +18,7 @@ const BikesFat = [
       speed: 70,
     },
     {
-      img: "./imgs/hire-fat-bikes/fat-bike (3).jpg",
+      img: "./imgs/bikes-transparent/bike-top (3).png",
       name: "Explorer Pro",
       location: "Edinburgh",
       price: 28.99,
@@ -27,7 +27,7 @@ const BikesFat = [
       speed: 60,
     },
     {
-      img: "./imgs/hire-fat-bikes/fat-bike (4).jpg",
+      img: "./imgs/bikes-transparent/bike-top (4).png",
       name: "Thunderbolt XT",
       location: "Edinburgh",
       price: 32.75,
@@ -36,7 +36,7 @@ const BikesFat = [
       speed: 68,
     },
     {
-      img: "./imgs/hire-fat-bikes/fat-bike (5).jpg",
+      img: "./imgs/bikes-transparent/bike-top (5).png",
       name: "Adventure Seeker",
       location: "Edinburgh",
       price: 31.99,
@@ -47,7 +47,7 @@ const BikesFat = [
 ];
 const BikesMountain = [
   {
-    img: "./imgs/hire-mountain-bikes/mountain-bike (1).jpg",
+    img: "./imgs/bikes-transparent/bike-top (6).png",
     name: "Trailblazer 5000",
     location: "Edinburgh",
     price: 45.99,
@@ -57,7 +57,7 @@ const BikesMountain = [
     gears: 21
   },
   {
-    img: "./imgs/hire-mountain-bikes/mountain-bike (2).jpg",
+    img: "./imgs/bikes-transparent/bike-top (7).png",
     name: "Summit Slayer",
     location: "Edinburgh",
     price: 52.50,
@@ -67,7 +67,7 @@ const BikesMountain = [
     speed: 55,
   },
   {
-    img: "./imgs/hire-mountain-bikes/mountain-bike (3).jpg",
+    img: "./imgs/bikes-transparent/bike-top (8).png",
     name: "Ridge Rider Pro",
     location: "Edinburgh",
     price: 49.99,
@@ -77,7 +77,7 @@ const BikesMountain = [
     speed: 55,
   },
   {
-    img: "./imgs/hire-mountain-bikes/mountain-bike (4).jpg",
+    img: "./imgs/bikes-transparent/bike-top (12).png",
     name: "Alpine Assault",
     location: "Edinburgh",
     price: 48.75,
@@ -87,7 +87,7 @@ const BikesMountain = [
     speed: 68,
   },
   {
-    img: "./imgs/hire-mountain-bikes/mountain-bike (5).jpg",
+    img: "./imgs/bikes-transparent/bike-top (13).png",
     name: "Peak Performance",
     location: "Edinburgh",
     price: 55.99,
@@ -100,7 +100,7 @@ const BikesMountain = [
 
 const BikesHybrid = [
   {
-    img: "./imgs/hire-hybrid-bikes/hybrid-bike (1).jpg",
+    img: "./imgs/bikes-transparent/bike-top (14).png",
     name: "Urban Commuter",
     location: "Glasgow",
     price: 39.99,
@@ -110,7 +110,7 @@ const BikesHybrid = [
     speed: 62,
   },
   {
-    img: "./imgs/hire-hybrid-bikes/hybrid-bike (2).jpg",
+    img: "./imgs/bikes-transparent/bike-top (15).png",
     name: "City Explorer",
     location: "Edinburgh",
     price: 42.50,
@@ -120,7 +120,7 @@ const BikesHybrid = [
     speed: 61,
   },
   {
-    img: "./imgs/hire-hybrid-bikes/hybrid-bike (3).jpg",
+    img: "./imgs/bikes-transparent/bike-top (16).png",
     name: "Crossroad Cruiser",
     location: "Aberdeen",
     price: 45.99,
@@ -130,7 +130,7 @@ const BikesHybrid = [
     speed: 69,
   },
   {
-    img: "./imgs/hire-hybrid-bikes/hybrid-bike (4).jpg",
+    img: "./imgs/bikes-transparent/bike-top (17).png",
     name: "Adventure Hybrid",
     location: "Dundee",
     price: 48.75,
@@ -140,7 +140,7 @@ const BikesHybrid = [
     speed: 64,
   },
   {
-    img: "./imgs/hire-hybrid-bikes/hybrid-bike (5).jpg",
+    img: "./imgs/bikes-transparent/bike-top (1).png",
     name: "Metro Trekker",
     location: "Inverness",
     price: 52.99,
@@ -168,10 +168,11 @@ function RenderBikes(object){
             <div class="text-icon-hire-row row"><img class="icon-hire" src="./imgs/bicycle.svg"><p>${fatBike.type}</p></div>
             <div class="text-icon-hire-row row"><img class="icon-hire" src="./imgs/location.svg"><p>${fatBike.location}</p></div>
             <div class="text-icon-hire-row row"><img class="icon-hire" src="./imgs/speedometer.svg"><p>${fatBike.speed}km/h</p></div>
-            <div class="text-icon-hire-row row"></div>
-          
+            <div class="text-icon-hire-row row">
             </div>
             <button class="btn-custom hire-btn">Hire</button>
+            </div>
+           
         </div>
         `
 

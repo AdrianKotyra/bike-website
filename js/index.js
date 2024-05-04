@@ -1,5 +1,5 @@
 const BikesTopSliderObjects = [
-    {   imageBike: "./imgs/cycle.png",
+    {    imageBike: "./imgs/bikes-transparent/bike-top (6).png",
         speedBike: "90km",
         kmphdBike: "30 KMPH",
         speedBikeHours: "4HOURS",
@@ -7,7 +7,7 @@ const BikesTopSliderObjects = [
         titleBike: "Model A",
     
     },
-    {   imageBike: "./imgs/bike-top-4.png",
+    {   imageBike: "./imgs/bikes-transparent/bike-top (1).png",
         speedBike: "80km",
         kmphdBike: "28 KMPH",
         speedBikeHours: "3HOURS",
@@ -15,7 +15,7 @@ const BikesTopSliderObjects = [
         titleBike: "Model B",
     
     },
-    {   imageBike: "./imgs/bike-top-2.png",
+    {    imageBike: "./imgs/bikes-transparent/bike-top (2).png",
         speedBike: "50km",
         kmphdBike: "29 KMPH",
         speedBikeHours: "2HOURS",
@@ -23,7 +23,7 @@ const BikesTopSliderObjects = [
         titleBike: "Model C",
     
     },
-    {   imageBike: "./imgs/bike-top-3.png",
+    {   imageBike: "./imgs/bikes-transparent/bike-top (3).png",
         speedBike: "40km",
         kmphdBike: "33 KMPH",
         speedBikeHours: "3HOURS",
@@ -31,7 +31,7 @@ const BikesTopSliderObjects = [
         titleBike: "Model D",
     
     },
-    {   imageBike: "./imgs/top-bike-7.png",
+    {     imageBike: "./imgs/bikes-transparent/bike-top (5).png",
         speedBike: "42km",
         kmphdBike: "30 KMPH",
         speedBikeHours: "3HOURS",
