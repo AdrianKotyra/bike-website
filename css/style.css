@@ -9,12 +9,12 @@
   --h3-wide-screen : 1.8rem;
   --paragraph-wide-screen : 1.5rem;
   --paragraph-small-wide-screen : 1.2rem;
+  --paragraph-small-wide-screen-nav : 1rem;
   --paragraph-very-small-wide-screen : 0.8rem;
 }
-html {
- 
+.img-slider-auto {
+  width: 100%;
 }
-
 .material-symbols-outlined {
   margin-right: 20px;
   font-size: 60px !important;
@@ -34,6 +34,7 @@ html {
   width: 50%;
 }
 .bottom-mid-section {
+  background-color: var(--bg-gray);
  padding: 5%;
 }
 .bottom-mid-section img {
@@ -59,6 +60,11 @@ html {
   height: 600px;
   display: block;
   margin: auto;
+}
+.white-space {
+  display: block;
+  width: 100%;
+  height: 20vh;
 }
 .trigger-bike-elements:hover {
   filter: brightness(0.5);
@@ -258,7 +264,7 @@ span {
 .video-section {
   margin: 5% 0;
 
-  height: 600px;
+  height: 60vh;
   position: relative;
   
 }
@@ -416,6 +422,9 @@ input[type]:checked ~ span.middle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+.img-container-about {
+  margin-right: 5%;
+}
 .text-hire {
   animation: subPagesAnimationText 0.8s forwards;
   padding-right: 15%;
@@ -476,7 +485,7 @@ h3 {
   font-size: var( --h3-wide-screen);
 }
 body {
-  
+  padding-top: 50px;
   overflow-x: hidden;
 
 }
@@ -573,6 +582,18 @@ body {
 .contact-address-container {
   background-color: var(--bg-gray);
 }
+.top-contact img {
+  padding-left: 5%;
+  object-fit: cover;
+  width: 100%;
+ 
+  margin: 0 0 0 auto;
+}
+.top-contact h1 {
+  padding-bottom: 10%;
+  margin: auto;
+  text-align: center;
+}
 .top-contact {
   padding: 5% 0;
 }
@@ -620,9 +641,7 @@ body {
 .form-container button {
   margin-top: 30px;
 }
-.top-contact h1 {
-  padding-right: 20%;
-}
+
 .container-form-inputs {
   margin-right: 5%;
   transform: translateY(-17px);
@@ -1019,7 +1038,10 @@ font-weight: 600;
   font-size: var(--h1-fontsize);
 }
 .section-container {
-  margin: 5%;
+  padding: 5%;
+}
+.icon-cross {
+  filter: invert(18%) sepia(58%) saturate(4755%) hue-rotate(354deg) brightness(82%) contrast(103%);
 }
 .text-mid-container p {
   
@@ -1202,7 +1224,7 @@ align-self: flex-end !important;
   line-height: 1.7rem;
 }
 .big-main-section {
-  background-color: var(--bg-gray);
+  
 }
 .text-container-about-2 {
   margin-left: 0 !important;
@@ -1257,6 +1279,10 @@ align-self: flex-end !important;
 .about-more {
   margin-top: 5%;
   justify-content: space-between;
+}
+.about-more .col h1{
+  display: flex;
+  flex-direction: row;
 }
 .about-box-1 {
   background-image: url("../imgs/about (1).jpg") !important;
@@ -1316,6 +1342,7 @@ align-self: flex-end !important;
   flex-direction: row;
 }
 .choose_section {
+  background-color: var(--bg-gray);
   justify-content: space-between;
 }
 .paragraph-container {
@@ -1332,7 +1359,7 @@ align-self: flex-end !important;
  
 }
 .mid-second-container {
-  width: 50%;
+  width: 80%;
 }
 .mid-second-container img {
   object-fit: contain;
@@ -1391,7 +1418,7 @@ align-self: flex-end !important;
   margin-top: 100px;
 }
 .mid_first_col {
-  flex-direction: row-reverse !important;
+ 
 
   background-color: var(--bg-gray);
 }
@@ -1403,7 +1430,7 @@ align-self: flex-end !important;
 }
 .mid_second_col{
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-evenly;
 }
 .mid_second_col {
@@ -1540,7 +1567,7 @@ align-self: flex-end !important;
   height: 440px !important;
 }
 nav p{
-  font-size: var(--paragraph-small-wide-screen);
+  font-size: var(--paragraph-small-wide-screen-nav);
 }
 .info-product-container {
 
@@ -2119,7 +2146,7 @@ html {
   }
   .top-contact h1 {
     width: 100%;
-    padding: 10% 0;
+    
   }
   .top-contact {
     flex-direction: column;
@@ -2287,6 +2314,12 @@ html {
     top: 0;
    
   }
+  .top-contact .row {
+    flex-direction: column;
+  }
+  .top-contact .col-50 {
+    width: 100%;
+  }
   .shapes-background {
     display: none;
   }
@@ -2316,6 +2349,12 @@ html {
 }
 
 @media screen and (max-width: 705px) {
+  .top-contact img {
+    width: 100%;
+  }
+  .top-contact .row {
+    flex-direction: column;
+  }
   .bike-service-repair-section img, .img-container-service-repair-bike {
     width: 100%;
     object-fit: cover;
@@ -2429,6 +2468,12 @@ html {
  
 }
 @media screen and (max-width: 605px) {
+  .bottom-mid-section h3 {
+    flex-direction: column;
+  }
+  .video-text .video-p {
+    flex-direction: column !important;
+  }
   .serive-para-hidden {
     width: 100%;
   }
@@ -2561,7 +2606,7 @@ html {
     opacity: 0%;
   }
   100%{
-    transform: translatey(50px);
+    transform: translatey(0px);
     opacity: 100%;
   }
 }
@@ -2744,4 +2789,52 @@ html {
 .prev.disabled {
   opacity: .25;
   pointer-events: none;
+}
+
+
+.slider-top::before,
+.slider-top::after {
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	content: "";
+	height: 100px;
+	position: absolute;
+	width: 200px;
+	z-index: 2;
+}
+
+.slider-top::after {
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+}
+
+.slider-top::before {
+	left: 0;
+	top: 0;
+}
+
+.slider-top {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+}
+
+.slider-top .slide-track {
+	animation: scroll 40s linear infinite;
+	display: flex;
+	width: calc(250px * 14);
+}
+
+.slider-top .slide {
+	height: 100px;
+	width: 250px;
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
 }
