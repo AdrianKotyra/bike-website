@@ -218,55 +218,7 @@ const locationObject = [
     },
 
 ]
-function displayOnHover(objectLocation){
-    const locationsContainer = document.querySelector(".service-container-box")
-    const mapContainer = document.querySelector(".map-box");
-    const locations = document.querySelectorAll(".locations");
-    locations.forEach(location=>location.addEventListener("click", function(){
-        const city = location.getAttribute("city");
- 
-        for (let i=0;i<objectLocation.length;i++) {
 
-            const cityNameFromObject = Object.keys(locationObject[i])[0];
-         
-            if(cityNameFromObject===city) {
-                locationsContainer.style.animation="locationsAnimation 0.5s forwards"
-                
-                const imgElement =  location.querySelector(".city-img");
-                const allImagesLocation = document.querySelectorAll(".city-img");
-
-                allImagesLocation.forEach(img=>img.classList.remove("city-img-active"))
-                setTimeout(() => {
-                    imgElement.classList.add("city-img-active")
-                }, 1);
-
-               
-                
-             
-
-                setTimeout(() => {
-                    mapContainer.style.display="block";
-                    
-                    
-                }, 501);
-               
-
-                mapContainer.innerHTML=objectLocation[i][city];
-                
-            }
-        }
-      
-      
-
-
-        
-        
-    }) )
-
-  
-
-}
-displayOnHover(locationObject)
 const readMore = [
     {
         id: 0,
@@ -772,6 +724,57 @@ function BikeRepair(){
 }
 BikeRepair()
 
+// ------------------------------Locations change---------------------------------
+function displayOnHover(objectLocation){
+    const locationsContainer = document.querySelector(".service-container-box")
+    const mapContainer = document.querySelector(".map-box");
+    const locations = document.querySelectorAll(".locations");
+    locations.forEach(location=>location.addEventListener("click", function(){
+        const city = location.getAttribute("city");
+ 
+        for (let i=0;i<objectLocation.length;i++) {
+
+            const cityNameFromObject = Object.keys(locationObject[i])[0];
+         
+            if(cityNameFromObject===city) {
+                locationsContainer.style.animation="locationsAnimation 0.5s forwards"
+                
+                const imgElement =  location.querySelector(".city-img");
+                const allImagesLocation = document.querySelectorAll(".city-img");
+
+                allImagesLocation.forEach(img=>img.classList.remove("city-img-active"))
+                setTimeout(() => {
+                    imgElement.classList.add("city-img-active")
+                }, 1);
+
+               
+                
+             
+
+                setTimeout(() => {
+                    mapContainer.style.display="block";
+                    
+                    
+                }, 501);
+               
+
+                mapContainer.innerHTML=objectLocation[i][city];
+                
+            }
+        }
+      
+      
+
+
+        
+        
+    }) )
+
+  
+
+}
+displayOnHover(locationObject)
+
 // ------------------------------INTERSECTION ELE(ELEMENT TO DISPPLAY) TRIGGER (INTERSECTED ELEMENT)---------------------------------
 
 function ShowEle(ele, trigger, animationClass) {
@@ -896,3 +899,93 @@ function faqCordians(){
     }))
 }
 faqCordians()
+
+// ------------------------------Contact Form Main---------------------------------
+function submitContactForm(){
+    const formMain = document.querySelector(".form-main");
+    const msgContainer = document.querySelector(".contact-container-msg");
+    formMain? 
+    formMain.addEventListener("submit", function(event){
+        event.preventDefault();
+        msgContainer.style.display="block";
+    }) : null
+  
+
+
+}
+
+submitContactForm()
+
+// ------------------------------Contact Form contact page---------------------------------
+
+function submitContactFormContact(){
+    const contactForm = document.querySelector(".contact-form-page");
+    const body = document.querySelector("body")
+    const modalMain = document.querySelector(".modal-container");
+
+    const messageAccepted = ` <div class="message-contact-form">
+    <div class="row">
+      <div class="col">
+        <h1 class="header">We value your feedback</h1>
+        <p>We would like to hear about your recent exeperience with Bike King road,<br> Thank you for your message</p>
+       
+      </div>
+
+      <img src="./imgs/graphic-bike3.jpg" alt="">
+
+    </div>
+   
+    <button class="btn-custom accept-btn-contact-form">OK</button>
+   </div>`
+    const messageRejected = ` <div class="message-contact-form">
+    <div class="row">
+      <div class="col">
+        <h1 class="header">Your form already been submitted</h1>
+        
+       
+      </div>
+
+      <img src="./imgs/graphic-bike.jpg" alt="">
+
+    </div>
+   
+    <button class="btn-custom accept-btn-contact-form">OK</button>
+   </div>`
+
+   
+    contactForm? contactForm.addEventListener("submit", function(event){
+        const createModalMEssage = function(message){
+            body.style.overflowY="hidden"
+            modalMain.style.display="block"
+            event.preventDefault();
+            modalMain.innerHTML=message
+        }
+        
+      
+
+       
+
+        if(!contactForm.classList.contains("submitted")) {
+            contactForm.classList.add("submitted");
+            createModalMEssage(messageAccepted)
+    
+        }
+        else {
+            createModalMEssage(messageRejected)
+    
+        }
+
+
+        const acceptButton = modalMain.querySelector(".accept-btn-contact-form");
+           acceptButton.addEventListener("click", function(){
+            modalMain.style.display="none"
+            body.style.overflowY="scroll"
+        })
+
+    }) : null
+  
+
+
+}
+
+submitContactFormContact()

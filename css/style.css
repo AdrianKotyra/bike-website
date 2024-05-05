@@ -54,7 +54,26 @@
   width: 1000px;
   height: 600px;
 }
+.message-contact-form {
 
+  padding: 30px;
+  animation: modalFade 0.3s forwards;
+  top: 20%;
+  position: fixed;
+ left: 50%;
+  transform: translate(-50%, -20%);
+  
+  background-color: white;
+}
+
+.message-contact-form button {
+  margin: auto;
+  display: block;
+}
+.message-contact-form img {
+  width: 30%;
+  height: 100%;
+}
 .bike-service-repair-section img{
   width: 1000px;
   height: 600px;
@@ -810,6 +829,7 @@ body {
   background-color:white;
 }
 body{
+
   margin: 0;
 }
 .products-dropdown{
@@ -1032,7 +1052,32 @@ font-weight: 600;
 
  
 }
+.contact-container-msg {
+  background-color: var(--bg-gray);
+  display: none;
+  animation: serviceAnimation 0.6s forwards;
+  padding: 10vh 0;
+  font-weight: 700;
+}
+.faq-section .col {
+  text-align: center;
+}
+.faq-section .row {
+  align-items: center;
+}
+.faq-section img {
+  float: left;
+  object-fit: contain;
+ 
+  display: block;
+  margin: 0 auto 0 0;
+  height: 50vh;
+
+}
 .content-faq {
+  font-size: var(--paragraph-wide-screen);
+  font-weight: 600;
+  animation: mapAnimation 0.7s forwards;
   width: 50%;
   display: none;
   padding: 20px 25px;
@@ -2101,6 +2146,10 @@ html {
 
 
 @media screen and (max-width: 1050px) {
+  .message-contact-form {
+    width: 80%;
+   
+  }
   .text-section-top {
     padding-top: 4% !important;
   }
@@ -2412,6 +2461,9 @@ html {
   .main-about-p {
     margin-left: 0 !important;
   }
+  .faq-section img {
+    width: 90%;
+  }
   .text-section-top {
     margin-left: 5%;
   }
@@ -2571,6 +2623,10 @@ html {
 }
   .feedback-col {
     height: 300px;
+  }
+  .message-contact-form {
+    width: 100%;
+   
   }
   .mid-second-container img {
     
