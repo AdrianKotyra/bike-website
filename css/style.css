@@ -1360,14 +1360,21 @@ align-self: flex-end !important;
 
  
 }
+.text-mid-container .row {
+  opacity: 0%;
+}
+.hire-bike-trigger {
+   margin:5vh 0 0 60px
+}
 .mid-second-container {
-  width: 80%;
+  width: 50%;
+
 }
 .mid-second-container img {
   object-fit: contain;
   float: right;
   width: 100%;
-  height: 100%;
+  height: 100%
 }
 .img-mid-container {
   margin-top: 200px;
@@ -2757,7 +2764,7 @@ html {
   z-index: 2;
   background-repeat: no-repeat;
   background-size: contain;
-  background-size: 50%;
+  background-size: 40%;
   background-position: center;
   width: 700px;
   height: 400px;
@@ -2767,6 +2774,9 @@ html {
   align-items: center;
   justify-content: center;
   
+}
+.text-mid-container span{
+  opacity: 70%;
 }
 .slider-arrows * {
   font-weight: 800;

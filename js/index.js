@@ -794,9 +794,21 @@ const aboutHeaderTrigger1 = document.querySelector(".about-header1-trigger");
 const aboutHeaderTrigger2 = document.querySelector(".about-header2-trigger");
 const aboutHeaderTrigger3 = document.querySelector(".about-header3-trigger");
 const aboutHeaderTrigger4 = document.querySelector(".about-header4-trigger");
+
 ShowEle(aboutHeader1, aboutHeaderTrigger1, "visible-service")
 ShowEle(aboutHeader2, aboutHeaderTrigger2, "visible-service")
 ShowEle(aboutHeader3, aboutHeaderTrigger3, "visible-service")
 ShowEle(aboutHeader4, aboutHeaderTrigger4, "visible-service")
 
 
+const rental1 = document.querySelector(".rental-p1");
+const rental2 = document.querySelector(".rental-p2");
+const rental3 = document.querySelector(".rental-p3");
+
+const rental1Anchor = document.querySelector(".rental-anchor1");
+const rental2Anchor = document.querySelector(".rental-anchor2");
+const rental3Anchor = document.querySelector(".rental-anchor3");
+
+ShowEle(rental1, rental1Anchor, "visible-service")
+ShowEle(rental2, rental2Anchor, "visible-service")
+ShowEle(rental3, rental3Anchor, "visible-service")
