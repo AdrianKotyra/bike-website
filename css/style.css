@@ -547,6 +547,9 @@ body {
 .text-mid-second {
   padding-top: 0 !important
 }
+.feedback-person {
+  font-style: italic;
+}
 .feedback_secion button {
  display: block;
   margin: 30px auto;
@@ -1029,14 +1032,36 @@ font-weight: 600;
 
  
 }
-.mid_section {
-  
+.content-faq {
+  width: 50%;
+  display: none;
+  padding: 20px 25px;
 }
 .img-grid-two {
   top: 300px;
 }
 .text-mid-container h1 {
   font-size: var(--h1-fontsize);
+}
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.faq-container .row {
+  font-size: var(--paragraph-small-wide-screen);
+  padding: 0 25px;
+  justify-content: space-between;
+  background-color: var(--bg-gray);
+}
+.faq-container .col-50 {
+ 
+ 
+  align-items: center;
+  cursor: pointer;
+  width: 90%;
+  
+ 
+
 }
 .section-container {
   padding: 5%;
@@ -1699,6 +1724,7 @@ nav p{
 
 }
 .feedback-card {
+  flex-direction: column-reverse !important;
   border: 2px solid rgb(247, 243, 243);
   justify-content: center;
   display: flex;
@@ -2204,7 +2230,12 @@ html {
   .nav__ul--extra {
     column-count: 1;
   }
-  
+  .faq-container .col-50, .content-faq {
+    width: 100%;
+  }
+  .addCordian {
+    font-size: 2rem !important;
+  }
 
   :root{
     --shadow-box: -3px 8px 15px 0px rgba(0,0,0,0.34);

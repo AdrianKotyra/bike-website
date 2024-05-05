@@ -1,3 +1,162 @@
+const faqQuestionsAnswers = [
+    {
+        question: "What types of bikes does Bike King Borders sell and repair?",
+        answer: "Bike King Borders sells and repairs road, mountain, and hybrid bikes."
+    },
+    {
+        question: "What additional products does Bike King Borders sell?",
+        answer: "In addition to bikes, Bike King Borders sells a range of bike accessories and clothing."
+    },
+    {
+        question: "Does Bike King Borders offer bike rentals?",
+        answer: "Yes, Bike King Borders hires out bikes for daily use on nearby off-road bike trails."
+    },
+    {
+        question: "What sets Bike King Borders apart from other companies in the Borders region?",
+        answer: "Bike King Borders is unique due to their location and the brilliant cycle trails nearby. They pride themselves on selling only quality products and guaranteeing servicing and repair."
+    },
+    {
+        question: "What social media platforms does Bike King Borders currently use?",
+        answer: "Bike King Borders currently uses Facebook, Instagram, X, and YouTube to advertise their location, products, and services."
+    },
+    {
+        question: "Why does Bike King Borders want a dedicated website?",
+        answer: "Bike King Borders wants a dedicated website to promote their business more effectively, appeal to a wide range of end-users, bring in more business and profits, and promote tourism in the area."
+    },
+    {
+        question: "Does Bike King Borders have major competitors nearby?",
+        answer: "While Bike King Borders doesn’t have any major competitors nearby for servicing and repairs, they are in direct competition with larger companies for bike sales."
+    },
+    {
+        question: "What is Bike King Borders' focus when it comes to the quality of their products and services?",
+        answer: "Bike King Borders focuses on selling only quality products and guarantees servicing and repair."
+    }
+];
+
+const feedbacks = [
+    {   id: 1,
+        personName: "Emily Johnson",
+        feedback: "Absolutely thrilled with the service at Bike King Borders! Their dedication to quality products and expert repairs sets them apart.",
+        stars: 4,
+        img: "./imgs/feedback/person (1).jpg"
+    },
+    {
+        id: 2,
+        personName: "David Martinez",
+        feedback: "Bike King Borders made my cycling experience in the Borders region unforgettable with their top-notch bike rentals and friendly staff.",
+        stars: 4,
+        img: "./imgs/feedback/person (2).jpg"
+    },
+    {   id: 3,
+        personName: "Sarah Thompson",
+        feedback: "Kudos to Bike King Borders for their excellent selection of bikes and accessories! I found everything I needed for my cycling adventures.",
+        stars: 4.7,
+        img: "./imgs/feedback/person (3).jpg"
+    },
+    {    id: 4,
+        personName: "Michael Brown",
+        feedback: "Impressed by Bike King Borders' commitment to promoting tourism in the area. Their passion for cycling shines through in everything they do.",
+        stars: 3.8,
+        img: "./imgs/feedback/person (4).jpg"
+    },
+    {   id: 5,
+        personName: "Jessica Lee",
+        feedback: "Had a fantastic experience shopping at Bike King Borders. Their staff was knowledgeable and helped me find the perfect bike for my needs.",
+        stars: 4.9,
+        img: "./imgs/feedback/person (5).jpg"
+    },
+    {   id: 6,
+        personName: "Christopher Nguyen",
+        feedback: "Highly recommend Bike King Borders for all your cycling needs. Their dedication to customer satisfaction is unmatched!",
+        stars: 5,
+        img: "./imgs/feedback/person (6).jpg"
+    },
+    {   id: 7,
+        personName: "Amanda Wilson",
+        feedback: "Bike King Borders' dedication to quality and service is evident in every aspect of their business. Proud to support such a reputable company.",
+        stars: 4.6,
+        img: "./imgs/feedback/person (7).jpg"
+    },
+    {   id: 8,
+        personName: "Daniel Taylor",
+        feedback: "Thanks to Bike King Borders, I was able to explore the beautiful cycle trails in the Borders region with ease. Their rentals were top-notch!",
+        stars: 4.9,
+        img: "./imgs/feedback/person (8).jpg"
+    },
+    {   id: 9,
+        personName: "Rachel Lopez",
+        feedback: "Bike King Borders' range of bike accessories and clothing is impressive. They have everything you need to enhance your cycling experience.",
+        stars: 4.7,
+        img: "./imgs/feedback/person (9).jpg"
+    },
+    {   id: 10,
+        personName: "Kevin King",
+        feedback: "Exceptional service and attention to detail at Bike King Borders. They truly go above and beyond for their customers.",
+        stars: 4.8,
+        img: "./imgs/feedback/person (10).jpg"
+    },
+    {   id: 11,
+        personName: "Megan Campbell",
+        feedback: "Bike King Borders' dedication to promoting cycling in the region is commendable. Proud to be a part of their community!",
+        stars: 5,
+        img: "./imgs/feedback/person (11).jpg"
+    },
+    {   id: 12,
+        personName: "Joshua Adams",
+        feedback: "The staff at Bike King Borders are passionate about cycling and it shows. They provided me with invaluable advice and assistance.",
+        stars: 4.5,
+        img: "./imgs/feedback/person (12).jpg"
+    },
+    {   id: 13,
+        personName: "Lauren Garcia",
+        feedback: "Bike King Borders' commitment to customer satisfaction is second to none. I'll definitely be returning for all my cycling needs.",
+        stars: 4.9,
+        img: "./imgs/feedback/person (13).jpg"
+    },
+    {   id: 14,
+        personName: "Ryan Rodriguez",
+        feedback: "Thrilled with the level of service I received at Bike King Borders. They truly care about their customers and their cycling experience.",
+        stars: 4.8,
+        img: "./imgs/feedback/person (14).jpg"
+    },
+    {   id: 15,
+        personName: "Samantha Clark",
+        feedback: "Bike King Borders exceeded my expectations with their excellent selection of bikes and accessories. A cyclist's paradise!",
+        stars: 4.7,
+        img: "./imgs/feedback/person (15).jpg"
+    },
+    {   id: 16,
+        personName: "Brandon Hernandez",
+        feedback: "Impressed by the professionalism and expertise of the staff at Bike King Borders. They made my shopping experience enjoyable and stress-free.",
+        stars: 4.6,
+        img: "./imgs/feedback/person (16).jpg"
+    },
+    {   id: 17,
+        personName: "Jennifer Scott",
+        feedback: "Thanks to Bike King Borders, I was able to find the perfect bike for my needs. Their attention to detail and personalized service are unmatched.",
+        stars: 4.9,
+        img: "./imgs/feedback/person (17).jpg"
+    },
+    {   id: 18,
+        personName: "Tyler Nguyen",
+        feedback:"Bike King Borders is my go-to destination for all things cycling. Their commitment to quality and service is unmatched in the region.",
+        stars: 4.8,
+        img: "./imgs/feedback/person (18).jpg"
+    },
+    {    id: 19,
+        personName: "Emily Baker",
+        feedback: "Highly recommend Bike King Borders to anyone passionate about cycling. Their dedication to excellence is truly inspiring!",
+        stars: 5,
+        img: "./imgs/feedback/person (19).jpg"
+    },
+    {    id: 20,
+        personName: "Nicholas Carter",
+        feedback: "Great experience overall, would buy again. 4.7 stars.",
+        stars: 4.7,
+        img: "./imgs/feedback/person (20).jpg"
+    }
+];
+
 const BikesTopSliderObjects = [
     {    imageBike: "./imgs/bikes-transparent/bike-top (6).png",
         speedBike: "90km",
@@ -208,129 +367,6 @@ function displayeReadMore(readMoreObject) {
 displayeReadMore(readMore)
 
 
-const feedbacks = [
-    {   id: 1,
-        personName: "Emily Johnson",
-        feedback: "Excellent service! 5 stars.",
-        stars: 4,
-        img: "./imgs/feedback/person (1).jpg"
-    },
-    {
-        id: 2,
-        personName: "David Martinez",
-        feedback: "Great experience, highly recommended. 4.5 stars.",
-        stars: 4,
-        img: "./imgs/feedback/person (2).jpg"
-    },
-    {   id: 3,
-        personName: "Sarah Thompson",
-        feedback: "Fantastic product, exceeded my expectations. 4.7 stars.",
-        stars: 4.7,
-        img: "./imgs/feedback/person (3).jpg"
-    },
-    {    id: 4,
-        personName: "Michael Brown",
-        feedback: "Superb customer support and quality. 4.8 stars.",
-        stars: 3.8,
-        img: "./imgs/feedback/person (4).jpg"
-    },
-    {   id: 5,
-        personName: "Jessica Lee",
-        feedback: "Wonderful service, will definitely come back again. 4.9 stars.",
-        stars: 4.9,
-        img: "./imgs/feedback/person (5).jpg"
-    },
-    {   id: 6,
-        personName: "Christopher Nguyen",
-        feedback: "Impressive product quality, 5 stars!",
-        stars: 5,
-        img: "./imgs/feedback/person (6).jpg"
-    },
-    {   id: 7,
-        personName: "Amanda Wilson",
-        feedback: "Brilliant experience overall. 4.6 stars.",
-        stars: 4.6,
-        img: "./imgs/feedback/person (7).jpg"
-    },
-    {   id: 8,
-        personName: "Daniel Taylor",
-        feedback: "Outstanding service and prompt delivery. 4.9 stars.",
-        stars: 4.9,
-        img: "./imgs/feedback/person (8).jpg"
-    },
-    {   id: 9,
-        personName: "Rachel Lopez",
-        feedback: "Absolutely satisfied with my purchase. 4.7 stars.",
-        stars: 4.7,
-        img: "./imgs/feedback/person (9).jpg"
-    },
-    {   id: 10,
-        personName: "Kevin King",
-        feedback: "Top-notch quality and fast shipping. 4.8 stars.",
-        stars: 4.8,
-        img: "./imgs/feedback/person (10).jpg"
-    },
-    {   id: 11,
-        personName: "Megan Campbell",
-        feedback: "Incredible product, couldn't be happier. 5 stars!",
-        stars: 5,
-        img: "./imgs/feedback/person (11).jpg"
-    },
-    {   id: 12,
-        personName: "Joshua Adams",
-        feedback: "Great value for money, highly recommended. 4.5 stars.",
-        stars: 4.5,
-        img: "./imgs/feedback/person (12).jpg"
-    },
-    {   id: 13,
-        personName: "Lauren Garcia",
-        feedback: "Excellent communication and service. 4.9 stars.",
-        stars: 4.9,
-        img: "./imgs/feedback/person (13).jpg"
-    },
-    {   id: 14,
-        personName: "Ryan Rodriguez",
-        feedback: "Fantastic experience from start to finish. 4.8 stars.",
-        stars: 4.8,
-        img: "./imgs/feedback/person (14).jpg"
-    },
-    {   id: 15,
-        personName: "Samantha Clark",
-        feedback: "Exceptional product quality. 4.7 stars.",
-        stars: 4.7,
-        img: "./imgs/feedback/person (15).jpg"
-    },
-    {   id: 16,
-        personName: "Brandon Hernandez",
-        feedback: "Very satisfied with my purchase. 4.6 stars.",
-        stars: 4.6,
-        img: "./imgs/feedback/person (16).jpg"
-    },
-    {   id: 17,
-        personName: "Jennifer Scott",
-        feedback: "Amazing customer service, thank you! 4.9 stars.",
-        stars: 4.9,
-        img: "./imgs/feedback/person (17).jpg"
-    },
-    {   id: 18,
-        personName: "Tyler Nguyen",
-        feedback: "Highly impressed with the speed of delivery. 4.8 stars.",
-        stars: 4.8,
-        img: "./imgs/feedback/person (18).jpg"
-    },
-    {    id: 19,
-        personName: "Emily Baker",
-        feedback: "Absolutely love the product! 5 stars.",
-        stars: 5,
-        img: "./imgs/feedback/person (19).jpg"
-    },
-    {    id: 20,
-        personName: "Nicholas Carter",
-        feedback: "Great experience overall, would buy again. 4.7 stars.",
-        stars: 4.7,
-        img: "./imgs/feedback/person (20).jpg"
-    }
-];
 
 
 const modalHireBike = ` <div class="modal-container-box modal-hire">
@@ -812,3 +848,51 @@ const rental3Anchor = document.querySelector(".rental-anchor3");
 ShowEle(rental1, rental1Anchor, "visible-service")
 ShowEle(rental2, rental2Anchor, "visible-service")
 ShowEle(rental3, rental3Anchor, "visible-service")
+
+
+// ------------------------------Render FAQ from data then create function to use it---------------------------------
+function renderFaq(data){
+    const faqContainer = document.querySelector(".faq-container");
+   
+    data.map(ele=> faqContainer.innerHTML+=`
+        <div class="col-50">
+            <div class="row">
+                <p>${ele.question}</p>
+
+                <span class="material-symbols-outlined addCordian">
+                add
+                </span>
+                
+            </div>
+
+            <div class="content-faq">
+                ${ele.answer}
+            </div>
+        </div>`
+        
+    )
+   
+
+    const allCordiansSymbols = document.querySelectorAll(".addCordian");
+    allCordiansSymbols.forEach(cordianSymbol=>cordianSymbol.innerHTML="add")
+}
+renderFaq(faqQuestionsAnswers)
+
+
+function faqCordians(){
+    cordiansTriggers = document.querySelectorAll(".faq-container .col-50");
+    
+    cordiansTriggers.forEach(ele=>ele.addEventListener("click", function(){
+
+        const eachQuestionSymbol = ele.querySelector(".material-symbols-outlined");
+        const eachQuestionAnswer = ele.querySelector(".content-faq");
+
+        eachQuestionSymbol.innerHTML = eachQuestionSymbol.innerHTML === "add" ? "remove" : "add";
+        eachQuestionAnswer.style.display = eachQuestionAnswer.style.display === "block" ? "none" : "block";
+
+
+      
+
+    }))
+}
+faqCordians()
