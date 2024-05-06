@@ -158,7 +158,7 @@ const feedbacks = [
 ];
 
 const BikesTopSliderObjects = [
-    {    imageBike: "./imgs/bikes-transparent/bike-top (6).png",
+    {    imageBike: "./imgs/bikes-transparent/bike-top (4).png",
         speedBike: "90km",
         kmphdBike: "30 KMPH",
         speedBikeHours: "4HOURS",
@@ -166,12 +166,20 @@ const BikesTopSliderObjects = [
         titleBike: "Model A",
     
     },
+    {    imageBike: "./imgs/bikes-transparent/bike-top (6).png",
+    speedBike: "90km",
+    kmphdBike: "30 KMPH",
+    speedBikeHours: "4HOURS",
+    speedBikeWeight: "18KG",
+    titleBike: "Model B",
+
+},
     {   imageBike: "./imgs/bikes-transparent/bike-top (1).png",
         speedBike: "80km",
         kmphdBike: "28 KMPH",
         speedBikeHours: "3HOURS",
         speedBikeWeight: "16KG",
-        titleBike: "Model B",
+        titleBike: "Model C",
     
     },
     {    imageBike: "./imgs/bikes-transparent/bike-top (2).png",
@@ -179,7 +187,7 @@ const BikesTopSliderObjects = [
         kmphdBike: "29 KMPH",
         speedBikeHours: "2HOURS",
         speedBikeWeight: "19KG",
-        titleBike: "Model C",
+        titleBike: "Model D",
     
     },
     {   imageBike: "./imgs/bikes-transparent/bike-top (3).png",
@@ -187,17 +195,33 @@ const BikesTopSliderObjects = [
         kmphdBike: "33 KMPH",
         speedBikeHours: "3HOURS",
         speedBikeWeight: "12KG",
-        titleBike: "Model D",
+        titleBike: "Model E",
     
     },
-    {     imageBike: "./imgs/bikes-transparent/bike-top (5).png",
+    {     imageBike: "./imgs/bikes-transparent/bike-top (15).png",
         speedBike: "42km",
         kmphdBike: "30 KMPH",
         speedBikeHours: "3HOURS",
         speedBikeWeight: "19KG",
-        titleBike: "Model E",
+        titleBike: "Model F",
     
     },
+    {     imageBike: "./imgs/bikes-transparent/bike-top (5).png",
+        speedBike: "45km",
+        kmphdBike: "32 KMPH",
+        speedBikeHours: "4HOURS",
+        speedBikeWeight: "29KG",
+        titleBike: "Model G",
+
+    },
+    {imageBike: "./imgs/bikes-transparent/bike-top (17).png",
+    speedBike: "28km",
+    kmphdBike: "42 KMPH",
+    speedBikeHours: "4HOURS",
+    speedBikeWeight: "39KG",
+    titleBike: "Model H",
+
+},
     ]
 
 const locationObject = [
@@ -501,8 +525,8 @@ dropDownTrigger()
 
 function topSliderBikes(objects, timeout) {
     const imageBike = document.querySelector(".top-bike-img");
-    const speedBike = document.querySelector(".bootom-text-top1 h3");
-    const kmphdBike = document.querySelector(".bootom-text-top1-second h3");
+  
+
     const speedBikeHours = document.querySelector(".bootom-text-top2 h3");
     const speedBikeWeight = document.querySelector(".bootom-text-top2-second h3");
     const titleBike = document.querySelector(".title-bike h3");
@@ -517,8 +541,8 @@ function topSliderBikes(objects, timeout) {
         }, 501);
 
         imageBike.src = objects[currentIndex].imageBike;
-        speedBike.innerHTML = objects[currentIndex].speedBike;
-        kmphdBike.innerHTML = objects[currentIndex].kmphdBike;
+     
+       
         speedBikeHours.innerHTML = objects[currentIndex].speedBikeHours;
         speedBikeWeight.innerHTML = objects[currentIndex].speedBikeWeight;
         titleBike.innerHTML = objects[currentIndex].titleBike;

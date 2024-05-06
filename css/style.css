@@ -4,8 +4,9 @@
   --red-main: #bb0909;
   --bg-gray : #f6f1f1;
   --header-fontsize :  4.5rem;
+  --h1-extra-big : 3.5rem;
   --h1-fontsize :  2.5rem;
-
+  
   --h3-wide-screen : 1.8rem;
   --paragraph-wide-screen : 1.5rem;
   --paragraph-small-wide-screen : 1.2rem;
@@ -14,6 +15,9 @@
 }
 .img-slider-auto {
   width: 100%;
+}
+.extra-big {
+  font-size: var(--h1-extra-big) !important;
 }
 .material-symbols-outlined {
   margin-right: 20px;
@@ -53,6 +57,39 @@
   position: relative;
   width: 1000px;
   height: 600px;
+}
+.three-cols-service h1 {
+  font-size: var(--paragraph-wide-screen);
+}
+.three-cols-service p {
+  font-size: var(--paragraph-small-wide-screen);
+}
+.three-cols-service {
+  transform: translateY(-160px);
+ 
+}
+.black {
+  filter: none;
+}
+.three-cols-service.row > .col:nth-child(3) {
+  color: #000000;
+  background-color: white;
+}
+.three-cols-service.row > .col:nth-child(2) { 
+  background-color: var(--bg-gray);
+  color: black;
+}
+
+.three-cols-service .col {
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: var(--shadow-box);
+  margin: 20px;
+  color: white;
+  width: 25vw;
+  height: 250px;
+  text-align: center;
+  background-color: var(--red-main);
 }
 .message-contact-form {
 
@@ -588,6 +625,7 @@ body {
   filter: brightness(1.2);
 }
 .btn-custom{
+  min-height: 40px;
   transition: 0.3s;
   z-index: 2;
   width: 140px;
@@ -688,17 +726,18 @@ body {
   font-size: var(--h1-fontsize);
   line-height: 3.2rem !important;
 }
+
 .bootom-text-top2::before {
   text-align: left;
   content: "CHARGING TIME";
   position: absolute;
   display: block;
-  width: 150px;
+  width: 150px !important;
   height: 50px;
   font-size: var(--paragraph-very-small-wide-screen);
   opacity: 60%;
   
-  left: 30px;
+  
   top: 0px;
 }
 .text-mid-container {
@@ -759,13 +798,13 @@ body {
 }
 .bootom-text-top1 {
   position: absolute;
-  right: 15%;
-  bottom: 0%;
+  right: 5%;
+  bottom: 50%;
 }
 .bootom-text-top1-second {
   position: absolute;
-  right: 0%;
-  bottom: 10%;
+  right: 5%;
+  bottom: 30%;
   font-weight: 800;
 }
 .logo-nav-container {
@@ -778,8 +817,10 @@ body {
   color: black;
 }
 .bootom-text-top2 {
+  
+  width: 100px;
   position: absolute;
-  left: 20%;
+  right: 5%;
   bottom: 0%;
 }
 .logo-top-big {
@@ -791,8 +832,9 @@ body {
 }
 
 .bootom-text-top2-second {
+  width: 100px;
   position: absolute;
-  left: 25%;
+  right: 5%;
   bottom: 10%;
 }
 .top-bike-img {
@@ -823,7 +865,7 @@ body {
   position: absolute;
   left: -310px;
   width: 600px; 
-  height: 100%; 
+  height: 125%; 
  
   clip-path: polygon(100.1% 0%, 50.9% 0%, 51% 100.3%);
   background-color:white;
@@ -901,6 +943,7 @@ a {
   text-decoration: none;
 }
 .part-section-top-second h3 {
+  text-align: right;
   font-size:  var(--h3-wide-screen);
   color: white;
 }
@@ -1159,13 +1202,14 @@ font-weight: 600;
 align-self: flex-end !important;
 }
 .section-container-hire {
-  margin: 2% 5%;
+  padding: 2% 5%;
 }
 .img-container-hire:hover .hire-bike-bike-title{
   opacity: 100%;
   transition: 0.3s;
 }
 .hire-bike-part-2 {
+  width: 40%;
   justify-content: space-between;
   flex-direction: column;
   display: flex;
@@ -1176,10 +1220,11 @@ align-self: flex-end !important;
 }
 .hire-bike-part-1 img {
   /* box-shadow: var(--shadow-box); */
- 
+  display: block;
+  margin: auto;
   object-fit: contain;
-  width: 600px;
-  height: 100%;
+  width: 80%;
+  height:  80%;
 }
 .hire-bike-part-1 {
   width: 600px;
@@ -1501,6 +1546,7 @@ align-self: flex-end !important;
 
   background-color: var(--bg-gray);
 }
+
 .mid_first_col {
   display: flex;
   flex-direction: row;
@@ -2068,13 +2114,12 @@ html {
   color: #ffffff;
 }
 .hire-bike-section-img-container {
+  width: 50%;
   position: relative;
+  height: 100%;
 }
 .hire-bike-section-img-container span{
  
-  position: absolute;
-  top: 0;
-  left: 0;
   color: wheat;
   background-color: var(--red-main);
  padding: 30px;
@@ -2082,7 +2127,9 @@ html {
 
 }
 .hire-bike-section-container {
-  height: 450px;
+  align-items: center;
+  justify-content: space-between;
+ 
 }
 .service-icon {
   padding: 10px;
@@ -2150,6 +2197,9 @@ html {
     width: 80%;
    
   }
+  .hire-bike-part-2 {
+    width: 100%;
+  }
   .text-section-top {
     padding-top: 4% !important;
   }
@@ -2200,8 +2250,8 @@ html {
   .hire-bikes-top img {
     height: 300px;
   }
-  .text-hire h1 {
-    padding-top: 50px;
+  .hire-bike-section-img-container span {
+    padding: 15px;
   }
   .text-hire {
     
@@ -2261,6 +2311,7 @@ html {
     height: 300px;
   }
   .hire-bike-section-container {
+    margin: 7% 0;
     flex-direction: column;
     height: auto;
   }
@@ -2290,6 +2341,7 @@ html {
     --shadow-box: -3px 8px 15px 0px rgba(0,0,0,0.34);
     --red-main: #bb0909;
     --bg-gray : #f5f5f5;
+    --h1-extra-big: 3.5rem;
     --header-fontsize: 3rem;
     --h1-fontsize :  2.5rem;
     --header-fontsize: 3rem;
@@ -2378,12 +2430,14 @@ html {
   }
   .part-section-top-second {
     width: 100%;
+    background-color: white;
    
   }
   .part-section-top-fist {
     height: 500px;
   }
   .bootom-text-top2-second {
+    color: black !important;
     top: 20%;
   }
   .bootom-text-top2-second::before, .bootom-text-top2::before {
@@ -2402,6 +2456,9 @@ html {
     top: 0;
    
   }
+  .three-cols-service {
+    transform: translatey(-100px);
+  }
   .top-contact .row {
     flex-direction: column;
   }
@@ -2412,6 +2469,8 @@ html {
     display: none;
   }
   .top-bike-img {
+    position: relative;
+    transform: translateX(-50%);
   left: 50%;
  
   bottom: 0;
@@ -2425,6 +2484,17 @@ html {
   }
 }
 @media screen and (max-width: 850px) {
+  .about-sec-main {
+    flex-direction: column;
+  }
+  .three-cols-service {
+  
+    flex-direction: column;
+  }
+  .three-cols-service .col {
+  width: 300px;
+  margin: 20px auto;
+  }
   .bottom-mid-section .col {
     width: 100%;
   }
@@ -2559,6 +2629,9 @@ html {
  
 }
 @media screen and (max-width: 605px) {
+  .three-cols-service {
+    transform: translateY(0);
+  }
   .bottom-mid-section h3 {
     flex-direction: column;
   }
@@ -2587,7 +2660,7 @@ html {
     --red-main: #bb0909;
     --bg-gray : #f5f5f5;
     --h1-fontsize :  1.5rem;
-  
+    --h1-extra-big: 2.5rem;
     --h3-wide-screen : 1.2rem;
     --paragraph-wide-screen : 1rem;
     --paragraph-small-wide-screen : 0.9rem;
@@ -2638,9 +2711,9 @@ html {
     display: none;
   }
   .top-bike-img {
-    position: relative;
+   
  
-    left: 0;
+   
  
     width: none;
     height: 250px;
