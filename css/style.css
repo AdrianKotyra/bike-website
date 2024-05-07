@@ -13,7 +13,9 @@
   --paragraph-small-wide-screen-nav : 1rem;
   --paragraph-very-small-wide-screen : 0.8rem;
 }
-
+body {
+  overflow-x: hidden;
+}
 .img-slider-auto {
   width: 100%;
 }
@@ -258,7 +260,11 @@
   margin: auto 0 ;
   
 }
-
+.feedbackSlider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 .top-about-text h1, .top-contact h1{
   animation: subPagesAnimationText 0.8s forwards;
 }
@@ -486,11 +492,14 @@ input[type]:checked ~ span.middle {
  display: flex;
 
 }
-.feedback_container {
-  gap: 20px;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.feedback_container {
+
+  gap: 20px;
+  width: 3500px;
+  display: flex;
+  
+  
 }
 .img-container-about {
   margin-right: 5%;
@@ -1023,7 +1032,7 @@ font-weight: 600;
  bottom: -300px;
  right: -20px;
 }
-.slide::before{
+.slide-company::before{
   top: 0;
   background-size: cover;
   text-align: center;
@@ -1035,7 +1044,7 @@ font-weight: 600;
   font-size: var(--h3-wide-screen);
   opacity: 60%;
 }
-.slide-1::before{
+/* .slide-1::before{
   content: "Model A";
 }
 .slide-2::before{
@@ -1061,7 +1070,7 @@ font-weight: 600;
 }
 .slide-9::before{
   content: "Model J";
-}
+} */
 .slide-1 {
 
 
@@ -1195,11 +1204,15 @@ font-weight: 600;
 .text-section-top{
   padding-top: 0%;
 }
+.about_container_about * {
+  margin:  10px;
+}
 .text-mid-container {  padding-top: 12%;}
 
 .text-feed-col span {
-  opacity: 60%;
+  opacity: 90%;
 }
+
 .text-feed-col {
   width: 100%;
  
@@ -1303,7 +1316,7 @@ align-self: flex-end !important;
   overflow: hidden;
   position: relative;
   border-radius: 30px;
- 
+  width: 500px;
   height: 400px;
  
   background-size: cover;
@@ -1424,19 +1437,48 @@ align-self: flex-end !important;
 .about-box-3 {
   background-image: url("../imgs/about (3).jpg") !important;
 }
-.box-1 {
+
+/* .box-1 {
  
-  background-image: url("../imgs/feedback\ \(1\).jpg");
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (1).jpg");
 
 }
 .box-2 {
-  background-image: url("../imgs/feedback\ \(2\).jpg");
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (2).jpg");
 
 }
 .box-3 {
-  background-image: url("../imgs/feedback\ \(3\).jpg");
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (3).jpg");
  
 }
+.box-4 {
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (4).jpg");
+ 
+}
+.box-5 {
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (5).jpg");
+ 
+}
+.box-6{
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (6).jpg");
+ 
+}
+.box-7 {
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (7).jpg");
+ 
+}
+.box-8 {
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (8).jpg");
+ 
+}
+.box-9 {
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (9).jpg");
+ 
+}
+.box-10 {
+  background-image: url("../imgs/feedbackSlider/feedbackSlider (10).jpg");
+ 
+} */
 .right-choose-col h1{
   color: var(--red-main);
 }
@@ -1476,7 +1518,7 @@ align-self: flex-end !important;
   justify-content: space-evenly;
   background-color: var(--red-main);
   color: white;
-  height: 30vh;
+  height: 35vh;
 }
 .choose-section div {
   opacity: 0;
@@ -1808,7 +1850,7 @@ nav p{
   margin-left: 20px;
 }
 .feedback-container{
-  background-color: var(--bg-gray);
+  background-color: white;
   display: none;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(356px, 1fr));
@@ -1845,7 +1887,7 @@ nav p{
   justify-content: center;
   display: flex;
   border-radius: 20px;
-  background-color: white;
+  background-color:var(--bg-gray);
   padding: 30px;
  
 }
@@ -2397,11 +2439,7 @@ html {
     width: 150px;
     height: 150px;
   }
-  .feedback_container {
- 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(266px, 1fr));
-  }
+
   .feedback-col {
     height: 350px;
   }
@@ -2539,6 +2577,9 @@ html {
 }
 
 @media screen and (max-width: 705px) {
+  .about_container_about {
+    flex-direction: column;
+  }
   .three-cols-service .col {
     height: auto;
   }
@@ -2720,11 +2761,7 @@ html {
   .contact-section .form {
     width: 100%;
   }
-  .feedback_container {
-    
-    display: grid;
-    grid-template-columns:   1fr;
-}
+ 
   .feedback-col {
     height: 300px;
   }
@@ -3036,8 +3073,14 @@ html {
 	height: 100px;
 	width: 250px;
 }
-
+.feedback_container {
+  animation: scrollFeedback 40s linear infinite
+}
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-250px * 7))}
+}
+@keyframes scrollFeedback {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-500px * 4))}
 }

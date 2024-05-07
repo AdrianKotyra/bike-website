@@ -33,6 +33,72 @@ const faqQuestionsAnswers = [
     }
 ];
 
+const feedbackSlider = [
+    {
+        id: 1,
+        name: "Emily Jones",
+        feedback: "Highly recommend Bike Kings for anyone looking for top-notch bikes and excellent customer service!",
+        img: "./imgs/feedbackSlider/feedbackSlider (1).jpg",
+    },
+    {
+        id: 2,
+        name: "Michael Smith",
+        feedback: "I've been a customer of Bike Kings for years, and they never disappoint. The quality of their bikes is unmatched!",
+        img: "./imgs/feedbackSlider/feedbackSlider (2).jpg",
+    },
+    {
+        id: 3,
+        name: "Sarah Johnson",
+        feedback: "Bike Kings made my biking experience incredible! Their staff is knowledgeable and friendly, making the whole process enjoyable.",
+        img: "./imgs/feedbackSlider/feedbackSlider (3).jpg",
+    },
+    {
+        id: 4,
+        name: "David Brown",
+        feedback: "Exceptional service from Bike Kings! I bought a bike for my son, and they went above and beyond to ensure we got exactly what we needed.",
+        img: "./imgs/feedbackSlider/feedbackSlider (4).jpg",
+    },
+    {
+        id: 5,
+        name: "Jessica Wilson",
+        feedback: "If you're in the market for a new bike, look no further than Bike Kings. They have a wide selection to choose from, and their team is incredibly helpful!",
+        img: "./imgs/feedbackSlider/feedbackSlider (5).jpg",
+    },
+    {
+        id: 6,
+        name: "Matthew Taylor",
+        feedback: "I had an amazing experience at Bike Kings. The staff was friendly and knowledgeable, and I found the perfect bike for my needs.",
+        img: "./imgs/feedbackSlider/feedbackSlider (7).jpg",
+    },
+    {
+        id: 7,
+        name: "Emma Martinez",
+        feedback: "Bike Kings exceeded my expectations! From the moment I walked in, I felt valued as a customer. I highly recommend them to anyone in need of a bike.",
+        img: "./imgs/feedbackSlider/feedbackSlider (8).jpg",
+    },
+    {
+        id: 8,
+        name: "Daniel Anderson",
+        feedback: "I can't thank Bike Kings enough for their outstanding service. They helped me find the perfect bike, and I couldn't be happier with my purchase.",
+        img: "./imgs/feedbackSlider/feedbackSlider (9).jpg",
+    },
+    {
+        id: 9,
+        name: "Olivia Garcia",
+        feedback: "Bike Kings made buying a bike a breeze! Their staff was friendly and helpful, and they had exactly what I was looking for.",
+        img: "./imgs/feedbackSlider/feedbackSlider (10).jpg",
+    },
+    {
+        id: 10,
+        name: "William Rodriguez",
+        feedback: "I had a fantastic experience at Bike Kings. Their team was attentive and patient, and they helped me find the perfect bike for my needs.",
+        img: "./imgs/feedbackSlider/feedbackSlider (11).jpg",
+    },
+
+
+
+
+]
 const feedbacks = [
     {   id: 1,
         personName: "Emily Johnson",
@@ -434,9 +500,23 @@ vests to practical additions such as bike racks and panniers for carrying your e
 
 
 // ------------------------------RENDER FEEDBACKS ON CLICK MAP OBJECT---------------------------------
+function renderFeedbackSlider(object){
+    const feedback_container = document.querySelector(".feedback_container");
+    object.map(ele => {
+        feedback_container ? feedback_container.innerHTML += 
+        `  
+        <div class="feedback-col box-1" style="background-image: url('${ele.img}')">
+            <div class="text-feed-col">
+                <p>${ele.name}</p>
+                <span class="cursive">
+                    "${ele.feedback}"</span>
+            </div>
+        </div>`
+        : null
+    })  
+}
 
-
-
+renderFeedbackSlider(feedbackSlider)
 function renderFeedback(object){
     const feedbackContainer = document.querySelector(".feedback-container");
     object.map(ele=>{
@@ -472,9 +552,9 @@ function renderFeedback(object){
     }
 
 
-)
+)}
     
-}
+
 renderFeedback(feedbacks)
 const triggerFeedbacks = document.querySelector(".feedback-trigger");
 triggerFeedbacks? triggerFeedbacks.addEventListener("click", function(){
