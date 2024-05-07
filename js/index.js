@@ -877,6 +877,50 @@ ShowEle(rental2, rental2Anchor, "visible-service")
 ShowEle(rental3, rental3Anchor, "visible-service")
 
 
+
+
+const chooseParagraphTrigger1 = document.querySelector(".choose-p-trigger1");
+
+function ShowEleChoose(trigger, animationClass) {
+    const chooseParagraph1 = document.querySelector(".choose-section > div:nth-child(1)");
+    const chooseParagraph2 = document.querySelector(".choose-section > div:nth-child(2)");
+    const chooseParagraph3 = document.querySelector(".choose-section > div:nth-child(3)");
+    const chooseParagraph4 = document.querySelector(".choose-section > div:nth-child(4)");
+
+    function ObsCallback (entries) {
+        const [entry] = entries
+        if(entry.isIntersecting===true) {
+            chooseParagraph1.classList.add(animationClass)
+            setTimeout(() => {
+                chooseParagraph2.classList.add(animationClass)
+            }, 300);
+            setTimeout(() => {
+                chooseParagraph3.classList.add(animationClass)
+            }, 600);
+            setTimeout(() => {
+                chooseParagraph4.classList.add(animationClass)
+            }, 900);
+        }
+      
+        
+    }
+    const ObsOptions = {
+        root:null,
+        threshold: 0,
+        rootMargin: '-100px'
+    }
+    const observer = new IntersectionObserver(ObsCallback, ObsOptions)
+    trigger?  observer.observe(trigger) : null;
+   
+}
+
+
+ShowEleChoose(chooseParagraphTrigger1, "visible-service" )
+
+
+
+
+
 // ------------------------------Render FAQ from data then create function to use it---------------------------------
 function renderFaq(data){
     const faqContainer = document.querySelector(".faq-container");
