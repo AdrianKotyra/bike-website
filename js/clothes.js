@@ -372,7 +372,53 @@ const bikeClothes3 = [
   }
 ];
 
-  
+function searchProducts(object) {
+  const inputSearchValue = document.querySelector(".search-input");
+
+  inputSearchValue.addEventListener("input", function() {
+    const bikesContainer = document.querySelector(".grid-bikes-container");
+    const searchOutput = inputSearchValue.value.toLowerCase();
+    bikesContainer.innerHTML = "";
+
+    setTimeout(() => {
+      object.forEach(ele => {
+      
+        if (ele.name) {
+          const elementName = ele.name.toLowerCase();
+          if (elementName.includes(searchOutput)) {
+            bikesContainer.innerHTML += `
+            <div class="bike-card accesory-card" data=${object.indexOf(ele)}>
+            <div class="bike-card-container">
+                <img class="img-bike" src="${ele.clothesImg}" alt="">
+                <div class="info-product-container"> 
+                    <h3 class="">${ele.name}</h3>
+                
+                    <div class="info-container row">
+                        <span>Type</span><span class="seats-bike">${ele.type}</span>
+                    </div>
+                
+                   
+                
+                    <div class="price-btn-container row">
+                        <p class="price price-bike">${ele.price}£</p>
+                        <button class="btn-custom">buy</button>
+                    </div>
+                </div>
+            </div>
+
+            </div>`;
+          
+          }
+        }
+      });
+      displayModal(object)
+    }, 1);
+    
+  });
+
+}
+
+searchProducts(bikeClothes1)
   
 function Slider() {
     
@@ -565,7 +611,7 @@ function Slider() {
   
 }
 
-function RenderAllClothes(accesory, see_more_number){
+function RenderAllClothes(accesory){
     
  
 
@@ -576,6 +622,7 @@ function RenderAllClothes(accesory, see_more_number){
         containerBikes ? containerBikes.innerHTML+=
         `
             <div class="bike-card accesory-card" data=${accesory.indexOf(accesoryCard)}>
+            <button class="btn-custom">buy</button>
             <div class="bike-card-container">
                 <img class="img-bike" src="${accesoryCard.clothesImg}" alt="">
                 <div class="info-product-container"> 
@@ -585,24 +632,19 @@ function RenderAllClothes(accesory, see_more_number){
                         <span>Type</span><span class="seats-bike">${accesoryCard.type}</span>
                     </div>
                 
-                    <div class="info-container row">
-                        <span></span><span class="speed-bike">${accesoryCard.description}</span>
-                    </div>
-                
-                    <div class="price-btn-container row">
-                        <p class="price price-bike">${accesoryCard.price}£</p>
-                        <button class="btn-custom">buy</button>
-                    </div>
+                  
+                 
+                      <p class="price price-bike">${accesoryCard.price}£</p>
+                     
+                  
                 </div>
             </div>
 
             </div>
         ` : null
     })
-    let seeMore = document.querySelector(".see-more");
-    seeMore?  seeMore.innerHTML= `<p class="${see_more_number} see-more-text"> see more</p>`: null;
-    const modalContainer = document.querySelector(".modal-container");
-
+   
+    
   
 
     const cards = document.querySelectorAll(".bike-card");
@@ -666,22 +708,10 @@ function RenderAllClothes(accesory, see_more_number){
     
     
 }
-RenderAllClothes(bikeClothes1, "see_more_1")
+RenderAllClothes(bikeClothes1)
 
 
-if(document.querySelector(".see_more_1")) {
-    document.querySelector(".see_more_1").addEventListener("click", function(){
 
-        RenderAllClothes(bikeClothes2, "see_more_2")
-    
-    document.querySelector(".see_more_2").addEventListener("click", function(){
-        RenderAllClothes(bikeClothes3, null)
-        
-        let seeMore = document.querySelector(".see-more");
-        seeMore.style.display="none";
-    })
-        
-})}
 
 function displayModal(bikeClothes){
 

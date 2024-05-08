@@ -1184,8 +1184,21 @@ font-weight: 600;
   
   font-size: var(--paragraph-wide-screen);
 }
+.grid-search-content  {
+  position: sticky;
+  top: 100px;
+}
+.grid-search-content > * {
+  display: block;
+
+}
+.grid-search {
+ position: relative;
+  width: 200px;
+}
 .grid-bikes-container {
-  justify-content: center;
+  width: 90%;
+  justify-content: right;
   flex-wrap: wrap;
 }
 
@@ -1725,14 +1738,26 @@ align-self: flex-end !important;
 .active {
   color: var(--red-main) !important;
 }
-.price-btn-container {
-  width: 90%;
+
+
+.price-bike {
   display: flex;
-  position: absolute;
-  bottom: 0;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  height: 40px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: absolute;
+  top: -24px;
+  right: 1px;
+  font-weight: 700;
+  background-color:var(--red-main);
+  color: white
 }
+
 .dot-grid {
   cursor: pointer;
   margin: 10px;
@@ -1747,33 +1772,53 @@ align-self: flex-end !important;
   cursor: pointer;
   margin: 20px 20px;
   border-radius: 30px;
-  border: 2px solid rgb(234, 232, 232);
+ 
   background-color: white;
-  height: 370px;
-  width: 300px;
+  height: 300px;
+  width: 200px;
   box-shadow: -3px 8px 15px 0px rgba(0,0,0,0.34);
   -webkit-box-shadow: -3px 8px 15px 0px rgba(0,0,0,0.34);
   -moz-box-shadow: -3px 8px 15px 0px rgba(0,0,0,0.34);
 }
+
+.accesory-card button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .accesory-card {
-  height: 440px !important;
+  height: 300px !important;
+}
+.accesory-card h3 {
+  line-height: 1.4rem;
+}
+.accesory-card span{
+  line-height: 1.2rem
 }
 nav p{
+ 
   font-size: var(--paragraph-small-wide-screen-nav);
+}
+.info-product-container h3 {
+  font-size: var(--paragraph-small-wide-screen);
 }
 .info-product-container {
 
-
+    line-height: 0.8rem;
     padding: 0 20px 0 20px;
 }
-
+.info-product-container button {
+  margin: 20px auto 0;
+  display: table;
+}
 .logo {
   transform: scale(0.9);
   width: 80px;
   height: 50px;
 }
 .bike-card img {
-  border: 2px solid rgb(234, 232, 232);
+  
   display: block;
   margin: 0 auto ;
   object-fit: cover;
@@ -1786,7 +1831,34 @@ nav p{
   color: white;
   transform: translateY(-23px);
 }
+.select-input {
+  font-size: var(--paragraph-wide-screen)
+}
+.search-input {
+  
+  width: 100%;
+  height: 40px;
+}
+.input-search-container{
+  position: relative;
+  width: 100%;
+}
+.input-search-container::before {
+
+  user-select: none;
+  z-index: 2;
+  background-size: cover;
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  background-image: url("../imgs/search.svg");
+}
 .grid-bikes-section {
+  padding: 0 2%;
+  justify-content: space-between;
   position: relative;
   padding-bottom: 150px;
  background-color: var(--bg-gray);
@@ -2358,9 +2430,7 @@ html {
     width: 100%;
     height: 100%;
   }
-  .accesory-card {
-    height: 360px !important;
-  }
+
   .half  {
     width: 100%;
   }
@@ -2596,7 +2666,23 @@ html {
   .trigger-bike-elements {
     display: none;
   }
-
+  .grid-bikes-section {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .grid-bikes-container {
+    width: 100%;
+    justify-content: center;
+  }
+  .grid-search {
+    padding: 20px;
+    width: 100%;
+    z-index: 22;
+    position: sticky;
+    top: 50px;
+    background-color: white;
+  }
   .about-community img, .row-2-comm img {
     height: 300px;
     width: 100%;
@@ -2609,6 +2695,7 @@ html {
   }
   .faq-section img {
     width: 90%;
+    height: auto;
   }
   
   .text-top-flash {
@@ -2703,6 +2790,16 @@ html {
  
 }
 @media screen and (max-width: 605px) {
+  .text-mid-container .row {
+    flex-direction: column;
+  }
+  .faq-container .row {
+    padding: 0;
+  }
+ 
+  .three-cols-service .col {
+    width: 100%;
+  }
   .three-cols-service {
     transform: translateY(0);
   }
@@ -2747,6 +2844,10 @@ html {
   }
   .btn-custom {
     width: 110px;
+  }
+  .choose-section {
+    flex-direction: column;
+    height: auto;
   }
   .section-container {
     justify-content: center;
