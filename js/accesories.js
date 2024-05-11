@@ -1,125 +1,4 @@
-const bikeAccessories1 = [
-    {  accessoriesImg: "./imgs/accesories/accessory (12).jpg",
-    accessoriesImg2: "./imgs/accesories/accessory (1).jpg",
-    accessoriesImg3: "./imgs/accesories/accessory (2).jpg",
-    accessoriesImg4: "./imgs/accesories/accessory (3).jpg",
-      name: "Bike Helmet",
-      type: "Safety Gear",
-      price: 30.99,
-      description: "Protective headgear for safe biking."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (11).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (12).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (1).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (2).jpg",
-      name: "Handlebar Grips",
-      type: "Comfort",
-      price: 15.50,
-      description: "Enhanced grip for comfortable handling."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (10).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (11).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (12).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (1).jpg",
-      name: "Water Bottle Holder",
-      type: "Utility",
-      price: 9.99,
-      description: "Convenient holder to keep your water bottle secure during rides."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (9).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (10).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (11).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (12).jpg",
-      name: "Bike Lights",
-      type: "Safety Gear",
-      price: 25.00,
-      description: "Front and rear lights for visibility during low-light conditions."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (8).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (9).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (10).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (11).jpg",
-      name: "Puncture Repair Kit",
-      type: "Maintenance",
-      price: 12.75,
-      description: "Essential tools for repairing punctures quickly on the go."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (7).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (8).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (9).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (10).jpg",
-      name: "Bike Lock",
-      type: "Security",
-      price: 40.25,
-      description: "Durable lock to secure your bike when not in use."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (6).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (7).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (8).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (9).jpg",
-      name: "Cycling Gloves",
-      type: "Apparel",
-      price: 20.99,
-      description: "Protective gloves for comfort and grip during long rides."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (5).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (6).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (7).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (8).jpg",
-      name: "Bike Rack",
-      type: "Transportation",
-      price: 65.00,
-      description: "Rack for attaching your bike to your vehicle for transportation."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (4).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (5).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (6).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (7).jpg",
-      name: "Bike Pump",
-      type: "Maintenance",
-      price: 30.50,
-      description: "Compact pump for inflating tires to the desired pressure."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (3).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (4).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (5).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (6).jpg",
-      name: "Bike Computer",
-      type: "Technology",
-      price: 50.75,
-      description: "Device for tracking cycling metrics such as speed, distance, and time."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (2).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (3).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (4).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (5).jpg",
-      name: "Saddle Bag",
-      type: "Storage",
-      price: 18.99,
-      description: "Small bag attached beneath the saddle for storing tools and essentials."
-    },
-    {
-      accessoriesImg: "./imgs/accesories/accessory (1).jpg",
-      accessoriesImg2: "./imgs/accesories/accessory (2).jpg",
-      accessoriesImg3: "./imgs/accesories/accessory (3).jpg",
-      accessoriesImg4: "./imgs/accesories/accessory (4).jpg",
-      name: "Bell",
-      type: "Safety Gear",
-      price: 8.00,
-      description: "Audible signal to alert pedestrians and other cyclists."
-    }
-];
-  
+
 
 
 function searchProducts(object) {
@@ -137,7 +16,7 @@ function searchProducts(object) {
           const elementName = ele.name.toLowerCase();
           if (elementName.includes(searchOutput)) {
             bikesContainer.innerHTML += `
-            <div class="bike-card accesory-card" id="accesories-card" data=${object.indexOf(ele)}>
+            <div class="bike-card bike-trigger accesory-card" id="accesories-card" data=${object.indexOf(ele)}>
             <div class="bike-card-container">
                 <img class="img-bike" src="${ele.accessoriesImg}" alt="">
                 <div class="info-product-container"> 
@@ -372,7 +251,7 @@ function RenderAllAccesories(accesory, see_more_number){
         
         containerBikes ? containerBikes.innerHTML+=
         `
-            <div class="bike-card accesory-card" data=${accesory.indexOf(accesoryCard)}>
+            <div class="bike-card  bike-trigger accesory-card" data=${accesory.indexOf(accesoryCard)}>
             <div class="bike-card-container">
                 <img class="img-bike" src="${accesoryCard.accessoriesImg}" alt="">
                 <div class="info-product-container"> 
@@ -393,9 +272,7 @@ function RenderAllAccesories(accesory, see_more_number){
             </div>
         ` : null
     })
-    let seeMore = document.querySelector(".see-more");
-    seeMore?  seeMore.innerHTML= `<p class="${see_more_number} see-more-text"> see more</p>`: null;
-   
+  
     const modalContainer = document.querySelector(".modal-container");
 
   
@@ -416,8 +293,9 @@ function RenderAllAccesories(accesory, see_more_number){
         const desc = accesory[numberOfProduct].description;
 
         const productModalLiteral = `
+        <img class="icon-cross" src="./imgs/cross.svg" alt="" >
         <div class="modal-container-box row">
-        <img class="icon-cross" src="./imgs/cross.svg" alt="" class="cross-exit-modal">
+    
         <div class="slider image-bike-modal">
         <div class="slider-list modal-slide">
           <div class="slider-track">

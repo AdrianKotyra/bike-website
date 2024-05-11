@@ -1,211 +1,6 @@
 
 
-const bikeModels1 = [
-    {   bikeImg: "./imgs/bikes-grid/bike (1).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (2).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (3).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (4).jpg",
-        name: "Model B82",
-        frontSeat: "Comfortable",
-        speed: "20 mph",
-        price: "500",
-        description: "The ultimate all-terrain companion, this model boasts a lightweight frame and responsive suspension for tackling rugged trails with ease. With its aerodynamic design and precision engineering, this bike offers unbeatable speed and agility for thrill-seeking riders.",
-    },
-    {  bikeImg: "./imgs/bikes-grid/bike (2).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (3).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (4).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (5).jpg",
-        name: "City I63",
-        frontSeat: "Adjustable",
-        speed: "25 mph",
-        price: "600",
-        description: "Designed for urban commuters, this bike features a sleek and minimalist frame combined with reliable disc brakes for confident city riding. Whether navigating crowded streets or cruising along bike paths, this model offers a smooth and comfortable ride for daily commuters.",
-    },
-    {   bikeImg: "./imgs/bikes-grid/bike (3).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (4).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (5).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (6).jpg",
-        name: "Explorer X41",
-        frontSeat: "Padded",
-        speed: "30 mph",
-        price: "700",
-        description:   "Built for endurance, this bike is equipped with a carbon fiber frame and endurance geometry for long-distance rides in comfort. With its advanced drivetrain and responsive handling, this model delivers uncompromising performance for cyclists seeking to conquer epic journeys.",
-    } ,
-    {    bikeImg: "./imgs/bikes-grid/bike (4).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (5).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (6).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (7).jpg",
-        name: "Speed H90",
-        frontSeat: "Comfortable",
-        speed: "20 mph",
-        price: "500",
-        description:   "Embrace the thrill of off-road adventures with this rugged mountain bike, featuring robust tires and powerful disc brakes for tackling challenging terrain. Engineered for maximum durability and agility, this model provides confidence-inspiring stability on even the most demanding trails.",
-    },
-    {  
-        bikeImg: "./imgs/bikes-grid/bike (5).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (6).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (7).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (8).jpg",
-        name: "Urban G25",
-        frontSeat: "Adjustable",
-        speed: "25 mph",
-        price: "600",
-        description:  "Experience the freedom of exploration with this versatile gravel bike, equipped with wide tires and a sturdy frame for off-road adventures. Whether conquering gravel roads or venturing into the wilderness, this model offers unparalleled versatility and performance for adventurous riders.",
-    },
-    {   bikeImg: "./imgs/bikes-grid/bike (6).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (7).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (8).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (9).jpg",
-        name: "Street J14",
-        frontSeat: "Padded",
-        speed: "30 mph",
-        price: "700",
-        description:   "Effortlessly blend style and functionality with this sleek and sophisticated urban cruiser, featuring a retro-inspired design and comfortable upright riding position. Perfect for leisurely rides around the city or weekend jaunts along scenic bike paths, this model combines timeless elegance with modern performance.",
-    },
-    {  bikeImg: "./imgs/bikes-grid/bike (7).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (8).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (9).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (10).jpg",
-        name: "Adventure A49",
-        frontSeat: "Leather",
-        speed: "22 mph",
-        price: "550",
-        description: "Unleash your competitive spirit with this high-performance road bike, engineered for speed and efficiency with a lightweight frame and aerodynamic design. Whether sprinting to the finish line or tackling steep climbs, this model delivers unparalleled performance for serious road cyclists.",
-    },
-    {  bikeImg: "./imgs/bikes-grid/bike (8).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (9).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (10).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (11).jpg",
-        name: "Model F31",
-        frontSeat: "Gel",
-        speed: "28 mph",
-        price: "650",
-        description :"Conquer the trails with confidence on this versatile hardtail mountain bike, featuring a durable aluminum frame and responsive front suspension for tackling technical terrain. With its agile handling and reliable components, this model is ready to take on anything the trail throws your way.",
-    },
-    {  bikeImg: "./imgs/bikes-grid/bike (9).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (10).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (11).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (12).jpg",
-        name: "Rider B97",
-        frontSeat: "Ergonomic",
-        speed: "24 mph",
-        price: "590",
-        description:  "Discover new horizons with this versatile touring bike, designed for long-distance adventures and epic bikepacking journeys. Equipped with robust racks and comfortable geometry for all-day comfort, this model is ready to take you on unforgettable adventures across continents and beyond."
-    },
 
-    {   bikeImg: "./imgs/bikes-grid/bike (10).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (11).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (12).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (1).jpg",
-        name: "Mountain C67",
-        frontSeat: "Cushioned",
-        speed: "21 mph",
-        price: "510",
-        description: "Experience the thrill of downhill racing with this purpose-built mountain bike, featuring a full suspension frame and aggressive geometry for maximum control and stability at high speeds. With its advanced suspension system and precision engineering, this model is built to dominate the most challenging descents.",
-    },
-    {   bikeImg: "./imgs/bikes-grid/bike (11).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (12).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (1).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (2).jpg",
-        name: "City D50",
-        frontSeat: "Memory Foam",
-        speed: "26 mph",
-        price: "620",
-        description: "Elevate your trail riding experience with this full suspension mountain bike, featuring plush suspension and nimble handling for conquering technical descents and steep climbs. Whether shredding singletrack or exploring backcountry trails, this model offers unmatched performance and versatility for adventurous riders.",
-    },
-    {   bikeImg: "./imgs/bikes-grid/bike (12).jpg",
-        bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-        bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-        bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-        name: "Explorer I93",
-        frontSeat: "Mesh",
-        speed: "29 mph",
-        price: "680",
-        description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-    },
-    {   bikeImg: "./imgs/bikes-grid/bike (13).jpg",
-    bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-    bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-    bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-    name: "Speed E71",
-    frontSeat: "Mesh",
-    speed: "29 mph",
-    price: "680",
-    description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-},
-{   bikeImg: "./imgs/bikes-grid/bike (14).jpg",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-name: "Touring G58",
-frontSeat: "Mesh",
-speed: "29 mph",
-price: "680",
-description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-},
-{   bikeImg: "./imgs/bikes-grid/bike (15).jpg",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-name: "Urban H33",
-frontSeat: "Mesh",
-speed: "29 mph",
-price: "680",
-description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-},
-{   bikeImg: "./imgs/bikes-grid/bike (16).jpg",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-name: "Rider X84",
-frontSeat: "Mesh",
-speed: "29 mph",
-price: "680",
-description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-},
-{   bikeImg: "./imgs/bikes-grid/bike (17).jpg",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-name: "Model A39",
-frontSeat: "Mesh",
-speed: "29 mph",
-price: "680",
-description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-},
-{   bikeImg: "./imgs/bikes-grid/bike (18).jpg",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-name: "Street B67",
-frontSeat: "Mesh",
-speed: "29 mph",
-price: "680",
-description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-},
-{   bikeImg: "./imgs/bikes-grid/bike (19).jpg",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-name: "Adventure J91",
-frontSeat: "Mesh",
-speed: "29 mph",
-price: "680",
-description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-},
-{   bikeImg: "./imgs/bikes-grid/bike (20).jpg",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
-bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
-bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
-name: "Mountain I4",
-frontSeat: "Mesh",
-speed: "29 mph",
-price: "680",
-description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
-},
-
-
-];
 function searchProducts(object) {
   const inputSearchValue = document.querySelector(".search-input");
 
@@ -221,28 +16,11 @@ function searchProducts(object) {
           const elementName = ele.name.toLowerCase();
           if (elementName.includes(searchOutput)) {
             bikesContainer.innerHTML += `
-              <div class="bike-card" data=${object.indexOf(ele)}>
-                <div class="bike-card-container">
-                  <p class="price price-bike">${ele.price}£</p>
-                  <img class="img-bike" src="${ele.bikeImg}" alt="">
-                  <div class="info-product-container"> 
-                    <h3 class="">${ele.name}</h3>
-                    <div class="info-container row">
-                      <span>Seats</span><span class="seats-bike">${ele.frontSeat}</span>
-                    </div>
-                    <div class="info-container row">
-                      <span>Speed</span><span class="speed-bike">${ele.speed}</span>
-                    </div>
-                  
-                   
-                 
-            
-                     
-                    <button class="btn-custom">buy</button>
-                  
-                  </div>
-                </div>
-              </div>`;
+            <div class="bike-container-products bike-trigger" data=${object.indexOf(ele)}>
+            <h3> ${ele.name} </h3>
+            <img class="img-bike" src="${ele.bikeImg}"  alt="">
+          
+            </div> `;
           
           }
         }
@@ -459,29 +237,12 @@ function RenderAllBikes(bikeModels){
         
         containerBikes ? containerBikes.innerHTML+=
         `
-            <div class="bike-card" data=${bikeModels.indexOf(bikeCard)}>
-            <div class="bike-card-container">
-                <p class="price price-bike">${bikeCard.price}£</p>
-                <img class="img-bike" src="${bikeCard.bikeImg}" alt="">
-                <div class="info-product-container"> 
-                    <h3 class="">${bikeCard.name}</h3>
-              
-                    <div class="info-container row">
-                        <span>Seats</span><span class="seats-bike">${bikeCard.frontSeat}</span>
-                    </div>
-                
-                    <div class="info-container row">
-                        <span>Speed</span><span class="speed-bike">${bikeCard.speed}</span>
-                    </div>
-                 
-                  
-                      
-                    <button class="btn-custom">buy</button>
-                  
-                </div>
-            </div>
-
-            </div>
+            <div class="bike-container-products bike-trigger" data=${bikeModels.indexOf(bikeCard)}>
+            <h3> ${bikeCard.name} </h3>
+            <img class="img-bike" src="${bikeCard.bikeImg}"  alt="">
+          
+            </div>  
+         
         ` : null
     })
   
@@ -508,7 +269,7 @@ function displayModal(bikes){
 
     
 
-    const cards = document.querySelectorAll(".bike-card");
+    const cards = document.querySelectorAll(".bike-trigger");
     cards.forEach(card=>card.addEventListener("click", function(){
       
         const numberOfProduct = card.getAttribute("data");
@@ -520,41 +281,87 @@ function displayModal(bikes){
         const img4 = bikes[numberOfProduct].bikeImg4;
 
         const name = bikes[numberOfProduct].name;
-        const frontSeat = bikes[numberOfProduct].frontSeat;
         const speed = bikes[numberOfProduct].speed;
         const price = bikes[numberOfProduct].price;
         const desc = bikes[numberOfProduct].description;
+        const frame = bikes[numberOfProduct].frame;
+      
+        const type = bikes[numberOfProduct].type;
+        const grupset = bikes[numberOfProduct].grupset;
+        const brakingSystem = bikes[numberOfProduct].brakingSystem;
+        const velg = bikes[numberOfProduct].velg;
+        const wheel = bikes[numberOfProduct].wheel;
+        const stang = bikes[numberOfProduct].stang;
+        const transmission = bikes[numberOfProduct].transmission;
+        const pedal = bikes[numberOfProduct].pedal;
+        const cleat = bikes[numberOfProduct].cleat;
+        
 
         const productModalLiteral = `
-        <div class="modal-container-box row">
         <img class="icon-cross" src="./imgs/cross.svg" alt="" class="cross-exit-modal">
+        <div class="rent-bike-modal">
+     
+        <h1 class="header">${name}</h1>
         <div class="slider image-bike-modal">
-        <div class="slider-list modal-slide">
-          <div class="slider-track">
-            <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: cover">   </div>
-            <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: cover">   </div>
-            <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: cover">   </div>
-            <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: cover">   </div>
-         
+          <div class="slider-list modal-slide">
+            <div class="slider-track">
+              <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: cover">   </div>
+              <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: cover">   </div>
+              <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: cover">   </div>
+            </div>
+          </div>
+          <div class="slider-arrows">
+            <button type="button" class="prev">&larr;</button>
+            <button type="button" class="next">&rarr;</button>
           </div>
         </div>
-        <div class="slider-arrows">
-          <button type="button" class="prev">&larr;</button>
-          <button type="button" class="next">&rarr;</button>
+  
+        <div class="properties-bike col">
+          <div class="row">
+            <p>Frame</p>
+            <p>${frame}</p>
+          </div>
+          <div class="row">
+            <p>Grup set</p>
+            <p>${grupset}</p>
+          </div>
+          <div class="row">
+            <p>Braking system</p>
+            <p>${brakingSystem}</p>
+          </div>
+          <div class="row">
+            <p>Wheel</p>
+            <p>${wheel}</p>
+          </div>
+          <div class="row">
+            <p>Velg aluminium</p>
+            <p>${velg}</p>
+          </div>
+          <div class="row">
+            <p>Stang</p>
+            <p>${stang}</p>
+          </div>
+          <div class="row">
+            <p>Pedal</p>
+            <p>${pedal}</p>
+          </div>
+          <div class="row">
+            <p>Transmission</p>
+            <p>${transmission}</p>
+          </div>
+          <div class="row">
+            <p>Cleat</p>
+            <p>${cleat}</p>
+          </div>
+  
+  
         </div>
-        </div>
-       
-        <div class="product-desc-container">
-          <h1 class="prod-title">${name}</h1>
-          <p class="prod-desc">${frontSeat}</p>
-          <p class="prod-desc">${speed}</p>
-          <p class="prod-desc">${price}£</p>
-          <p class="prod-desc description-modal">${desc}</p>
-          <div class="btn-more-cont modal-button">
-            <button class="btn-custom">Buy</button>
+        <p><strong> Description: </strong>${desc} </p>
       
-          </div>
-        </div>
+        <p><strong> Price: </strong>${price} £ </p>
+        <p><strong> Speed: </strong>${speed} km/h </p>
+        <p><strong> Type: </strong>${type} </p>
+        <button class="btn-custom">Buy</button>
       </div>
         `
         modalContainer.style.display="block";

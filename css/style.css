@@ -233,6 +233,26 @@ body {
 .service-bike-bottom {
   padding-top: 0 !important;
 }
+.bike-trigger {
+  cursor: pointer;
+}
+.bike-container-products:hover {
+  color: var(--red-main);
+}
+.bike-container-products {
+  margin: 30px;
+  width: 350px;
+  height: 400px;
+  
+}
+.bike-container-products h3{
+  text-align: center;
+}
+.img-bike {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
 .service-grid-row img {
   border-radius: 30px;
   object-fit: cover;
@@ -273,6 +293,7 @@ body {
 width: 50%;
 margin: auto;
 }
+
 .top-about-text p, .form-container {
   animation: subPagesAnimationImg 0.8s forwards;
   font-size: var(--paragraph-small-wide-screen);
@@ -1199,7 +1220,7 @@ font-weight: 600;
 .grid-bikes-container {
   width: 90%;
   justify-content: right;
-  flex-wrap: wrap;
+  flex-wrap: wrap;min-height: 30vh;
 }
 
 .text-section-top h1, .text-section-top span  {
@@ -1735,11 +1756,14 @@ align-self: flex-end !important;
 .bike-card-container {
   
 }
+
 .active {
   color: var(--red-main) !important;
 }
 
-
+.bike-card button {
+  width: 100%;
+}
 .price-bike {
   display: flex;
   align-items: center;
@@ -1844,7 +1868,7 @@ nav p{
   width: 100%;
 }
 .input-search-container::before {
-
+  filter: invert(99%) sepia(29%) saturate(0%) hue-rotate(191deg) brightness(117%) contrast(100%);
   user-select: none;
   z-index: 2;
   background-size: cover;
@@ -1910,8 +1934,9 @@ nav p{
   width: 40px !important;
   height: 40px;
   top:  10px;
-  right: 10px;
-  position: absolute;
+  right: 20px;
+  position: fixed;
+  z-index: 9999999999999999999;
   
 }
 
@@ -1991,6 +2016,9 @@ nav p{
   flex-direction: column;
   width: 50%;
 }
+.properties-bike .row {
+  justify-content: space-between;
+}
 .modal-container {
 
  display: none;
@@ -2000,7 +2028,22 @@ nav p{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.352);
 }
+.rent-bike-modal .slide {
+  background-size: contain !important;
+}
+.rent-bike-modal {
+  padding: 0% 15% 5% 15%;
+  overflow-y: scroll;
+  animation: modalFade 0.3s forwards;
+  top: 20%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 100%;
+  height: 100%;
+  background-color: white;
 
+}
 .top-bike-bikes-bike-sub {
   height: 500px !important;
   position: absolute;
@@ -2205,6 +2248,10 @@ html {
 }
 .nav-link-container p {
   color: black;
+
+}
+.products-dropdown-container-box a {
+  text-align: center;
 }
 .nav-link-container {
   font-weight: 700;
@@ -2647,6 +2694,9 @@ html {
 }
 
 @media screen and (max-width: 705px) {
+  .rent-bike-modal {
+    padding: 5% 2% 5% 2%;
+  }
   .about_container_about {
     flex-direction: column;
   }
@@ -2671,6 +2721,7 @@ html {
     width: 100%;
     justify-content: center;
   }
+
   .grid-bikes-container {
     width: 100%;
     justify-content: center;
@@ -2994,7 +3045,7 @@ html {
     opacity: 50%;
   }
   100%{
-    transform: translatey(64%);
+    transform: translatey(66%);
     opacity: 100%;
   }
 }

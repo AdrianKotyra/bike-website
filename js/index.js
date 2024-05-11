@@ -1,352 +1,194 @@
-const faqQuestionsAnswers = [
-    {
-        question: "What types of bikes does Bike King Borders sell and repair?",
-        answer: "Bike King Borders sells and repairs road, mountain, and hybrid bikes."
-    },
-    {
-        question: "What additional products does Bike King Borders sell?",
-        answer: "In addition to bikes, Bike King Borders sells a range of bike accessories and clothing."
-    },
-    {
-        question: "Does Bike King Borders offer bike rentals?",
-        answer: "Yes, Bike King Borders hires out bikes for daily use on nearby off-road bike trails."
-    },
-    {
-        question: "What sets Bike King Borders apart from other companies in the Borders region?",
-        answer: "Bike King Borders is unique due to their location and the brilliant cycle trails nearby. They pride themselves on selling only quality products and guaranteeing servicing and repair."
-    },
-    {
-        question: "What social media platforms does Bike King Borders currently use?",
-        answer: "Bike King Borders currently uses Facebook, Instagram, X, and YouTube to advertise their location, products, and services."
-    },
-    {
-        question: "Why does Bike King Borders want a dedicated website?",
-        answer: "Bike King Borders wants a dedicated website to promote their business more effectively, appeal to a wide range of end-users, bring in more business and profits, and promote tourism in the area."
-    },
-    {
-        question: "Does Bike King Borders have major competitors nearby?",
-        answer: "While Bike King Borders doesn’t have any major competitors nearby for servicing and repairs, they are in direct competition with larger companies for bike sales."
-    },
-    {
-        question: "What is Bike King Borders' focus when it comes to the quality of their products and services?",
-        answer: "Bike King Borders focuses on selling only quality products and guarantees servicing and repair."
-    }
-];
-
-const feedbackSlider = [
-    {
-        id: 1,
-        name: "Emily Jones",
-        feedback: "Highly recommend Bike Kings for anyone looking for top-notch bikes and excellent customer service!",
-        img: "./imgs/feedbackSlider/feedbackSlider (1).jpg",
-    },
-    {
-        id: 2,
-        name: "Michael Smith",
-        feedback: "I've been a customer of Bike Kings for years, and they never disappoint. The quality of their bikes is unmatched!",
-        img: "./imgs/feedbackSlider/feedbackSlider (2).jpg",
-    },
-    {
-        id: 3,
-        name: "Sarah Johnson",
-        feedback: "Bike Kings made my biking experience incredible! Their staff is knowledgeable and friendly, making the whole process enjoyable.",
-        img: "./imgs/feedbackSlider/feedbackSlider (3).jpg",
-    },
-    {
-        id: 4,
-        name: "David Brown",
-        feedback: "Exceptional service from Bike Kings! I bought a bike for my son, and they went above and beyond to ensure we got exactly what we needed.",
-        img: "./imgs/feedbackSlider/feedbackSlider (4).jpg",
-    },
-    {
-        id: 5,
-        name: "Jessica Wilson",
-        feedback: "If you're in the market for a new bike, look no further than Bike Kings. They have a wide selection to choose from, and their team is incredibly helpful!",
-        img: "./imgs/feedbackSlider/feedbackSlider (5).jpg",
-    },
-    {
-        id: 6,
-        name: "Matthew Taylor",
-        feedback: "I had an amazing experience at Bike Kings. The staff was friendly and knowledgeable, and I found the perfect bike for my needs.",
-        img: "./imgs/feedbackSlider/feedbackSlider (7).jpg",
-    },
-    {
-        id: 7,
-        name: "Emma Martinez",
-        feedback: "Bike Kings exceeded my expectations! From the moment I walked in, I felt valued as a customer. I highly recommend them to anyone in need of a bike.",
-        img: "./imgs/feedbackSlider/feedbackSlider (8).jpg",
-    },
-    {
-        id: 8,
-        name: "Daniel Anderson",
-        feedback: "I can't thank Bike Kings enough for their outstanding service. They helped me find the perfect bike, and I couldn't be happier with my purchase.",
-        img: "./imgs/feedbackSlider/feedbackSlider (9).jpg",
-    },
-    {
-        id: 9,
-        name: "Olivia Garcia",
-        feedback: "Bike Kings made buying a bike a breeze! Their staff was friendly and helpful, and they had exactly what I was looking for.",
-        img: "./imgs/feedbackSlider/feedbackSlider (10).jpg",
-    },
-    {
-        id: 10,
-        name: "William Rodriguez",
-        feedback: "I had a fantastic experience at Bike Kings. Their team was attentive and patient, and they helped me find the perfect bike for my needs.",
-        img: "./imgs/feedbackSlider/feedbackSlider (11).jpg",
-    },
-
-
-
-
-]
-const feedbacks = [
-    {   id: 1,
-        personName: "Emily Johnson",
-        feedback: "Absolutely thrilled with the service at Bike King Borders! Their dedication to quality products and expert repairs sets them apart.",
-        stars: 4,
-        img: "./imgs/feedback/person (1).jpg"
-    },
-    {
-        id: 2,
-        personName: "David Martinez",
-        feedback: "Bike King Borders made my cycling experience in the Borders region unforgettable with their top-notch bike rentals and friendly staff.",
-        stars: 4,
-        img: "./imgs/feedback/person (2).jpg"
-    },
-    {   id: 3,
-        personName: "Sarah Thompson",
-        feedback: "Kudos to Bike King Borders for their excellent selection of bikes and accessories! I found everything I needed for my cycling adventures.",
-        stars: 4.7,
-        img: "./imgs/feedback/person (3).jpg"
-    },
-    {    id: 4,
-        personName: "Michael Brown",
-        feedback: "Impressed by Bike King Borders' commitment to promoting tourism in the area. Their passion for cycling shines through in everything they do.",
-        stars: 3.8,
-        img: "./imgs/feedback/person (4).jpg"
-    },
-    {   id: 5,
-        personName: "Jessica Lee",
-        feedback: "Had a fantastic experience shopping at Bike King Borders. Their staff was knowledgeable and helped me find the perfect bike for my needs.",
-        stars: 4.9,
-        img: "./imgs/feedback/person (5).jpg"
-    },
-    {   id: 6,
-        personName: "Christopher Nguyen",
-        feedback: "Highly recommend Bike King Borders for all your cycling needs. Their dedication to customer satisfaction is unmatched!",
-        stars: 5,
-        img: "./imgs/feedback/person (6).jpg"
-    },
-    {   id: 7,
-        personName: "Amanda Wilson",
-        feedback: "Bike King Borders' dedication to quality and service is evident in every aspect of their business. Proud to support such a reputable company.",
-        stars: 4.6,
-        img: "./imgs/feedback/person (7).jpg"
-    },
-    {   id: 8,
-        personName: "Daniel Taylor",
-        feedback: "Thanks to Bike King Borders, I was able to explore the beautiful cycle trails in the Borders region with ease. Their rentals were top-notch!",
-        stars: 4.9,
-        img: "./imgs/feedback/person (8).jpg"
-    },
-    {   id: 9,
-        personName: "Rachel Lopez",
-        feedback: "Bike King Borders' range of bike accessories and clothing is impressive. They have everything you need to enhance your cycling experience.",
-        stars: 4.7,
-        img: "./imgs/feedback/person (9).jpg"
-    },
-    {   id: 10,
-        personName: "Kevin King",
-        feedback: "Exceptional service and attention to detail at Bike King Borders. They truly go above and beyond for their customers.",
-        stars: 4.8,
-        img: "./imgs/feedback/person (10).jpg"
-    },
-    {   id: 11,
-        personName: "Megan Campbell",
-        feedback: "Bike King Borders' dedication to promoting cycling in the region is commendable. Proud to be a part of their community!",
-        stars: 5,
-        img: "./imgs/feedback/person (11).jpg"
-    },
-    {   id: 12,
-        personName: "Joshua Adams",
-        feedback: "The staff at Bike King Borders are passionate about cycling and it shows. They provided me with invaluable advice and assistance.",
-        stars: 4.5,
-        img: "./imgs/feedback/person (12).jpg"
-    },
-    {   id: 13,
-        personName: "Lauren Garcia",
-        feedback: "Bike King Borders' commitment to customer satisfaction is second to none. I'll definitely be returning for all my cycling needs.",
-        stars: 4.9,
-        img: "./imgs/feedback/person (13).jpg"
-    },
-    {   id: 14,
-        personName: "Ryan Rodriguez",
-        feedback: "Thrilled with the level of service I received at Bike King Borders. They truly care about their customers and their cycling experience.",
-        stars: 4.8,
-        img: "./imgs/feedback/person (14).jpg"
-    },
-    {   id: 15,
-        personName: "Samantha Clark",
-        feedback: "Bike King Borders exceeded my expectations with their excellent selection of bikes and accessories. A cyclist's paradise!",
-        stars: 4.7,
-        img: "./imgs/feedback/person (15).jpg"
-    },
-    {   id: 16,
-        personName: "Brandon Hernandez",
-        feedback: "Impressed by the professionalism and expertise of the staff at Bike King Borders. They made my shopping experience enjoyable and stress-free.",
-        stars: 4.6,
-        img: "./imgs/feedback/person (16).jpg"
-    },
-    {   id: 17,
-        personName: "Jennifer Scott",
-        feedback: "Thanks to Bike King Borders, I was able to find the perfect bike for my needs. Their attention to detail and personalized service are unmatched.",
-        stars: 4.9,
-        img: "./imgs/feedback/person (17).jpg"
-    },
-    {   id: 18,
-        personName: "Tyler Nguyen",
-        feedback:"Bike King Borders is my go-to destination for all things cycling. Their commitment to quality and service is unmatched in the region.",
-        stars: 4.8,
-        img: "./imgs/feedback/person (18).jpg"
-    },
-    {    id: 19,
-        personName: "Emily Baker",
-        feedback: "Highly recommend Bike King Borders to anyone passionate about cycling. Their dedication to excellence is truly inspiring!",
-        stars: 5,
-        img: "./imgs/feedback/person (19).jpg"
-    },
-    {    id: 20,
-        personName: "Nicholas Carter",
-        feedback: "Great experience overall, would buy again. 4.7 stars.",
-        stars: 4.7,
-        img: "./imgs/feedback/person (20).jpg"
-    }
-];
-
-const BikesTopSliderObjects = [
-    {    imageBike: "./imgs/bikes-transparent/bike-top (4).png",
-        speedBike: "90km",
-        kmphdBike: "30 KMPH",
-        speedBikeHours: "4HOURS",
-        speedBikeWeight: "18KG",
-        titleBike: "Model A",
+function Slider() {
     
-    },
-    {    imageBike: "./imgs/bikes-transparent/bike-top (6).png",
-    speedBike: "90km",
-    kmphdBike: "30 KMPH",
-    speedBikeHours: "4HOURS",
-    speedBikeWeight: "18KG",
-    titleBike: "Model B",
+
+let slider = document.querySelector('.slider'),
+sliderList = slider.querySelector('.slider-list'),
+sliderTrack = slider.querySelector('.slider-track'),
+slides = slider.querySelectorAll('.slide'),
+arrows = slider.querySelector('.slider-arrows'),
+prev = arrows.children[0],
+next = arrows.children[1],
+slideWidth = slides[0].offsetWidth,
+slideIndex = 0,
+posInit = 0,
+posX1 = 0,
+posX2 = 0,
+posY1 = 0,
+posY2 = 0,
+posFinal = 0,
+isSwipe = false,
+isScroll = false,
+allowSwipe = true,
+transition = true,
+nextTrf = 0,
+prevTrf = 0,
+lastTrf = --slides.length * slideWidth,
+posThreshold = slides[0].offsetWidth * 0.35,
+trfRegExp = /([-0-9.]+(?=px))/,
+swipeStartTime,
+swipeEndTime,
+getEvent = function() {
+  return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+},
+slide = function() {
+  if (transition) {
+    sliderTrack.style.transition = 'transform .5s';
+  }
+  sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
+
+  prev.classList.toggle('disabled', slideIndex === 0);
+  next.classList.toggle('disabled', slideIndex === --slides.length);
+},
+swipeStart = function() {
+  let evt = getEvent();
+
+  if (allowSwipe) {
+
+    swipeStartTime = Date.now();
+    
+    transition = true;
+
+    nextTrf = (slideIndex + 1) * -slideWidth;
+    prevTrf = (slideIndex - 1) * -slideWidth;
+
+    posInit = posX1 = evt.clientX;
+    posY1 = evt.clientY;
+
+    sliderTrack.style.transition = '';
+
+    document.addEventListener('touchmove', swipeAction);
+    document.addEventListener('mousemove', swipeAction);
+    document.addEventListener('touchend', swipeEnd);
+    document.addEventListener('mouseup', swipeEnd);
+
+    sliderList.classList.remove('grab');
+    sliderList.classList.add('grabbing');
+  }
+},
+swipeAction = function() {
+
+  let evt = getEvent(),
+    style = sliderTrack.style.transform,
+    transform = +style.match(trfRegExp)[0];
+
+  posX2 = posX1 - evt.clientX;
+  posX1 = evt.clientX;
+
+  posY2 = posY1 - evt.clientY;
+  posY1 = evt.clientY;
+
+  if (!isSwipe && !isScroll) {
+    let posY = Math.abs(posY2);
+    if (posY > 7 || posX2 === 0) {
+      isScroll = true;
+      allowSwipe = false;
+    } else if (posY < 7) {
+      isSwipe = true;
+    }
+  }
+
+  if (isSwipe) {
+    if (slideIndex === 0) {
+      if (posInit < posX1) {
+        setTransform(transform, 0);
+        return;
+      } else {
+        allowSwipe = true;
+      }
+    }
+
+    // запрет ухода вправо на последнем слайде
+    if (slideIndex === --slides.length) {
+      if (posInit > posX1) {
+        setTransform(transform, lastTrf);
+        return;
+      } else {
+        allowSwipe = true;
+      }
+    }
+
+    if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
+      reachEdge();
+      return;
+    }
+
+    sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+  }
 
 },
-    {   imageBike: "./imgs/bikes-transparent/bike-top (1).png",
-        speedBike: "80km",
-        kmphdBike: "28 KMPH",
-        speedBikeHours: "3HOURS",
-        speedBikeWeight: "16KG",
-        titleBike: "Model C",
-    
-    },
-    {    imageBike: "./imgs/bikes-transparent/bike-top (2).png",
-        speedBike: "50km",
-        kmphdBike: "29 KMPH",
-        speedBikeHours: "2HOURS",
-        speedBikeWeight: "19KG",
-        titleBike: "Model D",
-    
-    },
-    {   imageBike: "./imgs/bikes-transparent/bike-top (3).png",
-        speedBike: "40km",
-        kmphdBike: "33 KMPH",
-        speedBikeHours: "3HOURS",
-        speedBikeWeight: "12KG",
-        titleBike: "Model E",
-    
-    },
-    {     imageBike: "./imgs/bikes-transparent/bike-top (15).png",
-        speedBike: "42km",
-        kmphdBike: "30 KMPH",
-        speedBikeHours: "3HOURS",
-        speedBikeWeight: "19KG",
-        titleBike: "Model F",
-    
-    },
-    {     imageBike: "./imgs/bikes-transparent/bike-top (5).png",
-        speedBike: "45km",
-        kmphdBike: "32 KMPH",
-        speedBikeHours: "4HOURS",
-        speedBikeWeight: "29KG",
-        titleBike: "Model G",
+swipeEnd = function() {
+  posFinal = posInit - posX1;
 
-    },
-    {imageBike: "./imgs/bikes-transparent/bike-top (17).png",
-    speedBike: "28km",
-    kmphdBike: "42 KMPH",
-    speedBikeHours: "4HOURS",
-    speedBikeWeight: "39KG",
-    titleBike: "Model H",
+  isScroll = false;
+  isSwipe = false;
+
+  document.removeEventListener('touchmove', swipeAction);
+  document.removeEventListener('mousemove', swipeAction);
+  document.removeEventListener('touchend', swipeEnd);
+  document.removeEventListener('mouseup', swipeEnd);
+
+  sliderList.classList.add('grab');
+  sliderList.classList.remove('grabbing');
+
+  if (allowSwipe) {
+    swipeEndTime = Date.now();
+    if (Math.abs(posFinal) > posThreshold || swipeEndTime - swipeStartTime < 300) {
+      if (posInit < posX1) {
+        slideIndex--;
+      } else if (posInit > posX1) {
+        slideIndex++;
+      }
+    }
+
+    if (posInit !== posX1) {
+      allowSwipe = false;
+      slide();
+    } else {
+      allowSwipe = true;
+    }
+
+  } else {
+    allowSwipe = true;
+  }
 
 },
-    ]
+setTransform = function(transform, comapreTransform) {
+  if (transform >= comapreTransform) {
+    if (transform > comapreTransform) {
+      sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+    }
+  }
+  allowSwipe = false;
+},
+reachEdge = function() {
+  transition = false;
+  swipeEnd();
+  allowSwipe = true;
+};
 
-const locationObject = [
-    {   
-        Edinburgh: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42505.913946369445!2d-3.209524473569967!3d55.950378624658164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887b800a5982623%3A0x64f2147b7ce71727!2sEdynburg!5e0!3m2!1spl!2suk!4v1712929132318!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
-    },
-    {   
-        Glasgow: "<iframe class='map-locations'src='https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d71640.85760796783!2d-4.277090456257747!3d55.86653883128981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d55.871302699999994!2d-4.3208192!5e0!3m2!1spl!2suk!4v1712925366704!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
-    },
-    {   
-        Dundee: "<iframe class='map-locations'src='https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d41933.67765759646!2d-2.999435681596449!3d56.470044502524225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x48864144ab639cd3%3A0x94e43b1e384be52a!2sDundee!3m2!1d56.462018!2d-2.9707209999999997!5e0!3m2!1spl!2suk!4v1712928621381!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
-    },
-    {   
-        Inverness: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34329.67594682603!2d-4.263057198744742!3d57.468035742118154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488f715b2d17de2b%3A0x624309d12e3ec43d!2sInverness!5e0!3m2!1spl!2suk!4v1712929267344!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
-    },
-    {   
-        Aberdeen: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d69247.95500329071!2d-2.1198962959580236!3d57.15418085125638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4884054c1fd77549%3A0xe8bb05da5cf4c472!2sAberdeen!5e0!3m2!1spl!2suk!4v1712929376791!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
-    },
+sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
+sliderList.classList.add('grab');
 
-]
+sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
+slider.addEventListener('touchstart', swipeStart);
+slider.addEventListener('mousedown', swipeStart);
 
-const readMore = [
-    {
-        id: 0,
-        text: ["Founded in 2023, Bike King Borders emerged from the founder's profound passion for cycling and a profound appreciation for the scenic beauty of the region it serves. With a vision extending beyond mere commerce, the company aims to become a cornerstone of the cycling community, offering more than just products and services but also a hub for enthusiasts to connect and share their love for the sport. This commitment to fostering a vibrant cycling culture has been integral to the company's growth, as it resonates with individuals who seek more than just transactions; they seek a sense of belonging and camaraderie within a community that shares their passion.", "Since its inception, Bike King Borders has remained dedicated to its core values of excellence and authenticity. Every product and service offered reflects this commitment, ensuring that customers receive not only top-notch gear but also a personalized experience tailored to their cycling needs. This dedication to quality has garnered the trust and loyalty of customers, establishing Bike King Borders as a reliable source for all things cycling-related in the region. Furthermore, the company's deep-rooted connection to the cycling culture permeates through every aspect of its operations, from the knowledgeable staff who are passionate about the sport to the events and initiatives aimed at bringing the community together.", "As Bike King Borders continues to grow, it remains steadfast in its mission to enrich the cycling experience for enthusiasts of all levels. Beyond just being a retailer, the company aspires to be a driving force behind the cycling scene in the region, organizing group rides, races, and community events that promote not only physical health but also a sense of camaraderie and belonging. By staying true to its founding principles and nurturing its relationship with the cycling community, Bike King Borders looks forward to a future where every cyclist feels supported, inspired, and empowered to explore the beautiful landscapes of the region on two wheels."],
-        imgs: ["./imgs/readmore/readmore%20(1).jpg", "./imgs/readmore/readmore%20(2).jpg", "./imgs/readmore/readmore%20(3).jpg"]
-    },
-    {
-        id: 1,
-        text: ["Bike King Borders, established in 2023, embodies a vision that extends far beyond the mere transaction of goods and services. At its core, the company was founded with the ambitious goal of nurturing a vibrant cycling community. This vision isn't just about selling bicycles or accessories; it's about creating a space where enthusiasts can come together, share their passion for the sport, and forge lasting connections. Since its inception, Bike King Borders has remained steadfast in its commitment to this ethos, recognizing that a thriving cycling culture is not only beneficial for business but also enriches the lives of individuals and the community at large.", " Driven by a dedication to excellence, Bike King Borders has experienced steady growth since its founding. This growth isn't solely measured in terms of revenue or market share but rather in the deepening of its roots within the cycling culture of the region it serves. By prioritizing quality products and services, the company has earned the trust and loyalty of its customers, establishing itself as a reliable and respected cornerstone of the cycling community. This commitment to excellence isn't just a business strategy; it's a reflection of Bike King Borders' genuine passion for cycling and its desire to provide enthusiasts with the best possible experience.", "Central to Bike King Borders' success is its profound connection to the cycling culture that thrives within the region. This connection isn't superficial but rather deeply ingrained in the company's DNA. From sponsoring local races and events to organizing group rides and community initiatives, Bike King Borders actively participates in and contributes to the vibrant cycling scene. This authentic engagement resonates with cyclists who seek more than just products; they seek a sense of belonging and camaraderie within a community that shares their passion. As Bike King Borders continues to grow and evolve, it remains committed to its founding principles, ensuring that the cycling community remains at the heart of everything it does."],
-        imgs: ["./imgs/readmore/readmore%20(4).jpg", "./imgs/readmore/readmore%20(5).jpg", "./imgs/readmore/readmore%20(6).jpg"]
-    },
-    {
-        id: 2,
-        text: ["At Bike King Borders, our mission extends far beyond the typical role of a retailer. We see ourselves as more than just a place to buy cycling equipment – we're your dedicated companion on your cycling journey. Whether you're an experienced cyclist searching for the latest high-performance gear or a novice enthusiast eager to explore the picturesque trails of our region, we're here to support you every step of the way. Our commitment to being your trusted partner means providing not only top-quality products but also expert guidance and personalized assistance to ensure that your cycling experience is nothing short of exceptional.", "Our carefully curated selection of cycling equipment reflects our dedication to serving cyclists of all backgrounds and skill levels. Whether you're passionate about conquering the open road, tackling rugged mountain terrain, or cruising through city streets, we have everything you need to fuel your cycling passion. From cutting-edge road bikes designed for speed and precision to durable mountain models built to withstand challenging trails, and versatile hybrid bikes perfect for urban commuting or leisurely rides, our comprehensive range of products caters to every style and preference. Each item in our inventory is handpicked to meet the highest standards of quality, performance, and durability, ensuring that you can confidently embark on your cycling adventures with gear you can trust.", "At Bike King Borders, we understand that cycling is more than just a hobby – it's a lifestyle. That's why we're dedicated to providing not only top-of-the-line equipment but also a supportive and inclusive community where cyclists can come together to share their passion and experiences. Whether you're joining us for one of our organized group rides, participating in a local cycling event, or simply stopping by our store for a friendly chat, you'll find a welcoming environment where cyclists of all backgrounds are celebrated and encouraged. With Bike King Borders as your trusted partner, you can embark on your cycling journey with confidence, knowing that you have the support and resources you need to achieve your goals and make lasting memories on the road or trail."],
-        imgs: ["./imgs/readmore/readmore%20(7).jpg", "./imgs/readmore/readmore%20(8).jpg", "./imgs/readmore/readmore%20(9).jpg"]
-    },
-    {
-        id: 3,
-        text: ["What distinguishes Bike King Borders from other cycling retailers is our steadfast dedication to quality and unwavering commitment to customer satisfaction. We believe that every cyclist deserves equipment and service that meet the highest standards, which is why we prioritize excellence in everything we do. Our team of seasoned technicians is not only passionate about cycling but also highly skilled in the art of bike maintenance and repair. Whether you're in need of a routine tune-up or a complex repair, you can trust our experts to deliver top-notch service that ensures your bike performs at its peak, mile after mile.", "At Bike King Borders, we take great pride in our meticulous attention to detail. We understand that even the smallest adjustments can make a significant difference in your cycling experience, which is why we approach every task with precision and care. From adjusting your bike's gears and brakes to fine-tuning its suspension and drivetrain, no detail is overlooked in our pursuit of perfection. Our goal is not just to fix your bike but to ensure that it's operating at optimal efficiency, allowing you to enjoy a smooth and seamless ride every time you hit the road or trail.", "What truly sets us apart, however, is our genuine dedication to keeping you rolling smoothly, mile after mile. We don't just see ourselves as service providers; we see ourselves as partners in your cycling journey, committed to supporting you every step of the way. Whether you're a seasoned rider with years of experience or a newcomer just starting out, you can count on Bike King Borders to provide the expertise, assistance, and personalized attention you need to achieve your cycling goals. With our team by your side, you can ride with confidence, knowing that your bike is in capable hands and that we're here to ensure your continued satisfaction and enjoyment of the sport."],
-        imgs: ["./imgs/readmore/readmore%20(10).jpg", "./imgs/readmore/readmore%20(11).jpg", "./imgs/readmore/readmore%20(12).jpg"]
-    },
-    {
-        id: 4,
-        text: ["Embark on your cycling journey and find the perfect ride to match your aspirations with Bike King Borders' premium selection of bikes. Whether you're a seasoned cyclist with a thirst for speed and precision on the open road or an adventurous spirit eager to conquer rugged mountain trails, we have the ideal model to fulfill your needs and elevate your riding experience. Our curated collection features top-of-the-line road bikes designed for high performance and maximum efficiency, as well as rugged mountain bikes built to withstand the toughest terrain and provide unmatched stability and control.", "For those who crave the thrill of the open road, our selection of high-performance road bikes offers unparalleled speed, agility, and responsiveness. Engineered with cutting-edge technology and precision craftsmanship, these bikes are designed to deliver an exhilarating riding experience, whether you're tackling a challenging climb or sprinting towards the finish line. With lightweight frames, aerodynamic designs, and top-of-the-line components, our road bikes are built to help you achieve your cycling goals and reach new levels of performance.", "If your heart belongs to the trails and you yearn for adventure in the great outdoors, our rugged mountain bikes are the perfect choice for you. Designed to tackle the toughest terrain with ease, these bikes are built to withstand the rigors of off-road riding and provide unparalleled stability, control, and durability. Whether you're navigating rocky descents, powering through technical climbs, or shredding through singletrack trails, our mountain bikes are ready to take on whatever challenges the trail throws your way. With features like responsive suspension systems, powerful disc brakes, and durable frames, our mountain bikes are built to help you explore new trails, conquer new obstacles, and experience the thrill of off-road adventure like never before." ],
-        imgs: ["./imgs/readmore/readmore%20(13).jpg", "./imgs/readmore/readmore%20(14).jpg", "./imgs/readmore/readmore%20(15).jpg"]
-    },
-    {
-        id: 5,
-        text: ["Prepare for success on your cycling journey with Bike King Borders' comprehensive selection of gear and accessories. Whether you're gearing up for your daily commute or preparing for an epic adventure, we have everything you need to ride with confidence, comfort, and style. Our curated collection includes practical essentials like helmets, locks, and lights to keep you safe and visible on the road, as well as performance-enhancing components like pedals, saddles, and handlebars to optimize your riding experience and take your performance to the next level.", "Safety is paramount when it comes to cycling, which is why we offer a wide range of essential gear designed to protect you on every ride. Our selection of helmets features cutting-edge designs and advanced safety features to ensure maximum protection in the event of a fall or collision. Additionally, our high-quality locks and lights provide added security and visibility, giving you peace of mind as you navigate busy streets and dimly lit pathways.", "In addition to safety gear, we also offer a variety of performance-enhancing components to help you achieve your cycling goals. From premium pedals that provide optimal power transfer and efficiency to ergonomic saddles that offer unmatched comfort and support, our selection of components is designed to enhance your riding experience and optimize your performance. Whether you're looking to upgrade your existing setup or customize your bike to suit your individual needs and preferences, our knowledgeable staff is here to help you find the perfect gear to take your cycling to the next level. With Bike King Borders as your trusted partner, you can gear up for success and ride with confidence, knowing that you have everything you need to enjoy the ultimate cycling experience." ],
-        imgs: ["./imgs/readmore/readmore%20(16).jpg", "./imgs/readmore/readmore%20(17).jpg", "./imgs/readmore/readmore%20(18).jpg"]
-    },
-    {
-        id: 6,
-        text: ["Elevate your cycling experience and ride in style with Bike King Borders' premium collection of cycling apparel and accessories. Whether you're hitting the road for a long-distance ride or exploring rugged trails in the great outdoors, our carefully curated selection combines performance-driven features with fashionable designs to ensure that you not only look good but also feel comfortable and confident on every ride. From sleek jerseys and padded shorts to weather-resistant jackets and versatile accessories, our collection has everything you need to ride in style, no matter where your journey takes you.", "Our range of cycling apparel is designed with both performance and style in mind, offering innovative features and technologies to enhance your comfort and performance on the bike. Our sleek jerseys are crafted from high-quality, moisture-wicking fabrics to keep you cool and dry during intense rides, while our padded shorts provide cushioned support and protection for long hours in the saddle. Additionally, our weather-resistant jackets offer protection from the elements, ensuring that you stay warm and dry in changing weather conditions.", "In addition to apparel, our collection also includes a variety of stylish accessories to complete your cycling ensemble and add a touch of flair to your ride. From colorful socks and caps to sleek sunglasses and gloves, our accessories are designed to complement your look and enhance your riding experience. Whether you're cycling through the city streets or tackling rugged trails in the wilderness, our stylish accessories are sure to turn heads and make a statement wherever you go." ],
-        imgs: ["./imgs/readmore/readmore%20(19).jpg", "./imgs/readmore/readmore%20(20).jpg", "./imgs/readmore/readmore%20(21).jpg"]
-    },
-]
+arrows.addEventListener('click', function() {
+let target = event.target;
 
+if (target.classList.contains('next')) {
+  slideIndex++;
+} else if (target.classList.contains('prev')) {
+  slideIndex--;
+} else {
+  return;
+}
+
+slide();
+});
+
+
+}
 // ------------------------------DISPLAY MORE ON CLICK---------------------------------
 
 
