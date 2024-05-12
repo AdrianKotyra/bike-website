@@ -1,3 +1,5 @@
+// --------------------PREMADE SLIDER FUNCTION (NOT MINE)--------------------
+
 function Slider() {
     
 
@@ -97,7 +99,7 @@ swipeAction = function() {
       }
     }
 
-    // запрет ухода вправо на последнем слайде
+
     if (slideIndex === --slides.length) {
       if (posInit > posX1) {
         setTransform(transform, lastTrf);
@@ -404,14 +406,6 @@ triggerFeedbacks? triggerFeedbacks.addEventListener("click", function(){
     gridFeedback.style.display="grid";
 }) : null
   
-
-
-
-
-
-
-
-
 
 
 
@@ -839,6 +833,36 @@ function ShowEleChoose(trigger, animationClass) {
 
 ShowEleChoose(chooseParagraphTrigger1, "visible-service" )
 
+
+const serviceColsTrigger = document.querySelector(".anchor-service-cols");
+
+function ShowServiceCols(trigger) {
+  const serviceCols = document.querySelectorAll(".col-service");
+  const serviceColsTexts = document.querySelectorAll(".col-service .text");
+
+  function ObsCallback (entries) {
+      const [entry] = entries
+      if(entry.isIntersecting===true && window.innerWidth > 605) { 
+        serviceCols.forEach(ele=>ele.style.display="table")
+        setTimeout(() => {
+          serviceColsTexts.forEach(ele=>ele.style.display="table")
+        }, 700);
+    
+      }
+    
+      
+  }
+  const ObsOptions = {
+      root:null,
+      threshold: 0,
+      rootMargin: '0px'
+  }
+  const observer = new IntersectionObserver(ObsCallback, ObsOptions)
+  trigger?  observer.observe(trigger) : null;
+ 
+}
+
+ShowServiceCols(serviceColsTrigger)
 
 
 

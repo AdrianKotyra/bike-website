@@ -1,6 +1,6 @@
 
 
-
+// --------------------SEARCH PRODUCT-------------------
 function searchProducts(object) {
   const inputSearchValue = document.querySelector(".search-input");
 
@@ -36,7 +36,7 @@ searchProducts(bikeModels1)
 
 
 
-
+// --------------------PREMADE SLIDER FUNCTION (NOT MINE)--------------------
 function Slider() {
     
 let slider = document.querySelector('.slider'),
@@ -227,7 +227,7 @@ slide();
 
 }
 
-
+// --------------------PRENDER ALL BIKES LOOP THROUGH OBJECT BIKES--------------------
 function RenderAllBikes(bikeModels){
     
 
@@ -261,6 +261,7 @@ RenderAllBikes(bikeModels1)
    
     
  
+// --------------------DISPLAY MODAL BIKES--------------------
 
 function displayModal(bikes){
 

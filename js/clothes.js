@@ -1,5 +1,6 @@
 
 
+// --------------------SEARCH PRODUCTS --------------------
 function searchProducts(object) {
   const inputSearchValue = document.querySelector(".search-input");
 
@@ -47,7 +48,7 @@ function searchProducts(object) {
 }
 
 searchProducts(bikeClothes1)
-  
+// --------------------PREMADE SLIDER FUNCTION (NOT MINE)--------------------
 function Slider() {
     
   let slider = document.querySelector('.slider'),
@@ -238,7 +239,7 @@ function Slider() {
   
   
 }
-
+// --------------------RENDER ALL CLOTHES--------------------
 function RenderAllClothes(accesory){
     
  
@@ -340,7 +341,7 @@ function RenderAllClothes(accesory){
 RenderAllClothes(bikeClothes1)
 
 
-
+// --------------------DISPLAY MODAL CLOTHES--------------------
 
 function displayModal(bikeClothes){
 

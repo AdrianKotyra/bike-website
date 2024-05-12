@@ -1,5 +1,5 @@
 
-
+// --------------------SEARCH ACCESSORIES--------------------
 
 function searchProducts(object) {
   const inputSearchValue = document.querySelector(".search-input");
@@ -48,6 +48,8 @@ function searchProducts(object) {
 }
 
 searchProducts(bikeAccessories1)
+
+// --------------------PREMADE SLIDER FUNCTION (NOT MINE)--------------------
 function Slider() {
     
   let slider = document.querySelector('.slider'),
@@ -239,7 +241,7 @@ function Slider() {
   
 }
 
-
+// --------------------RENDER ALL ACCESSORIES --------------------
 
 function RenderAllAccesories(accesory, see_more_number){
     
@@ -351,7 +353,7 @@ if(document.querySelector(".see_more_1")) {
     })
         
 })}
-
+// --------------------DISPLAY MODAL ACCESSORIES--------------------
 function displayModal(accessory){
 
 

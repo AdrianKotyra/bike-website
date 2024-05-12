@@ -620,7 +620,7 @@ const BikesTopSliderObjects = [
         kmphdBike: "30 KMPH",
         speedBikeHours: "4HOURS",
         speedBikeWeight: "18KG",
-        titleBike: "Model A",
+        titleBike: "Thunderbolt XT",
     
     },
     {    imageBike: "./imgs/bikes-transparent/bike-top (6).png",
@@ -628,7 +628,7 @@ const BikesTopSliderObjects = [
     kmphdBike: "30 KMPH",
     speedBikeHours: "4HOURS",
     speedBikeWeight: "18KG",
-    titleBike: "Model B",
+    titleBike: "Trailblazer 5000",
 
 },
     {   imageBike: "./imgs/bikes-transparent/bike-top (1).png",
@@ -636,7 +636,7 @@ const BikesTopSliderObjects = [
         kmphdBike: "28 KMPH",
         speedBikeHours: "3HOURS",
         speedBikeWeight: "16KG",
-        titleBike: "Model C",
+        titleBike: "Metro Trekker",
     
     },
     {    imageBike: "./imgs/bikes-transparent/bike-top (2).png",
@@ -644,7 +644,7 @@ const BikesTopSliderObjects = [
         kmphdBike: "29 KMPH",
         speedBikeHours: "2HOURS",
         speedBikeWeight: "19KG",
-        titleBike: "Model D",
+        titleBike: "Speed E71",
     
     },
     {   imageBike: "./imgs/bikes-transparent/bike-top (3).png",
@@ -652,7 +652,7 @@ const BikesTopSliderObjects = [
         kmphdBike: "33 KMPH",
         speedBikeHours: "3HOURS",
         speedBikeWeight: "12KG",
-        titleBike: "Model E",
+        titleBike: "Explorer Pro",
     
     },
     {     imageBike: "./imgs/bikes-transparent/bike-top (15).png",
@@ -660,7 +660,7 @@ const BikesTopSliderObjects = [
         kmphdBike: "30 KMPH",
         speedBikeHours: "3HOURS",
         speedBikeWeight: "19KG",
-        titleBike: "Model F",
+        titleBike: "City Explorer",
     
     },
     {     imageBike: "./imgs/bikes-transparent/bike-top (5).png",
@@ -668,7 +668,7 @@ const BikesTopSliderObjects = [
         kmphdBike: "32 KMPH",
         speedBikeHours: "4HOURS",
         speedBikeWeight: "29KG",
-        titleBike: "Model G",
+        titleBike: "City I63",
 
     },
     {imageBike: "./imgs/bikes-transparent/bike-top (17).png",
@@ -676,7 +676,7 @@ const BikesTopSliderObjects = [
     kmphdBike: "42 KMPH",
     speedBikeHours: "4HOURS",
     speedBikeWeight: "39KG",
-    titleBike: "Model H",
+    titleBike: "Adventure Hybrid"
 
 },
     ]
