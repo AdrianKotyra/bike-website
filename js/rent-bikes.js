@@ -43,7 +43,11 @@ const renderDivHybrid = document.querySelector(".hire-bike-section-hybrid");
 renderDivFat? RenderBikes(BikesFat) : null;
 renderDivMountain? RenderBikes(BikesMountain) : null;
 renderDivHybrid? RenderBikes(BikesHybrid)  : null;
+
+
 // --------------------MODAL RENT BIKE--------------------
+
+
 function modalRentBike(object) {
 
   const modalContainer = document.querySelector(".modal-container");

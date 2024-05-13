@@ -1,3 +1,5 @@
+
+
 // --------------------PREMADE SLIDER FUNCTION (NOT MINE)--------------------
 
 function Slider() {
@@ -1004,5 +1006,241 @@ function submitContactFormContact(){
 
 submitContactFormContact()
 
+// ------------------------------Calendar Render---------------------------------
+function renderCallendar(){
+  const daysTag = document.querySelector(".days");
+  const currentDate = document.querySelector(".current-date");
+  const prevNextIcon = document.querySelectorAll(".icons span");
+  
+  let currYear = new Date().getFullYear();
+  let currMonth = new Date().getMonth();
+  
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  
+  const renderCalendar = () => {
+      const date = new Date(currYear, currMonth, 1);
+      let firstDayofMonth = date.getDay();
+      let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
+      let lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay();
+      let lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
+  
+      let liTag = "";
+  
+      for (let i = firstDayofMonth; i > 0; i--) {
+          liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+      }
+  
+      for (let i = 1; i <= lastDateofMonth; i++) {
+          let isToday = i === new Date().getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? "active" : "";
+          liTag += `<li class="${isToday}">${i}</li>`;
+      }
+  
+      for (let i = lastDayofMonth; i < 6; i++) {
+          liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+      }
+  
+      currentDate.innerText = `${months[currMonth]} ${currYear}`;
+      daysTag.innerHTML = liTag;
+  };
+  
+  renderCalendar();
+  const daysCallendar = document.querySelectorAll(".calendar .days li")
+  selectUnselectT(daysCallendar)
+  prevNextIcon.forEach(icon => {
+      icon.addEventListener("click", () => {
+          currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+  
+          if (currMonth < 0 || currMonth > 11) {
+              currYear = icon.id === "prev" ? currYear - 1 : currYear + 1;
+              currMonth = currMonth < 0 ? 11 : 0;
+          }
+          
+          renderCalendar();
+          const daysCallendar = document.querySelectorAll(".calendar .days li")
+          selectUnselectT(daysCallendar)
+      });
+  });
+}
 
+
+// ------------------------------helper function add class remove class---------------------------------
+
+function selectUnselectT(Elements){
+  const activeClass = "selected";
+  Elements.forEach(ele=>ele.addEventListener("click", ()=> {
+
+    Elements.forEach(ele=>ele.classList.remove(activeClass))
+    setTimeout(() => {
+      ele.classList.add(activeClass);
+    }, 1);
+   
+  }))
+ 
+}
+
+
+// ------------------------------APPOINTEMNT MODAL---------------------------------
+
+
+
+function modalAppointment() {
+ 
+  const btnAppointment = document.querySelectorAll(".appointment-button");
+  const modalContainer = document.querySelector(".modal-container");
+  const modalAppointment = `
+  <img class="icon-cross"src="./imgs/cross.svg" alt=""> 
+  <div class="book-modal">
+    <div class="book-modal-container">
+      <h3>Set Appointment Type</h3>
+      <div class="select-type-container row">
+        <div class="col-100">
+          <div class="type-col">
+            <p>I want to get my bike repaired.</p>
+          </div>
+          <div class="type-col">
+            <p>I want to select and buy a bike.</p>
+          </div>
+        </div>
+        <div class="col-100">
+          <div class="type-col">
+            <p>I want to hire a bike</p>
+          </div>
+          <div class="type-col">
+            <p>I want to collect my serviced product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Select Time</h3>
+    <div class="time-table col-100">
+      <div class="wrapper col-50">
+        <header>
+          <p class="current-date"></p>
+          <div class="icons">
+            <span id="prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+              </svg> 
+            </span>
+            <span id="next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+              </svg>
+            </span>
+           </div>
+        </header>
+        <div class="calendar">
+          <ul class="weeks">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+          <ul class="days"></ul>
+        </div>
+      </div>
+      <div class="time-grid col-50">
+        <div class="time-col">
+          <p> 10.00 AM</p>
+        </div>
+        <div class="time-col">
+          <p> 11.00 AM</p>
+        </div>
+        <div class="time-col">
+          <p> 12.00 PM</p>
+        </div>
+        <div class="time-col">
+          <p> 13.00 PM</p>
+        </div>
+        <div class="time-col">
+          <p> 14.00 PM</p>
+        </div>
+        <div class="time-col">
+          <p> 15.00 PM</p>
+        </div>
+        <div class="time-col">
+          <p> 16.00 PM</p>
+        </div>
+        <div class="time-col">
+          <p> 17.00 PM</p>
+        </div>
+        <div class="time-col">
+          <p> 18.00 PM</p>
+        </div>
+        <div class="time-col">
+          <p> 19.00 PM</p>
+        </div>
+      </div>
+    </div>
+    <h3>Select Location</h3>
+    <div class="location-select">
+      <div class="loc-col">
+        <p>Edinburgh</p>
+      </div>
+      <div class="loc-col">
+        <p>Glasgow</p>
+      </div>
+      <div class="loc-col">
+        <p>Dundee</p>
+      </div>
+      <div class="loc-col">
+        <p>Inverness</p>
+      </div>
+      <div class="loc-col">
+        <p>Aberdeen</p>
+      </div>
+    </div>
+    <h3>Comments</h3>
+    <div class="row comment-container"> 
+      <div class="half">
+        <textarea id="" cols="30" rows="10" required>
+
+        </textarea>
+      
+      </div>
+
+      <img src="./imgs/bikeillu2.svg" alt="">
+    
+    </div>
+   
+    <button class="btn-custom">Confirm</button>
+  </div>
+  `
+  btnAppointment.forEach(btn=>btn.addEventListener("click", ()=>{
+    modalContainer.innerHTML=modalAppointment;
+    modalContainer.style.display="block";
+   
+    const typeColumn = document.querySelector(".type-col");
+    const typeColumnsAll = document.querySelectorAll(".type-col");
+    const crossCloseModal = document.querySelectorAll(".icon-cross");
+
+    selectUnselectT(typeColumnsAll)
+    renderCallendar()
+
+    const timeCol = document.querySelectorAll(".time-col");
+    selectUnselectT(timeCol)
+
+   
+    const locations = document.querySelectorAll(".loc-col");
+    selectUnselectT(locations)
+
+
+    // ----exit modal----
+    crossCloseModal.forEach(element => {
+      element.addEventListener("click", function(){
+          modalContainer.style.display="none"
+          body.style.overflowY="scroll";
+      })
+      
+      
+    });
+  }))
+
+
+ 
+}
+modalAppointment()
 
