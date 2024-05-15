@@ -794,7 +794,13 @@ ShowEle(rental1, rental1Anchor, "visible-service")
 ShowEle(rental2, rental2Anchor, "visible-service")
 ShowEle(rental3, rental3Anchor, "visible-service")
 
+const aboutText = document.querySelector(".about-text-container")
+const aboutTextAnchor = document.querySelector(".anchorAbout")
+ShowEle(aboutText, aboutTextAnchor, "visible-service")
 
+const textMidContainer = document.querySelector(".text-mid-container-accessories")
+const anchorSliderSection = document.querySelector(".anchorSliderSection")
+ShowEle(textMidContainer, anchorSliderSection, "visible-service")
 
 
 const chooseParagraphTrigger1 = document.querySelector(".choose-p-trigger1");
@@ -1077,7 +1083,20 @@ function selectUnselectT(Elements){
   }))
  
 }
-
+function closeModal(){
+  const modalContainer = document.querySelector(".modal-container");
+  const crossCloseModal = document.querySelectorAll(".exitModal");
+    // ----exit modal----
+    crossCloseModal.forEach(element => {
+      element.addEventListener("click", function(){
+          modalContainer.style.display="none"
+         
+          
+      })
+      
+     
+    });
+}
 
 // ------------------------------APPOINTEMNT MODAL---------------------------------
 
@@ -1088,7 +1107,7 @@ function modalAppointment() {
   const btnAppointment = document.querySelectorAll(".appointment-button");
   const modalContainer = document.querySelector(".modal-container");
   const modalAppointment = `
-  <img class="icon-cross"src="./imgs/cross.svg" alt=""> 
+  <img class="icon-cross exitModal"src="./imgs/cross.svg" alt=""> 
   <div class="book-modal">
     <div class="book-modal-container">
       <h3>Set Appointment Type</h3>
@@ -1206,16 +1225,17 @@ function modalAppointment() {
     
     </div>
    
-    <button class="btn-custom">Confirm</button>
+    <button class="btn-custom confirmAppointement">Confirm</button>
+    <div class="message_modal_appointement"> </div>
   </div>
   `
+
   btnAppointment.forEach(btn=>btn.addEventListener("click", ()=>{
     modalContainer.innerHTML=modalAppointment;
     modalContainer.style.display="block";
    
-    const typeColumn = document.querySelector(".type-col");
     const typeColumnsAll = document.querySelectorAll(".type-col");
-    const crossCloseModal = document.querySelectorAll(".icon-cross");
+ 
 
     selectUnselectT(typeColumnsAll)
     renderCallendar()
@@ -1228,15 +1248,39 @@ function modalAppointment() {
     selectUnselectT(locations)
 
 
-    // ----exit modal----
-    crossCloseModal.forEach(element => {
-      element.addEventListener("click", function(){
-          modalContainer.style.display="none"
-          body.style.overflowY="scroll";
-      })
-      
-      
-    });
+
+    const btnConfirm = document.querySelector(".confirmAppointement");
+
+    btnConfirm.addEventListener("click", ()=> {
+      const messageContainer = document.querySelector(".message_modal_appointement")
+      const currentDate = document.querySelector(".current-date").innerHTML;
+      const appointmentDetails = [];
+
+      const activeElements = document.querySelectorAll('.selected');
+      activeElements.forEach(element => {
+        appointmentDetails.push(element.innerHTML);
+
+       
+       
+      });
+      const messageApproval = `
+      <div class="message_appointement"> 
+      <img class="icon-cross exitModal"src="./imgs/cross.svg" alt=""> 
+      <h3> Appointements Details </h3>
+        <p> ${appointmentDetails[0]} </p>
+        <p> ${appointmentDetails[1]}  ${currentDate}</p>
+        <p> ${appointmentDetails[2]}</p>
+        <p> ${appointmentDetails[3]} </p>
+        <button class="btn-custom exitModal"> OK </button>
+      </div>
+      `
+      appointmentDetails.length===4?  modalContainer.innerHTML=messageApproval : 
+      messageContainer.innerHTML="Select all appointements options"
+     
+      closeModal()
+    })
+   
+    closeModal()
   }))
 
 
