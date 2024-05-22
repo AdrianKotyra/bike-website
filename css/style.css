@@ -8,11 +8,13 @@
   --h1-fontsize :  2.5rem;
   --gradient : linear-gradient(45deg, #bb0909 0%, #fad0c4 99%, #fad0c4 100%);
   --h3-wide-screen : 1.8rem;
+
   --paragraph-wide-screen : 1.5rem;
   --paragraph-small-wide-screen : 1.2rem;
   --paragraph-small-wide-screen-nav : 1rem;
   --paragraph-very-small-wide-screen : 0.8rem;
 }
+
 .time-col {
   cursor: pointer;
   background-color: #ffffff;
@@ -173,7 +175,7 @@ body {
   width: 100%;
 }
 .three-cols-service{
-  justify-content: center;
+  justify-content: space-between;
 }
 .extra-big {
   font-size: var(--h1-extra-big) !important;
@@ -278,7 +280,7 @@ body {
   font-size: var(--paragraph-small-wide-screen);
 }
 .three-cols-service {
-  transform: translateY(-160px);
+  transform: translateY(-130px);
  
 }
 .black {
@@ -304,7 +306,7 @@ body {
   border-radius: 20px;
   padding: 10px;
   box-shadow: var(--shadow-box);
-  margin: 20px;
+
   color: white;
   width: 23vw;
   height: 280px;
@@ -374,6 +376,19 @@ body {
   background-color: var(--red-main);
   position: absolute;
   border-radius: 20px
+}
+.buy-col-text {
+  transition: 0.3s;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--red-main);
+  position: absolute;
+  color: white;
+  width: 30%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -40%);
+  opacity: 0%;
 }
 .saddle-container {
  
@@ -1126,7 +1141,7 @@ body {
   width: 100px;
   position: absolute;
   right: 5%;
-  bottom: 0%;
+  bottom: 10%;
 }
 .logo-top-big {
   
@@ -1140,7 +1155,7 @@ body {
   width: 100px;
   position: absolute;
   right: 5%;
-  bottom: 10%;
+  bottom: 20%;
 }
 .top-bike-img {
   object-fit: contain;
@@ -1499,7 +1514,7 @@ font-weight: 600;
 .text-section-top{
   padding-top: 0%;
 }
-.about_container_about * {
+.about_container_about > * {
   margin:  10px;
 }
 .text-mid-container {  padding-top: 12%;}
@@ -1582,6 +1597,25 @@ align-self: flex-end !important;
   text-align: center;
   margin: auto;
 }
+.rent-cols {
+  gap: 30px;
+}
+.text-rental {
+  top: unset !important;
+  bottom: 0 !important;
+}
+.rent-bikes-col-container {
+  overflow:hidden;
+  position: relative;
+  border-radius: 30px;
+}
+.rent-bikes-col-container img {
+  border-radius: 0px !important;
+  width: 100% !important;
+  
+  
+  object-fit: contain;
+}
 .hire-bike-imgs-container {
   padding: 30px;
   gap: 30px;
@@ -1591,6 +1625,31 @@ align-self: flex-end !important;
 }
 .hire-bike-modal h3 {
   margin: 30px 0 100px 0;
+}
+
+.gear-box:hover .buy-col-text {
+  opacity: 100%;
+  transition: 0.3s;
+  
+}
+ 
+
+.gear-box {
+  filter: brightness(1);
+  transition: 0.3s;
+  cursor: pointer;
+ 
+  position: relative;
+}
+.text-gear {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--red-main);
+  color: white;
 }
 .modal-hire {
   overflow-y: scroll;
@@ -1682,6 +1741,10 @@ align-self: flex-end !important;
   position: relative;
   height:300px;
 }
+.choose-p-trigger1 {
+  width: 100px;
+  height: 100px;
+}
 .main-image-big-section {
   
   width: 100%;
@@ -1723,6 +1786,16 @@ align-self: flex-end !important;
   display: flex;
   flex-direction: row;
 }
+.about-gear-1 {
+  background-image: url("../imgs/cyclist_gear (1).jpg") !important;
+}
+.about-gear-2{
+  background-image: url("../imgs/cyclist_gear (2).jpg") !important;
+}
+.about-gear-3 {
+  background-image: url("../imgs/cyclist_gear (3).jpg") !important;
+}
+
 .about-box-1 {
   background-image: url("../imgs/about (1).jpg") !important;
 }
@@ -1843,7 +1916,9 @@ align-self: flex-end !important;
   opacity: 0%;
 }
 .hire-bike-trigger {
-   margin:5vh 0 0 60px
+  display: table;
+  text-align: center;
+   margin:auto;
 }
 .mid-second-container {
   width: 50%;
@@ -2345,8 +2420,7 @@ margin: 10px auto 30px auto;
 font-size: var(--h1-fontsize);
 }
 .btn-accessory {
-  width: auto;
-  height: 50px !important;
+  
 }
 .newsletter-modal-container img {
   flex: 0 0 auto;
@@ -2693,6 +2767,11 @@ html {
 
 
 @media screen and (max-width: 1050px) {
+  .rent-bikes-col-container {
+    width: 100% !important;
+    display: table;
+    margin: auto;
+  }
   .about-sec-main {
     flex-direction: column-reverse !important;
   }
@@ -3269,9 +3348,13 @@ html {
     --h1-fontsize :  1.5rem;
     --h1-extra-big: 2.5rem;
     --h3-wide-screen : 1.2rem;
-    --paragraph-wide-screen : 1rem;
+    --paragraph-wide-screen : 16px;
     --paragraph-small-wide-screen : 0.9rem;
     --paragraph-very-small-wide-screen : 0.6rem;
+  }
+  p{
+    font-size: 16px;
+    line-height: 24px;
   }
   .img-grid-1 {
  

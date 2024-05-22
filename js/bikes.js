@@ -229,31 +229,37 @@ slide();
 
 // --------------------PRENDER ALL BIKES LOOP THROUGH OBJECT BIKES--------------------
 function RenderAllBikes(bikeModels){
+  bikeModels.forEach(bikeCard => { 
+    let containerBikes = document.querySelector(".grid-bikes-container");
+      
+    containerBikes ? containerBikes.innerHTML+=
+    `
+      <div class="bike-container-products bike-trigger" data=${bikeModels.indexOf(bikeCard)}>
+      <h3> ${bikeCard.name} </h3>
+      <img class="img-bike" src="${bikeCard.bikeImg}"  data=${bikeModels.indexOf(bikeCard)} alt="">
     
-
-   
-    bikeModels.forEach(bikeCard => { 
-        let containerBikes = document.querySelector(".grid-bikes-container");
-        
-        containerBikes ? containerBikes.innerHTML+=
-        `
-            <div class="bike-container-products bike-trigger" data=${bikeModels.indexOf(bikeCard)}>
-            <h3> ${bikeCard.name} </h3>
-            <img class="img-bike" src="${bikeCard.bikeImg}"  alt="">
-          
-            </div>  
-         
-        ` : null
-    })
-  
-   
-  const modalContainer = document.querySelector(".modal-container");
-
+      </div>  
     
+    ` : null
+    // HOW TO HOVER EVERY IMAGE AND CHANGE IT TO DIFFERENT IMAGE AND BACK TO ORIGINAL ONE
+    // document.querySelectorAll(".img-bike").forEach(element => {
 
-   
+    //   element.addEventListener("mouseover", function(){
+    //     element.style.animation="mapAnimation 0.5s forwards"
+    //     const objectIndex = element.getAttribute("data");
+    //     element.src=bikeModels[objectIndex].bikeImg2
+    //   })
+    //   element.addEventListener("mouseout", function(){
+    //     element.style.animation=""
+    //     const objectIndex = element.getAttribute("data");
+    //     element.src=bikeModels[objectIndex].bikeImg
+    //   })
+    // });
+     
     
-  
+  })
+
+
 }
 RenderAllBikes(bikeModels1)
 
@@ -377,3 +383,6 @@ function displayModal(bikes){
 
 }
 displayModal(bikeModels1)
+
+
+

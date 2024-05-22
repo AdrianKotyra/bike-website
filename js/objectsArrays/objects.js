@@ -2,7 +2,7 @@
 
 const bikeModels1 = [
     {   bikeImg: "./imgs/bikes-transparent/bike-top (16).png",
-        bikeImg2: "./imgs/bikes-grid/bike (2).jpg",
+        bikeImg2: "./imgs/bikes-transparent/bike-top (1).png",
         bikeImg3: "./imgs/bikes-grid/bike (3).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (4).jpg",
         name: "Model B82",
@@ -25,7 +25,7 @@ const bikeModels1 = [
     },
 
     {   bikeImg: "./imgs/bikes-transparent/bike-top (5).png",
-        bikeImg2: "./imgs/bikes-grid/bike (3).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (2).png",
         bikeImg3: "./imgs/bikes-grid/bike (4).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (5).jpg",
         name: "City I63",
@@ -47,7 +47,7 @@ const bikeModels1 = [
         cleat: "Time"
     },
     {  bikeImg: "./imgs/bikes-transparent/bike-top (15).png",
-        bikeImg2: "./imgs/bikes-grid/bike (4).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (3).png",
         bikeImg3: "./imgs/bikes-grid/bike (5).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (6).jpg",
         name: "Explorer X41",
@@ -69,7 +69,7 @@ const bikeModels1 = [
         cleat: "SPD"
     } ,
     {    bikeImg: "./imgs/bikes-transparent/bike-top (13).png",
-        bikeImg2: "./imgs/bikes-grid/bike (5).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (4).png",
         bikeImg3: "./imgs/bikes-grid/bike (6).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (7).jpg",
         name: "Speed H90",
@@ -92,7 +92,7 @@ const bikeModels1 = [
     },
     {  
       bikeImg: "./imgs/bikes-transparent/bike-top (3).png",
-        bikeImg2: "./imgs/bikes-grid/bike (6).jpg",
+      bikeImg2: "./imgs/bikes-transparent/bike-top (5).png",
         bikeImg3: "./imgs/bikes-grid/bike (7).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (8).jpg",
         name: "Urban G25",
@@ -113,8 +113,8 @@ const bikeModels1 = [
       transmission: "3x",
       cleat: "Time"
     },
-    {     bikeImg: "./imgs/bikes-transparent/bike-top (9).png",
-        bikeImg2: "./imgs/bikes-grid/bike (7).jpg",
+    {     bikeImg: "./imgs/bikes-transparent/bike-top (2).png",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (6).png",
         bikeImg3: "./imgs/bikes-grid/bike (8).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (9).jpg",
         name: "Street J14",
@@ -136,7 +136,7 @@ const bikeModels1 = [
         cleat: "Time"
     },
     {    bikeImg: "./imgs/bikes-transparent/bike-top (19).png",
-        bikeImg2: "./imgs/bikes-grid/bike (8).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (7).png",
         bikeImg3: "./imgs/bikes-grid/bike (9).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (10).jpg",
         name: "Adventure A49",
@@ -158,7 +158,7 @@ const bikeModels1 = [
       cleat: "SPD"
     },
     {    bikeImg: "./imgs/bikes-transparent/bike-top (11).png",
-        bikeImg2: "./imgs/bikes-grid/bike (9).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (8).png",
         bikeImg3: "./imgs/bikes-grid/bike (10).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (11).jpg",
         name: "Model F31",
@@ -180,7 +180,7 @@ const bikeModels1 = [
       cleat: "Look"
     },
     {   bikeImg: "./imgs/bikes-transparent/bike-top (18).png",
-        bikeImg2: "./imgs/bikes-grid/bike (10).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (9).png",
         bikeImg3: "./imgs/bikes-grid/bike (11).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (12).jpg",
         name: "Rider B97",
@@ -203,7 +203,7 @@ const bikeModels1 = [
     },
 
     {     bikeImg: "./imgs/bikes-transparent/bike-top (7).png",
-        bikeImg2: "./imgs/bikes-grid/bike (11).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (10).png",
         bikeImg3: "./imgs/bikes-grid/bike (12).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (1).jpg",
         name: "Mountain C67",
@@ -225,7 +225,7 @@ const bikeModels1 = [
         cleat: "SPD"
     },
     {    bikeImg: "./imgs/bikes-transparent/bike-top (6).png",
-        bikeImg2: "./imgs/bikes-grid/bike (12).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (11).png",
         bikeImg3: "./imgs/bikes-grid/bike (1).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (2).jpg",
         name: "City D50",
@@ -246,7 +246,7 @@ const bikeModels1 = [
         cleat: "SPD"
     },
     {    bikeImg: "./imgs/bikes-transparent/bike-top (3).png",
-        bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (12).png",
         bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
         bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
         name: "Explorer I93",
@@ -267,7 +267,7 @@ const bikeModels1 = [
       cleat: "Look"
     },
     {     bikeImg: "./imgs/bikes-transparent/bike-top (2).png",
-    bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
+    bikeImg2: "./imgs/bikes-transparent/bike-top (13).png",
     bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
     bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
     name: "Speed E71",
@@ -290,7 +290,7 @@ const bikeModels1 = [
 
 
 {     bikeImg: "./imgs/bikes-transparent/bike-top (7).png",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
+bikeImg2: "./imgs/bikes-transparent/bike-top (14).png",
 bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
 bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
 name: "Model A39",
@@ -311,7 +311,7 @@ transmission: "1x",
 cleat: "SPD"
 },
 {bikeImg: "./imgs/bikes-transparent/bike-top (12).png",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
+bikeImg2: "./imgs/bikes-transparent/bike-top (15).png",
 bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
 bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
 name: "Street B67",
@@ -332,7 +332,7 @@ transmission: "2x",
 cleat: "Look"
 },
 {     bikeImg: "./imgs/bikes-transparent/bike-top (20).png",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
+bikeImg2: "./imgs/bikes-transparent/bike-top (16).png",
 bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
 bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
 name: "Street B67",
@@ -354,7 +354,7 @@ transmission: "2x",
 cleat: "Look"
 },
 {     bikeImg: "./imgs/bikes-transparent/bike-top (21).png",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
+bikeImg2: "./imgs/bikes-transparent/bike-top (17).png",
 bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
 bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
 name: "Street B67",
@@ -364,7 +364,7 @@ price: "680",
 description:  "Redefine your daily commute with this innovative electric bike, offering pedal-assist technology and long-lasting battery life for effortless city riding. With its lightweight frame and powerful motor, this model makes commuting a breeze while reducing your carbon footprint and enhancing your daily routine.",
 },
 {     bikeImg: "./imgs/bikes-transparent/bike-top (22).png",
-bikeImg2: "./imgs/bikes-grid/bike (1).jpg",
+bikeImg2: "./imgs/bikes-transparent/bike-top (1).png",
 bikeImg3: "./imgs/bikes-grid/bike (2).jpg",
 bikeImg4: "./imgs/bikes-grid/bike (3).jpg",
 name: "Street B67",
