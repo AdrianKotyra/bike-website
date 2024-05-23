@@ -1288,3 +1288,50 @@ function modalAppointment() {
 }
 modalAppointment()
 
+
+// ------------------------------video modal---------------------------------
+function videoModal(){
+    
+  const video = `
+  <div class="newsletter-modal video-modal">
+    <div class="icon-bg">
+    </div>
+    <img class="icon-cross exit-window"src="./imgs/cross.svg" alt="">
+    
+
+    "
+    <iframe class="video-bike"width="100%" height="100%" src="https://www.youtube.com/embed/_T7NTe3uBN4?si=EGjGxO0lOSRKWRrJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+  `
+  const modalContainer = document.querySelector(".modal-container");
+  const body = document.querySelector("body");
+  body.style.overflowY="hidden";
+  modalContainer.innerHTML=video;
+  modalContainer.style.display="block";
+  const crossCloseModal = document.querySelectorAll(".exit-window");
+  crossCloseModal.forEach(element => {
+      element.addEventListener("click", function(){
+          modalContainer.style.display="none"
+          body.style.overflowY="scroll";
+          var stopVideos = function () {
+            var videos = document.querySelectorAll('.video-bike');
+            Array.prototype.forEach.call(videos, function (video) {
+                if (video.tagName.toLowerCase() === 'video') {
+                    video.pause();
+                } else {
+                    var src = video.src;
+                    video.src = src;
+                }
+            });
+        };
+        stopVideos()
+      })
+      
+  });
+}
+const videoTrigger = document.querySelector(".watch-video-button");
+videoTrigger? videoTrigger.addEventListener("click", ()=> {
+  videoModal()
+}) : null
+

@@ -218,6 +218,9 @@ body {
   display: flex;
   flex-direction: row;
 }
+.mid-section {
+  background-color: var(--bg-gray);
+}
 .mid-section, .mid_section {
   position: relative;
 }
@@ -582,6 +585,7 @@ span {
 
 }
 .newsletter-section {
+  background-attachment: fixed;
   position: relative;
   background-repeat: no-repeat;
   background-image: url("../imgs/newsimg.jpg");
@@ -620,6 +624,14 @@ background-position: center;
   position: relative;
   
 }
+.hire-header {
+  margin-top: 15vh;
+}
+.watch-video-button:hover {
+  color: black;
+  background-color: white;
+  transition: 0.4s;
+}
 .video-p {
   text-decoration: none;
   color: white;
@@ -635,19 +647,33 @@ background-position: center;
   transform: translate(-50%, -40%);
 }
 .video {
-  filter: brightness(0.7);
+  object-fit: contain;
+  object-position: 65% 65%;
+  
+  filter: brightness(0.6);
 }
+
 .video-p {
   justify-content: center;
 }
-.video-p > a>* {
+.watch-video-button {
   
+  width: 180px;
+  cursor: pointer;
+  color: white;
+   margin: 20px auto;
+   padding: 10px;
+   border: 2px solid white;
+}
+.video-p > a>* {
+  width: 180px;
   cursor: pointer;
  color: white;
   margin: 10px;
   padding: 10px;
   border: 2px solid white;
 }
+
 .video {
   object-fit: cover;
   height: 100%;
@@ -907,6 +933,8 @@ body {
   height: 500px !important;
 }
 .text-mid-second {
+  
+  
   padding-top: 0 !important
 }
 .feedback-person {
@@ -967,7 +995,11 @@ body {
   padding-top: 5%;
 
 }
-.form-container, .top-contact h1 {
+.form-container {
+  width: 80%;
+  padding-bottom: 5vh;
+}
+.top-contact h1 {
   width: 50%;
 }
 .info-row p {
@@ -1048,7 +1080,7 @@ body {
 }
 .text-mid-container {
   display: flex;
- 
+  
   flex-direction: column;
   height: 100%;
  
@@ -1511,6 +1543,9 @@ font-weight: 600;
   margin-right: 15%;
   padding-bottom: 5vh;
 }
+.text-mid-container {
+  padding-bottom: 15vh;
+}
 .text-section-top{
   padding-top: 0%;
 }
@@ -1592,6 +1627,7 @@ align-self: flex-end !important;
   padding-top: 5vh;
   text-align: center;
 }
+
 .rent-p{
   width: 70%;
   text-align: center;
@@ -1600,18 +1636,26 @@ align-self: flex-end !important;
 .rent-cols {
   gap: 30px;
 }
-.text-rental {
-  top: unset !important;
-  bottom: 0 !important;
+
+.slider-hire {
+  width: 100% !important;
 }
 .rent-bikes-col-container {
+  background-position: center;
+  background-color: var(--bg-gray);
+
+  background-repeat: no-repeat;
+  margin: 10px;
+  height: 400px;
+  width: 50%;
+  background-size: 70%;
   overflow:hidden;
   position: relative;
-  border-radius: 30px;
+
 }
 .rent-bikes-col-container img {
   border-radius: 0px !important;
-  width: 100% !important;
+ 
   
   
   object-fit: contain;
@@ -1644,7 +1688,7 @@ align-self: flex-end !important;
 .text-gear {
   padding: 20px;
   text-align: center;
-  width: 100%;
+  width: 120px;
   position: absolute;
   top: 0;
   right: 0;
@@ -1734,6 +1778,10 @@ align-self: flex-end !important;
   width: 50%;
   border-radius: 30px
 }
+.bikes-banner
+.choose-banner {
+  position: relative;
+}
 .main-about-p {
   margin-left: 40% !important;
 }
@@ -1741,18 +1789,28 @@ align-self: flex-end !important;
   position: relative;
   height:300px;
 }
-.choose-p-trigger1 {
-  width: 100px;
-  height: 100px;
+.background-container {
+  color: white;
+  background-image: url("../imgs/repair-bike.jpg");
+  position: relative;
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+ 
+  height: 60vh;
+
+ 
 }
-.main-image-big-section {
-  
+/* .main-image-big-section {
+  background-image: url("");
   width: 100%;
   transform: translateY(30%);
   position: absolute;
   bottom: 0;
   object-fit: contain;
-}
+} */
 .accessories-top-img {
  object-fit: cover !important;
  width: 400px  !important;
@@ -1762,18 +1820,32 @@ align-self: flex-end !important;
  
 
 }
+.clothes-banner {
+  background-size: contain;
+  background-image: url("../imgs/clothes-big.jpg");
+}
+.accessories-banner {
+  background-image: url("../imgs/big-accessories.jpg");
+}
+.bikes-banner {
+  background-image: url("../imgs/big-bikes.jpg");
+}
+.abount-banner {
+  background-image: url("../imgs/about-big.jpg");
+}
 .about-big {
   height: 60vh;
   width: 100%;
-  object-fit: cover;
 
+ 
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .about-p button {
   margin: 0;
 }
-.about-p p {
-  opacity: 80%;
-}
+
 .about-p {
   margin-left: 50%;
   text-align: left;
@@ -1887,6 +1959,10 @@ align-self: flex-end !important;
   background-color: var(--red-main);
   color: white;
   height: 60vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../imgs/cycling-feedback.jpg");
 }
 .choose-section div {
   opacity: 0;
@@ -1988,6 +2064,7 @@ align-self: flex-end !important;
 
 
 .mid_second_col{
+
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -2374,6 +2451,7 @@ margin: 10px auto 30px auto;
   background-color: rgba(0, 0, 0, 0.352);
 }
 .rent-bike-modal .slide {
+  height: 40vh;
   background-size: contain !important;
 }
 .message_modal_appointement {
@@ -2450,6 +2528,11 @@ position: fixed;
   width: 100%;
   height: 100%;
   background-color:var(--bg-gray);
+}
+.video-modal .icon-bg {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
 }
 .newsletter-modal {
   overflow-y: scroll;
@@ -2770,7 +2853,7 @@ html {
   .rent-bikes-col-container {
     width: 100% !important;
     display: table;
-    margin: auto;
+    
   }
   .about-sec-main {
     flex-direction: column-reverse !important;
@@ -3058,10 +3141,15 @@ html {
   z-index: 2;
   }
   .text-mid-container {
+    text-align: center;
     padding-top: 0% !important;
   }
 }
 @media screen and (max-width: 850px) {
+  .rent-bikes-col-container {
+    background-size: 100%;
+    height: 300px;
+  }
   .select-type-container {
     flex-direction: column;
   }
@@ -3169,9 +3257,7 @@ html {
     height: 300px;
     width: 100%;
   }
-  .text-mid-container {
-    margin-left: 5%;
-  }
+  
   .main-about-p {
     margin-left: 0 !important;
   }
@@ -3396,6 +3482,9 @@ html {
   }
   .mid-second-container img {
     
+  }
+  .rent-bikes-col-container {
+    height: 200px;
   }
   .big-bottom-sec {
     height: 100px;
@@ -3625,7 +3714,7 @@ html {
 .slider {
   position: relative;
   width: 50%;
-  height: 400px;
+ 
   margin: 50px auto 50px;
   user-select: none;
   touch-action: pan-y;
@@ -3637,7 +3726,7 @@ html {
 
 .slider-list {
   width: 700px;
-  height: 400px;
+  
   overflow: hidden;
 }
 
