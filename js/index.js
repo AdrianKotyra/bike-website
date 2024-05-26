@@ -255,7 +255,7 @@ function displayeReadMore(readMoreObject) {
 displayeReadMore(readMore)
 
 
-
+// ------------------------------modal windows hirebike and accessories---------------------------------
 
 const modalHireBike = ` <div class="modal-container-box modal-hire">
 <img class="icon-cross"src="./imgs/cross.svg" alt="">
@@ -796,12 +796,16 @@ ShowEle(rental3, rental3Anchor, "visible-service")
 
 const aboutText = document.querySelector(".about-text-container")
 const aboutTextAnchor = document.querySelector(".anchorAbout")
-ShowEle(aboutText, aboutTextAnchor, "visible-service")
+ShowEle(aboutText, aboutTextAnchor, "rightToleftFade")
 
 const textMidContainer = document.querySelector(".text-mid-container-accessories")
 const anchorSliderSection = document.querySelector(".anchorSliderSection")
 ShowEle(textMidContainer, anchorSliderSection, "visible-service")
 
+const textTopLeft = document.querySelector(".text-section-top");
+const textTopLeftAnchor = document.querySelector(".anchor-left-text-top");
+
+ShowEle(textTopLeft, textTopLeftAnchor, "rightToleftFade")
 
 const chooseParagraphTrigger1 = document.querySelector(".choose-p-trigger1");
 

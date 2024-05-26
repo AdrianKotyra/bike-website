@@ -3,7 +3,7 @@
 // --------------------SEARCH PRODUCTS --------------------
 function searchProducts(object) {
   const inputSearchValue = document.querySelector(".search-input");
-
+  
   inputSearchValue.addEventListener("input", function() {
     const bikesContainer = document.querySelector(".grid-bikes-container");
     const searchOutput = inputSearchValue.value.toLowerCase();
@@ -16,22 +16,16 @@ function searchProducts(object) {
           const elementName = ele.name.toLowerCase();
           if (elementName.includes(searchOutput)) {
             bikesContainer.innerHTML += `
-            <div class="bike-card bike-trigger accesory-card" data=${object.indexOf(ele)}>
+            <div class="bike-card  bike-trigger " data=${object.indexOf(ele)}>
             <div class="bike-card-container">
                 <img class="img-bike" src="${ele.clothesImg}" alt="">
                 <div class="info-product-container"> 
                     <h3 class="">${ele.name}</h3>
                 
-                    <div class="info-container row">
-                        <span>Type</span><span class="seats-bike">${ele.type}</span>
-                    </div>
+                  
                 
+              
                    
-                
-                    <div class="price-btn-container row">
-                        <p class="price price-bike">${ele.price}£</p>
-                        <button class="btn-custom">buy</button>
-                    </div>
                 </div>
             </div>
 
@@ -240,105 +234,98 @@ function Slider() {
   
 }
 // --------------------RENDER ALL CLOTHES--------------------
-function RenderAllClothes(accesory){
-    
+function RenderAllclothes(clothes){
+  let containerBikes = document.querySelector(".grid-bikes-container");
+  containerBikes.innerHTML= ""
  
 
     
-    accesory.forEach(accesoryCard => { 
-        let containerBikes = document.querySelector(".grid-bikes-container");
-        
+  clothes.forEach(accesoryCard => { 
+
+      
         containerBikes ? containerBikes.innerHTML+=
         `
-            <div class="bike-card bike-trigger accesory-card" data=${accesory.indexOf(accesoryCard)}>
-            <button class="btn-custom">buy</button>
+            <div class="bike-card  bike-trigger " data=${clothes.indexOf(accesoryCard)}>
             <div class="bike-card-container">
                 <img class="img-bike" src="${accesoryCard.clothesImg}" alt="">
                 <div class="info-product-container"> 
                     <h3 class="">${accesoryCard.name}</h3>
                 
-                    <div class="info-container row">
-                        <span>Type</span><span class="seats-bike">${accesoryCard.type}</span>
-                    </div>
+                  
                 
-                  
-                 
-                      <p class="price price-bike">${accesoryCard.price}£</p>
-                     
-                  
+              
+                   
                 </div>
             </div>
 
             </div>
         ` : null
     })
-   
-    
+  
+    const modalContainer = document.querySelector(".modal-container");
+
   
 
     const cards = document.querySelectorAll(".bike-card");
     cards.forEach(card=>card.addEventListener("click", function(){
       
-      const numberOfProduct = card.getAttribute("data");
-  
-  
-     
-      const img1 = accesory[numberOfProduct].clothesImg;
-      const img2 = accesory[numberOfProduct].clothesImg2;
-      const img3 = accesory[numberOfProduct].clothesImg3;
-      const img4 = accesory[numberOfProduct].clothesImg4;
+        const numberOfProduct = card.getAttribute("data");
 
-   
-      const name = accesory[numberOfProduct].name;
-      const type = accesory[numberOfProduct].type;
-      const price = accesory[numberOfProduct].price;
-      const desc = accesory[numberOfProduct].description;
-  
-      const productModalLiteral = `
-     
-      <div class="modal-container-box row">
-      <img class="icon-cross" src="./imgs/cross.svg" alt="" class="cross-exit-modal">
-      <div class="slider image-bike-modal">
-      <div class="slider-list modal-slide">
-        <div class="slider-track">
-          <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: cover">   </div>
-          <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: cover">   </div>
-          <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: cover">   </div>
-          <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: cover">   </div>
+
+        const img1 = clothes[numberOfProduct].clothesImg;
+        const img2 = clothes[numberOfProduct].clothesImg2;
+        const img3 = clothes[numberOfProduct].clothesImg3;
+        const img4 = clothes[numberOfProduct].clothesImg4;
+        const name = clothes[numberOfProduct].name;
+        const type = clothes[numberOfProduct].type;
+        const price = clothes[numberOfProduct].price;
+        const desc = clothes[numberOfProduct].description;
+
+        const productModalLiteral = `
+       
+        <div class="modal-container-box row">
+        <img class="icon-cross" src="./imgs/cross.svg" alt="" >
+        <div class="slider image-bike-modal">
+        <div class="slider-list modal-slide">
+
+          <div class="slider-track">
+            <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: 50%">   </div>
+            <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: 50%">   </div>
+            <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: 50%">   </div>
+            <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: 50%">   </div>
+        
+          </div>
+        </div>
+        <div class="slider-arrows">
+          <button type="button" class="prev">&larr;</button>
+          <button type="button" class="next">&rarr;</button>
+        </div>
+        </div>
+        <div class="product-desc-container">
+          <h1 class="prod-title">${name}</h1>
+          <p class="prod-desc">${type}</p>
+          <p class="prod-desc">${price}£</p>
+          <p class="prod-desc description-modal">${desc}</p>
+          <div class="btn-more-cont modal-button">
+            <button class="btn-custom">Buy</button>
       
+          </div>
         </div>
       </div>
-      <div class="slider-arrows">
-        <button type="button" class="prev">&larr;</button>
-        <button type="button" class="next">&rarr;</button>
-      </div>
-      </div>
-      <div class="product-desc-container">
-        <h1 class="prod-title">${name}</h1>
-        <p class="prod-desc">${type}</p>
-        <p class="prod-desc">${price}£</p>
-        <p class="prod-desc description-modal">${desc}</p>
-        <div class="btn-more-cont modal-button">
-          <button class="btn-custom">Buy</button>
-    
-        </div>
-      </div>
-    </div>
-      `
-      modalContainer.style.display="block";
-      modalContainer.innerHTML=productModalLiteral;
-  
-      const crossCloseModal = document.querySelector(".icon-cross");
-      crossCloseModal.addEventListener("click", function(){
-          modalContainer.style.display="none"
-      })
+        `
+        modalContainer.style.display="block";
+        modalContainer.innerHTML=productModalLiteral;
+
+        const crossCloseModal = document.querySelector(".icon-cross");
+        crossCloseModal.addEventListener("click", function(){
+            modalContainer.style.display="none"
+        })
       Slider()
   }))
-
-    
+      
     
 }
-RenderAllClothes(bikeClothes1)
+RenderAllclothes(bikeClothes1, "see_more_1")
 
 
 // --------------------DISPLAY MODAL CLOTHES--------------------
@@ -367,17 +354,16 @@ function displayModal(bikeClothes){
     const desc = bikeClothes[numberOfProduct].description;
 
     const productModalLiteral = `
-  
     <div class="modal-container-box row">
     <img class="icon-cross" src="./imgs/cross.svg" alt="" class="cross-exit-modal">
     <div class="slider image-bike-modal">
     <div class="slider-list modal-slide">
       <div class="slider-track">
-        <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: cover">   </div>
-        <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: cover">   </div>
-        <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: cover">   </div>
-        <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: cover">   </div>
-     
+        <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: 50%">   </div>
+        <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: 50%">   </div>
+        <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: 50%">   </div>
+        <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: 50%">   </div>
+    
       </div>
     </div>
     <div class="slider-arrows">
@@ -407,6 +393,32 @@ function displayModal(bikeClothes){
   Slider()
 }))
 
-
 }
 displayModal(bikeClothes1)
+// --------------------SEARCH Clothes via types--------------------
+
+function clothesChangeTypes(objectAccessories){
+  const select = document.querySelector(".select-type");
+
+  select.addEventListener("change", ()=>{
+    const selectedType = select.value;
+   
+    if(selectedType!=="All") {
+      const arrayOfSelectedTypes = objectAccessories.filter(ele=>{
+        return ele.type === selectedType
+        
+      })
+      RenderAllclothes(arrayOfSelectedTypes)
+     
+    }
+    else {
+      RenderAllclothes(bikeClothes1)
+    }
+   
+
+  })
+  
+}
+  
+
+clothesChangeTypes(bikeClothes1)

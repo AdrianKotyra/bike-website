@@ -16,22 +16,16 @@ function searchProducts(object) {
           const elementName = ele.name.toLowerCase();
           if (elementName.includes(searchOutput)) {
             bikesContainer.innerHTML += `
-            <div class="bike-card bike-trigger accesory-card" id="accesories-card" data=${object.indexOf(ele)}>
+            <div class="bike-card  bike-trigger " data=${object.indexOf(ele)}>
             <div class="bike-card-container">
                 <img class="img-bike" src="${ele.accessoriesImg}" alt="">
                 <div class="info-product-container"> 
                     <h3 class="">${ele.name}</h3>
                 
-                    <div class="info-container row">
-                        <span>Type</span><span class="seats-bike">${ele.type}</span>
-                    </div>
+                  
                 
+              
                    
-                
-                    <div class="price-btn-container row">
-                        <p class="price price-bike">${ele.price}£</p>
-                        <button class="btn-custom">buy</button>
-                    </div>
                 </div>
             </div>
 
@@ -48,6 +42,9 @@ function searchProducts(object) {
 }
 
 searchProducts(bikeAccessories1)
+
+
+
 
 // --------------------PREMADE SLIDER FUNCTION (NOT MINE)--------------------
 function Slider() {
@@ -243,31 +240,27 @@ function Slider() {
 
 // --------------------RENDER ALL ACCESSORIES --------------------
 
-function RenderAllAccesories(accesory, see_more_number){
-    
+function RenderAllAccesories(accesory){
+  let containerBikes = document.querySelector(".grid-bikes-container");
+  containerBikes.innerHTML= ""
  
 
     
     accesory.forEach(accesoryCard => { 
-        let containerBikes = document.querySelector(".grid-bikes-container");
-        
+
+      
         containerBikes ? containerBikes.innerHTML+=
         `
-            <div class="bike-card  bike-trigger accesory-card" data=${accesory.indexOf(accesoryCard)}>
+            <div class="bike-card  bike-trigger " data=${accesory.indexOf(accesoryCard)}>
             <div class="bike-card-container">
                 <img class="img-bike" src="${accesoryCard.accessoriesImg}" alt="">
                 <div class="info-product-container"> 
                     <h3 class="">${accesoryCard.name}</h3>
                 
-                    <div class="info-container row">
-                        <span>Type</span><span class="seats-bike">${accesoryCard.type}</span>
-                    </div>
+                  
                 
               
-                    <div class="price-btn-container row">
-                        <p class="price price-bike">${accesoryCard.price}£</p>
-                        <button class="btn-custom">buy</button>
-                    </div>
+                   
                 </div>
             </div>
 
@@ -295,16 +288,17 @@ function RenderAllAccesories(accesory, see_more_number){
         const desc = accesory[numberOfProduct].description;
 
         const productModalLiteral = `
-        <img class="icon-cross" src="./imgs/cross.svg" alt="" >
+       
         <div class="modal-container-box row">
-    
+        <img class="icon-cross" src="./imgs/cross.svg" alt="" >
         <div class="slider image-bike-modal">
         <div class="slider-list modal-slide">
+
           <div class="slider-track">
-            <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: cover">   </div>
-            <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: cover">   </div>
-            <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: cover">   </div>
-            <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: cover">   </div>
+            <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: 50%">   </div>
+            <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: 50%">   </div>
+            <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: 50%">   </div>
+            <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: 50%">   </div>
         
           </div>
         </div>
@@ -339,20 +333,6 @@ function RenderAllAccesories(accesory, see_more_number){
 }
 RenderAllAccesories(bikeAccessories1, "see_more_1")
 
-
-if(document.querySelector(".see_more_1")) {
-    document.querySelector(".see_more_1").addEventListener("click", function(){
-
-    RenderAllAccesories(bikeAccessories2, "see_more_2")
-    
-    document.querySelector(".see_more_2").addEventListener("click", function(){
-        RenderAllAccesories(bikeAccessories3, null)
-        
-        let seeMore = document.querySelector(".see-more");
-        seeMore.style.display="none";
-    })
-        
-})}
 // --------------------DISPLAY MODAL ACCESSORIES--------------------
 function displayModal(accessory){
 
@@ -383,10 +363,10 @@ function displayModal(accessory){
     <div class="slider image-bike-modal">
     <div class="slider-list modal-slide">
       <div class="slider-track">
-        <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: cover">   </div>
-        <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: cover">   </div>
-        <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: cover">   </div>
-        <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: cover">   </div>
+        <div class="slide modal-slide" style="background-image: url('${img1}'); background-size: 50%">   </div>
+        <div class="slide modal-slide" style="background-image: url('${img2}'); background-size: 50%">   </div>
+        <div class="slide modal-slide" style="background-image: url('${img3}'); background-size: 50%">   </div>
+        <div class="slide modal-slide" style="background-image: url('${img4}'); background-size: 50%">   </div>
     
       </div>
     </div>
@@ -419,3 +399,30 @@ function displayModal(accessory){
 
 }
 displayModal(bikeAccessories1)
+
+
+// --------------------SEARCH ACCESSORIES via types--------------------
+
+function accessoriesChangeTypes(objectAccessories){
+  const select = document.querySelector(".select-type");
+
+  select.addEventListener("change", ()=>{
+    const selectedType = select.value;
+    if(selectedType!=="All") {
+      const arrayOfSelectedTypes = objectAccessories.filter(ele=>{
+        return ele.type === selectedType
+        
+      })
+      RenderAllAccesories(arrayOfSelectedTypes)
+     
+    }
+    else {
+      RenderAllAccesories(bikeAccessories1)
+    }
+   
+
+  })
+}
+  
+
+accessoriesChangeTypes(bikeAccessories1)
