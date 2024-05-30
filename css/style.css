@@ -28,7 +28,11 @@
   top: 40%;
   transform: translate(-50%, -50%);
 }
+.accessories-btn-top {
+  height: 60px !important;
+}
 .header-section {
+  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -39,7 +43,20 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("../imgs/cycling-feedback3.jpg");
+  background-image: url("../imgs/professional-cyclist-wo.jpg") 
+}
+.clothes-main-slide {
+  background-position: center;
+  background-image: url("../imgs/cycling-feedback3.jpg") !important;
+
+}
+.accessories-main-slide {
+  background-position: center;
+  background-image: url("../imgs/front-view-kids-with-bike-outdoors.jpg") !important
+}
+.service-main-slide {
+  background-position: center;
+  background-image: url("../imgs/repair-bike.jpg") !important
 }
 .time-col {
   cursor: pointer;
@@ -496,6 +513,9 @@ body {
   width: 100%;
   height: 100%;
 }
+.service-grid-row p {
+  opacity: 70%;
+}
 .service-grid-row img {
   border-radius: 30px;
   object-fit: cover;
@@ -534,7 +554,7 @@ body {
 }
 .top-about-text h1,
 .top-contact h1 {
-  animation: subPagesAnimationText 0.8s forwards;
+  
 }
 .top-about-text {
   padding-top: 100px;
@@ -544,7 +564,7 @@ body {
 
 .top-about-text p,
 .form-container {
-  animation: subPagesAnimationImg 0.8s forwards;
+  
   font-size: var(--paragraph-small-wide-screen);
 }
 .top-about {
@@ -808,12 +828,49 @@ input[type]:checked ~ span.middle {
 .img-container-about {
   margin-right: 5%;
 }
-.text-hire {
-  animation: subPagesAnimationText 0.8s forwards;
-  padding-right: 15%;
+.bikes-rent-road {
+  background-image: url("../imgs/rent-hire (3).jpg");
+}
+.bikes-rent-mountain {
+  background-image: url("../imgs/rent-hire (2).jpg");
+}
+.bikes-rent-hybrid {
+  background-image: url("../imgs/rent-hire (1).jpg");
+
+}
+.about-sec {
+  background-image: url("../imgs/about-bg.jpg");
+}
+.repair-sec {
+  background-position: top !important;
+  background-image: url("../imgs/big-accessories.jpg");
+}
+.contact-sub-top {
+  background-image: url("../imgs/professional-cyclist-woman.jpg");
+ 
 }
 
+.text-hire {
+  width: 70% !important;
+}
+.text-hire .header {
+  color: white !important;
+}
+
+.text-hire > * {
+  color: white;
+}
+.hire-bikes-top h1{
+  color: white;
+}
 .hire-bikes-top {
+  background-attachment: fixed;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  text-align: center;
   padding: 5% 0;
 }
 .videoTextAnimation {
@@ -825,9 +882,7 @@ input[type]:checked ~ span.middle {
   height: 500px;
   object-fit: contain;
 }
-.hire-bikes-top > * {
-  width: 50%;
-}
+
 
 .service-cities-container img {
   border: 10px solid rgb(255, 255, 255);
@@ -898,10 +953,11 @@ body {
   height: 60px;
 }
 .hamburger {
+  top: 5px;
   width: 40px;
   height: 40px;
   position: absolute;
-  right: 0;
+  right: 5px;
   display: none;
 }
 .top_section {
@@ -954,15 +1010,16 @@ body {
   font-size: var(--paragraph-small-wide-screen);
   color: white;
 }
+
 .contact-address-container {
   background-color: var(--bg-gray);
 }
 .top-contact img {
+  display: block;
   padding-left: 5%;
   object-fit: cover;
-  width: 100%;
-
-  margin: 0 0 0 auto;
+  width: 400px;
+  margin: auto;
 }
 .top-contact h1 {
   padding-bottom: 10%;
@@ -1121,6 +1178,7 @@ body {
   font-weight: 800;
 }
 .logo-nav-container {
+
   display: flex;
 
   justify-content: left;
@@ -1241,7 +1299,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
-  gap: 40px;
+  gap: 15px;
   display: flex;
   flex-direction: row;
 }
@@ -1271,7 +1329,7 @@ nav {
   box-shadow: -3px 8px 15px 0px rgba(0, 0, 0, 0.34);
   -webkit-box-shadow: -3px 8px 15px 0px rgba(0, 0, 0, 0.34);
   -moz-box-shadow: -3px 8px 15px 0px rgba(0, 0, 0, 0.34);
-
+  padding: 0 2%;
   font-weight: 600;
   z-index: 999;
   margin: auto;
@@ -1541,12 +1599,12 @@ nav {
   margin-left: 40px;
 }
 .hire-bike-part-1 img {
-  /* box-shadow: var(--shadow-box); */
+ 
   display: block;
   margin: auto;
   object-fit: contain;
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
 }
 .hire-bike-part-1 {
   width: 600px;
@@ -1665,20 +1723,37 @@ nav {
   background-size: cover;
   background-position: center;
 }
-.top-sub-pages h1 {
+.top-sub-pages-text, .text-hire{
+
+  width: 100%;
+  top: 50%;
+ left: 50%;
+  position: absolute;
   animation: subPagesAnimationText 0.6s forwards;
-  width: 50%;
-  display: block;
-  padding: 10vh 0 0 0;
-  margin: auto;
 }
-.top-sub-pages img {
-  animation: subPagesAnimationImg 0.6s forwards;
-  object-fit: contain;
-  width: 650px;
-  height: 500px;
+.top-sub-pages h1 {
+
+ 
+}
+.bikes-sub-top {
+  background-position-y: center;
+  background-image: url("../imgs/man-mountain-biking-equipment.jpg");
+}
+.accessories-sub-top {
+  background-position-y: center;
+  background-image: url("../imgs/close-up-person-with-electric-bike.jpg");
+}
+.clothes-sub-top {
+  background-position-y: center;
+  background-image: url("../imgs/man-cycling-outdoors-with-his-bike.jpg");
 }
 .top-sub-pages {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 90vh;
+  color: white;
+  background-size: cover;
+  
   padding: 5% 0;
   text-align: center;
   margin: auto;
@@ -2174,7 +2249,7 @@ nav p {
 }
 .logo {
   transform: scale(0.9);
-  width: 80px;
+  width: 180px;
   height: 50px;
 }
 .bike-card img {
@@ -2458,6 +2533,10 @@ nav p {
   width: 80%;
   height: 80%;
   background-color: white;
+}
+.modal-accessories {
+  background-size: contain !important;
+  height: 40vh !important;
 }
 .modal-container-box {
   overflow-y: scroll;
@@ -2747,6 +2826,69 @@ nav p {
   height: 200px;
 }
 
+/*  slider  */
+.hidden{
+  display: none !important
+}
+
+.sliderContainer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+    background-color: #ffffff;
+   
+}
+
+
+
+.sliderContainer>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 25px;
+    background-size: cover;
+}
+
+
+/* .sliderContainer>div:first-of-type{
+    background-image: url('./imgs/about-bg.jpg')
+}
+
+.sliderContainer>div:nth-of-type(2){
+  background-image: url('./imgs/about-bg.jpg')
+}
+
+.sliderContainer>div:nth-of-type(3){
+  background-image: url('./imgs/about-bg.jpg')
+}
+
+.sliderContainer>div:last-of-type{
+  background-image: url('./imgs/about-bg.jpg')
+} */
+
+
+.magicStartLoop{
+  animation: in 800ms ease
+}
+
+@keyframes in{
+  0%{
+    right: -1513.2px
+  }
+
+  100%{
+    right: 0
+  }
+}
+
+
 @media screen and (max-width: 1050px) {
   .rent-bikes-col-container {
     width: 100% !important;
@@ -3014,6 +3156,9 @@ nav p {
   .bootom-text-top2 {
     top: 40%;
   }
+  .logo {
+    width: 140px;
+  }
   .text-section-top {
     padding-top: 0;
   }
@@ -3052,6 +3197,12 @@ nav p {
   }
 }
 @media screen and (max-width: 850px) {
+  .hire-bikes-top, .top-sub-pages, .header-section {
+    height: 60vh;
+  }
+  .top-sub-pages-text, .text-hire {
+    top: 30%;
+  }
   .rent-bikes-col-container {
     background-size: 100%;
     height: 300px;
@@ -3285,6 +3436,9 @@ nav p {
     right: unset;
     left: unset;
   }
+  .modal-accessories {
+    background-size: 70% !important;
+  }
   .about_container_about > * {
     width: 100%;
   }
@@ -3517,11 +3671,11 @@ nav p {
 }
 @keyframes subPagesAnimationText {
   0% {
-    transform: translateX(-15%);
+    transform: translate(-35%,-50%);
     opacity: 50%;
   }
   100% {
-    transform: translateX(0%);
+    transform: translate(-50%, -50%);
     opacity: 100%;
   }
 }
@@ -3601,8 +3755,8 @@ nav p {
 .slider {
   position: relative;
   width: 50%;
-
-  margin: 50px auto 50px;
+  padding: 5%;
+  margin: auto;
   user-select: none;
   touch-action: pan-y;
 }

@@ -1339,3 +1339,23 @@ videoTrigger? videoTrigger.addEventListener("click", ()=> {
   videoModal()
 }) : null
 
+
+
+//slider
+
+setInterval(function () {
+  $(".x")? 
+  $(".x").each(function () {
+      $(this).removeClass('x magicStartLoop').animate({
+          right: $(this).innerWidth()
+      }, 850, function () {
+          $(this).addClass('hidden').removeAttr("style");
+      });
+      $(this).next().removeClass("hidden").addClass("x magicStartLoop");
+      if ($(".sliderContainer").children().last().hasClass("magicStartLoop")) {
+          setTimeout(function () {
+              $(".sliderContainer").children().first().removeClass("hidden").addClass("x magicStartLoop");
+          }, 4000);//you must set this time as the same time for setInterval time
+      }
+  }) : null
+}, 4000);

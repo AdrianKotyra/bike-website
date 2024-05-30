@@ -12,7 +12,7 @@ function RenderBikes(object){
         <div class="hire-bike-section-container row section-container-hire">
             <div class="hire-bike-part-1 hire-bike-section-img-container">
             <span>${Bike.price}£</span>
-            <img src="${Bike.img}" alt="">
+            <img src="${Bike.img}"class=" hire-btn" data-id=${Bike.id} alt="">
             </div>
     
             <div class="hire-bike-part-2 hire-bike-section-info">
