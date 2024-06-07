@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 :root {
   --shadow-box: -3px 8px 15px 0px rgba(0, 0, 0, 0.34);
   --red-main: #d73e3e;
@@ -13,7 +22,43 @@
   --paragraph-small-wide-screen-nav: 1rem;
   --paragraph-very-small-wide-screen: 0.8rem;
 }
-
+.text-label {
+  font-size: var(--paragraph-wide-screen);
+  padding: 30px 90px 0 0;
+}
+.label {
+  font-weight: 700;
+  text-align: center;
+  clip-path: polygon(0% 0%, 100.1% 0%, 0% 100%);
+  height: 150px;
+  width:  200px;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  top: 50;
+  left: 0;
+  background-color: #d73e3e86;
+}
+.nav-conainer p {
+  line-height: 0rem
+}
+body p{
+  line-height: 2rem;
+}
+.text-mid-container .col span {
+ 
+  color: white;
+  opacity: 100%;
+  background-color: var(--red-main);
+}
+.address-map {
+  display: none;
+  padding: 20px 0;
+  background-color: var(--red-main);
+  color: white;
+  text-align: center;
+  font-size: var(--h1-fontsize);
+}
 .rightToleftFade {
   animation: rightToleftFadeAnimation 0.7s forwards !important;
 }
@@ -31,17 +76,29 @@
 .accessories-btn-top {
   height: 60px !important;
 }
+.header-section p, .three-cols-service p, .bottom-mid-section h3 {
+  text-align: left;
+
+}
+.bottom-mid-section .material-symbols-outlined  {
+  padding-right: 20px;
+}
+.three-cols-service p {
+  padding-left: 20px;
+
+}
 .header-section {
   position: relative;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 .header-container {
   position: relative;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 55%;
   background-size: cover;
   background-image: url("../imgs/professional-cyclist-wo.jpg") 
 }
@@ -199,7 +256,7 @@ header .current-date {
   background: #f2f2f2;
 }
 .about-section-container {
-  padding: 5% 5% 0 5%;
+  padding: 5% 5% 5% 5%;
 }
 .about-section {
   position: relative;
@@ -208,6 +265,7 @@ header .current-date {
   opacity: 70%;
 }
 body {
+  padding-top: 50px;
   overflow-x: hidden;
 }
 .img-slider-auto {
@@ -219,10 +277,14 @@ body {
 .extra-big {
   font-size: var(--h1-extra-big) !important;
 }
+.icon-red {
+  cursor: pointer;
+  filter: invert(18%) sepia(58%) saturate(4755%) hue-rotate(354deg)
+  brightness(82%) contrast(103%);
+}
 .material-symbols-outlined {
   font-size: 60px !important;
-  filter: invert(18%) sepia(58%) saturate(4755%) hue-rotate(354deg)
-    brightness(82%) contrast(103%);
+  
 }
 .book-modal img {
   width: 50%;
@@ -292,10 +354,19 @@ body {
 .col-100 {
   width: 100%;
 }
+.col-30 {
+  width: 30%;
+}
 .col-50 {
   width: 50%;
 }
 .bottom-mid-section {
+  background-position: center;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../imgs/cyclist-rend.jpg");
   background-color: var(--bg-gray);
   padding: 5%;
 }
@@ -577,6 +648,9 @@ body {
 .box-imgs {
   position: relative;
 }
+.col-service p{
+  text-align: left;
+}
 .col-service .text {
   display: none;
   animation: mapAnimation 1s forwards;
@@ -816,11 +890,25 @@ input[type]:checked ~ span.middle {
   flex-wrap: wrap;
   margin: auto;
   width: 100%;
-  padding: 5% 5%;
+  padding: 0% 5% 5% 5%;
   display: flex;
+}.input_box {
+  gap : 30px
 }
+.button_form {
+  min-height: 40px !important;
+  background-color: white !important;
+  color: red !important;
+  margin-top: 20px;
+}
+.btn-feedback, .button_form {
 
+  min-height: 60px !important;
+  background-color: white !important;
+  color: red !important;
+}
 .feedback_container {
+
   gap: 20px;
   width: 3500px;
   display: flex;
@@ -839,7 +927,7 @@ input[type]:checked ~ span.middle {
 
 }
 .about-sec {
-  background-image: url("../imgs/about-bg.jpg");
+  background-image: url("../imgs/full-shot-friends-bicycles-outdoors.jpg");
 }
 .repair-sec {
   background-position: top !important;
@@ -871,7 +959,7 @@ input[type]:checked ~ span.middle {
   background-repeat: no-repeat;
   margin: auto;
   text-align: center;
-  padding: 5% 0;
+
 }
 .videoTextAnimation {
   animation: videoTextAnimation 0.5s forwards;
@@ -918,7 +1006,7 @@ h3 {
   font-size: var(--h3-wide-screen);
 }
 body {
-  padding-top: 50px;
+
   overflow-x: hidden;
 }
 .news-text {
@@ -1033,7 +1121,7 @@ body {
   padding-top: 5%;
 }
 .form-container {
-  width: 80%;
+  width: 100%;
   padding-bottom: 5vh;
 }
 .top-contact h1 {
@@ -1043,7 +1131,7 @@ body {
   color: var(--red-main);
 }
 .visible-service {
-  animation: serviceAnimation 0.7s forwards;
+  animation: serviceAnimation 0.7s forwards !important;
 }
 .hidden {
   opacity: 0%;
@@ -1575,7 +1663,7 @@ nav {
 
   position: absolute;
   bottom: 0px;
-  height: 200px;
+  height: 230px;
   padding: 20px;
 
   background-color: rgba(0, 0, 0, 0.466);
@@ -1710,6 +1798,7 @@ nav {
   width: 100% !important;
   height: 100%;
 }
+
 .feedback-col {
   box-shadow: -3px 8px 21px 0px rgba(0, 0, 0, 0.34);
   -webkit-box-shadow: -3px 8px 21px 0px rgba(0, 0, 0, 0.34);
@@ -1754,7 +1843,7 @@ nav {
   color: white;
   background-size: cover;
   
-  padding: 5% 0;
+ 
   text-align: center;
   margin: auto;
   display: block;
@@ -1777,6 +1866,7 @@ nav {
   width: 50%;
 }
 .desc-bikes-bike p {
+  text-align: left;
   width: 50%;
   margin: auto;
 }
@@ -2373,13 +2463,16 @@ nav p {
   opacity: 70%;
 }
 .star-icon {
-  filter: invert(15%) sepia(66%) saturate(4818%) hue-rotate(354deg)
-    brightness(88%) contrast(103%);
+  filter: invert(35%) sepia(36%) saturate(2210%) hue-rotate(328deg) brightness(93%) contrast(98%);
   width: 30px !important;
   height: 30px !important;
 }
 .person-name {
   font-weight: 700;
+}
+.feedback-cross {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(246deg) brightness(107%) contrast(101%);
+  top: 60px;
 }
 .feedback-person-img-container img {
   object-fit: cover;
@@ -2387,7 +2480,16 @@ nav p {
   height: 120px;
   border-radius: 50%;
 }
+.feedback-card:hover .star-icon {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(246deg) brightness(107%) contrast(101%);
+}
+.feedback-card:hover {
+  transition: 0.2s;
+  background-color: var(--red-main);
+  color: white;
+}
 .feedback-card {
+  cursor: pointer;
   flex-direction: column-reverse !important;
   border: 2px solid rgb(247, 243, 243);
   justify-content: center;
@@ -2425,19 +2527,39 @@ nav p {
 }
 .selected {
   background-color: var(--red-main);
-  color: white;
+  color: #ffffff;
 }
 .properties-bike .row {
   justify-content: space-between;
+}
+.feedback_input {
+  border: 2px solid white;
+  height: 30px;
+}
+.msg_feedback {
+  resize: none;
+  width: 100%;
+}
+.button_form {
+
 }
 .appointment-button {
   display: table;
   margin: 10px auto 30px auto;
 }
-
+.feedback-leave {
+  animation: dropDownAnimation 0.3s forwards;
+  width: 100%;
+}
+.empty_star {
+  cursor: pointer;
+  filter: invert(97%) sepia(4%) saturate(38%) hue-rotate(127deg) brightness(107%) contrast(100%);
+  width: 40px;
+  height: 40px;
+}
 .modal-container {
   display: none;
-  z-index: 9999;
+  z-index: 99999999999999999 !important;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -2537,6 +2659,71 @@ nav p {
 .modal-accessories {
   background-size: contain !important;
   height: 40vh !important;
+}
+.modal-container-map {
+  overflow-y: scroll;
+  top: 20%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 60%;
+  height: 60%;
+  background-color: white;
+}
+.text-container-modal-feedback {
+  padding: 20px;
+}
+.feedback-section-modal {
+
+  display: flex;
+  justify-content: center;
+}
+.customer-card-feedback h3{
+  text-align: center;
+}
+.customer-name-stars-container{
+  font-weight: 700;
+}
+.customer-card-feedback {
+  box-shadow: var(--shadow-box);
+  border-radius: 30px;
+  width: 500px;
+  transform: translateY(-20vh);
+  height: calc(80vh + 40px);
+
+  position: relative;
+  background-color: white;
+  color: black;
+}
+.customer-name-stars-container {
+  width: 100%;
+
+  
+  align-items: center;
+  color: black;
+  justify-content: space-between;
+}
+.customer-card-feedback img{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+
+}
+
+.feedback-modal {
+  padding: 20px;
+  color: white;
+  animation: modalFade 0.3s forwards;
+  top: 40%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 100%;
+  height: 60%;
+  background-color: var(--red-main);
+  
 }
 .modal-container-box {
   overflow-y: scroll;
@@ -2827,7 +3014,7 @@ nav p {
 }
 
 /*  slider  */
-.hidden{
+.hidden-slider{
   display: none !important
 }
 
@@ -2855,7 +3042,12 @@ nav p {
     font-size: 25px;
     background-size: cover;
 }
-
+.bottom-mid-section h3 {
+  min-height: 160px;
+  padding: 30px;
+  color: white;
+  background-color:#d73e3e9e
+}
 
 /* .sliderContainer>div:first-of-type{
     background-image: url('./imgs/about-bg.jpg')
@@ -2964,6 +3156,7 @@ nav p {
     padding: 15px;
   }
   .text-hire {
+
     padding-right: 0;
   }
   .hire-bikes-top > * {
@@ -2984,9 +3177,7 @@ nav p {
 
     width: 90%;
   }
-  .form-container {
-    width: 100%;
-  }
+
   .top-contact h1 {
     width: 100%;
   }
@@ -3168,6 +3359,9 @@ nav p {
   .title-bike {
     top: 0;
   }
+  .feedback-modal {
+    height: 100%;
+  }
   .three-cols-service {
     transform: translatey(-100px);
   }
@@ -3197,6 +3391,41 @@ nav p {
   }
 }
 @media screen and (max-width: 850px) {
+  .form-feedback {
+    flex-direction: column;
+  }
+  .form-feedback .col-50 {
+    width: 100%;
+  }
+  .feedback-modal .col-50 {
+    padding-top: 5vh
+  }
+  .feedback-cross {
+    top: 10px;
+  }
+  .feedback-modal-container {
+    width: 100%;
+    height: 100%;
+  }
+  .customer-card-feedback {
+    width: 400px;
+    transform: translate(0);
+  }
+  .feedback-section-modal {
+    width: 100%;
+    justify-content: center;
+  }
+  .feedback-modal-container .col-50 {
+    width: 100%;
+  }
+  .feedback-modal {
+    top: 20%;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+   
+  }
   .hire-bikes-top, .top-sub-pages, .header-section {
     height: 60vh;
   }
@@ -3209,6 +3438,9 @@ nav p {
   }
   .select-type-container {
     flex-direction: column;
+  }
+  .contact-sub-top {
+    background-position: -300px
   }
   .time-grid,
   .location-select {
@@ -3268,9 +3500,46 @@ nav p {
   .book-modal img {
     height: auto;
   }
+  
 }
 
 @media screen and (max-width: 705px) {
+  .label {
+    display: none;
+  }
+  .hire-bikes-top button {
+    display: block;
+
+    margin: auto;
+    text-align: center !important;
+  }
+  .service-grid-row img {
+    height: 300px;
+  }
+  .service-grid {
+    grid-template-columns: 1fr
+  }
+  .text-hire {
+    padding-left: 5%;
+    text-align: left !important;
+    width: 100% !important;
+  }
+  .sliderContainer p,  .text-section-top p, .top-sub-pages-text {
+    padding-left: 5%;
+    text-align: left !important;
+  }
+  .text-section-top span {
+    
+    line-height: 1rem !important;
+  }
+  .text-section-top h1{
+    text-align: left;
+    padding-left: 5%;
+  }
+  .text-container {
+    margin: auto;
+    width: 95vw;
+  }
   .rent-bike-modal {
     padding: 5% 2% 5% 2%;
   }
@@ -3337,8 +3606,9 @@ nav p {
     width: 100% !important;
   }
   .about-more {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
+
   .about-more > * {
     width: 100%;
   }
@@ -3347,7 +3617,7 @@ nav p {
   }
   .desc-bikes-bike p {
     width: 100%;
-    padding: 5%;
+    
   }
   .top-sub-pages img {
     height: auto;
@@ -3373,7 +3643,17 @@ nav p {
   .part-section-top-fist {
     height: 700px;
   }
-
+  .info-bike-service .info-row {
+    flex-direction: column;
+  }
+  .modal-container-map {
+    width: 100%;
+    height: 100%;
+  }
+  .serive-para-hidden {
+    text-align: center;
+    width: 100%;
+  }
   .top-bike-bikes-bike {
     color: white !important;
   }
@@ -3382,6 +3662,7 @@ nav p {
     margin-top: 20px;
     position: relative;
   }
+  
   .text-section-top-sub h1 {
     line-height: 2rem !important;
   }
@@ -3416,6 +3697,12 @@ nav p {
   }
 }
 @media screen and (max-width: 605px) {
+  .customer-card-feedback {
+    width: 100%;
+  }
+  .bottom-mid-section .material-symbols-outlined, .about-text-container a  {
+    margin: auto;
+  }
   .col-service,
   .col-service .text,
   #redeem-serivce-col,
@@ -3801,6 +4088,7 @@ nav p {
 }
 .text-mid-container span {
   opacity: 70%;
+  padding: 10px 10px 
 }
 .slider-arrows * {
   font-weight: 800;

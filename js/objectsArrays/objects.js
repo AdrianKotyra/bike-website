@@ -767,24 +767,31 @@ const BikesTopSliderObjects = [
 
 const locationObject = [
   {
+   
     Edinburgh:
-      "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42505.913946369445!2d-3.209524473569967!3d55.950378624658164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887b800a5982623%3A0x64f2147b7ce71727!2sEdynburg!5e0!3m2!1spl!2suk!4v1712929132318!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    `<iframe src=https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8937.277997029074!2d-3.098524!3d55.9438341!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887b9a7365fccff%3A0x52629bc613f4b94b!2sEdinburgh%20College!5e0!3m2!1spl!2suk!4v1717182993590!5m2!1spl!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+    address: "24 Milton Rd E, Edinburgh EH15 2PQ"
   },
   {
     Glasgow:
-      "<iframe class='map-locations'src='https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d71640.85760796783!2d-4.277090456257747!3d55.86653883128981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d55.871302699999994!2d-4.3208192!5e0!3m2!1spl!2suk!4v1712925366704!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71706.64946113205!2d-4.28028398541712!3d55.83086143098579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4888441e1797b92f%3A0xec2975632e67711c!2sCity%20of%20Glasgow%20College!5e0!3m2!1spl!2suk!4v1717183532912!5m2!1spl!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+    address: "190 Cathedral St, Glasgow G4 0RF"
   },
   {
-    Dundee:
-      "<iframe class='map-locations'src='https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d41933.67765759646!2d-2.999435681596449!3d56.470044502524225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x48864144ab639cd3%3A0x94e43b1e384be52a!2sDundee!3m2!1d56.462018!2d-2.9707209999999997!5e0!3m2!1spl!2suk!4v1712928621381!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    Dundee: 
+     
+    `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17624.57589375647!2d-3.0116497208984656!3d56.483747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865d21cbe7ed07%3A0x10cf6238f48a437c!2sDundee%20and%20Angus%20College!5e0!3m2!1spl!2suk!4v1717183446998!5m2!1spl!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+    address: "Campus, Kingsway, Old Glamis Rd, Dundee DD3 8LE"
   },
   {
     Inverness:
-      "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34329.67594682603!2d-4.263057198744742!3d57.468035742118154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488f715b2d17de2b%3A0x624309d12e3ec43d!2sInverness!5e0!3m2!1spl!2suk!4v1712929267344!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2145.1217299481164!2d-4.186688723474121!3d57.47626265794751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488f714c3da37437%3A0x4cf97bb804184f7e!2sUHI%20Inverness!5e0!3m2!1spl!2suk!4v1717183617682!5m2!1spl!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+      address: "Campus, 1, Inverness IV2 5NA"
   },
   {
     Aberdeen:
-      "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d69247.95500329071!2d-2.1198962959580236!3d57.15418085125638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4884054c1fd77549%3A0xe8bb05da5cf4c472!2sAberdeen!5e0!3m2!1spl!2suk!4v1712929376791!5m2!1spl!2suk' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34637.49550500418!2d-2.1288382046193592!3d57.139738120660084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48840e17e7a14d39%3A0x39654090a0587f05!2sAberdeen%20College!5e0!3m2!1spl!2suk!4v1717183714368!5m2!1spl!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+      address: "Aberdeen City Campus, Gallowgate, Aberdeen AB25 1BN"
   },
 ];
 

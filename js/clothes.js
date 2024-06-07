@@ -236,25 +236,27 @@ function RenderAllclothes(clothes) {
 
   clothes.forEach((accesoryCard) => {
     containerBikes
-      ? (containerBikes.innerHTML += `
-            <div class="bike-card  bike-trigger " data=${clothes.indexOf(
-              accesoryCard
-            )}>
-            <div class="bike-card-container">
-                <img class="img-bike" src="${accesoryCard.clothesImg}" alt="">
-                <div class="info-product-container"> 
-                    <h3 class="">${accesoryCard.name}</h3>
-                
-                  
-                
-              
-                   
-                </div>
-            </div>
+    ? (containerBikes.innerHTML += `
+    <div class="bike-card  bike-trigger " data=${clothes.indexOf(
+      accesoryCard
+    )}>
+    <div class="bike-card-container">
+        <img class="img-bike" src="${
+          accesoryCard.clothesImg
+        }" alt="">
+        <div class="info-product-container"> 
+            <h3 class="">${accesoryCard.name}</h3>
+        
+          
+        
+      
+           
+        </div>
+    </div>
 
-            </div>
-        `)
-      : null;
+    </div>
+`)
+: null;
   });
 
   const modalContainer = document.querySelector(".modal-container");
@@ -275,7 +277,7 @@ function RenderAllclothes(clothes) {
 
       const productModalLiteral = `
        
-        <div class="modal-container-box row modal-accessories">
+        <div class="modal-container-box row">
         <img class="icon-cross" src="./imgs/cross.svg" alt="" >
         <div class="slider image-bike-modal">
         <div class="slider-list modal-slide modal-accessories">

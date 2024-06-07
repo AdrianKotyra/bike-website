@@ -2,6 +2,27 @@
 
 // --------------------PREMADE SLIDER FUNCTION (NOT MINE)--------------------
 
+//slider autoslider
+setTimeout(() => {
+  setInterval(function () {
+    $(".x")? 
+    $(".x").each(function () {
+        $(this).removeClass('x magicStartLoop').animate({
+            right: $(this).innerWidth()
+        }, 850, function () {
+            $(this).addClass('hidden-slider').removeAttr("style");
+        });
+        $(this).next().removeClass("hidden-slider").addClass("x magicStartLoop");
+        if ($(".sliderContainer").children().last().hasClass("magicStartLoop")) {
+            setTimeout(function () {
+                $(".sliderContainer").children().first().removeClass("hidden-slider").addClass("x magicStartLoop");
+            }, 4000);// <===Interval time
+        }
+    }) : null
+  }, 4000);
+}, 1000);//  <=== delay
+
+//slider on click
 function Slider() {
     
 
@@ -360,6 +381,8 @@ function renderFeedbackSlider(object){
         </div>`
         : null
     })  
+     
+  
 }
 
 renderFeedbackSlider(feedbackSlider)
@@ -369,7 +392,7 @@ function renderFeedback(object){
         feedbackContainer? feedbackContainer.innerHTML += 
        
         `  
-        <div class="feedback-card col">
+        <div class="feedback-card col" data-id=${object.indexOf(ele)}>
           <p class="feedback-person"> ${ele.feedback}
           </p>
           <div class="feedback-person-img-container row">
@@ -395,17 +418,23 @@ function renderFeedback(object){
             
           
         }
+      
     }
+ 
+  )
 
-
-)}
+}
     
 
-renderFeedback(feedbacks)
+
 const triggerFeedbacks = document.querySelector(".feedback-trigger");
 triggerFeedbacks? triggerFeedbacks.addEventListener("click", function(){
     const gridFeedback = document.querySelector(".feedback-container");
     gridFeedback.style.display="grid";
+    // inititate single modal feedback card function
+    triggerFeedbacks.style.visibility="hidden"
+    renderFeedback(feedbacks)
+    renderSingleFeedback(feedbacks)
 }) : null
   
 
@@ -468,8 +497,8 @@ function topSliderBikes(objects, timeout) {
     
 }
 
-topSliderBikes(BikesTopSliderObjects, 3000)
 
+topSliderBikes(BikesTopSliderObjects, 3000)
 
 
 // ------------------------------MODAL HIRE BIKES---------------------------------
@@ -670,24 +699,32 @@ BikeRepair()
 function displayOnHover(objectLocation){
     const locationsContainer = document.querySelector(".service-container-box")
     const mapContainer = document.querySelector(".map-box");
+    const address = document.querySelector(".address-map")
+    
     const locations = document.querySelectorAll(".locations");
     locations.forEach(location=>location.addEventListener("click", function(){
         const city = location.getAttribute("city");
  
         for (let i=0;i<objectLocation.length;i++) {
 
-            const cityNameFromObject = Object.keys(locationObject[i])[0];
-         
+            const cityNameFromObject = Object.keys(objectLocation[i])[0];
+            const cityAddress= Object.values(objectLocation[i])[1];
             if(cityNameFromObject===city) {
                 locationsContainer.style.animation="locationsAnimation 0.5s forwards"
-                
                 const imgElement =  location.querySelector(".city-img");
                 const allImagesLocation = document.querySelectorAll(".city-img");
 
                 allImagesLocation.forEach(img=>img.classList.remove("city-img-active"))
+
                 setTimeout(() => {
-                    imgElement.classList.add("city-img-active")
+                  imgElement.classList.add("city-img-active")
+                  address.innerHTML=cityAddress
+                    
                 }, 1);
+                setTimeout(() => {
+                  address.style.display="block"
+                 
+                }, 600);
 
                
                 
@@ -888,7 +925,7 @@ function renderFaq(data){
             <div class="row">
                 <p>${ele.question}</p>
 
-                <span class="material-symbols-outlined addCordian">
+                <span class="material-symbols-outlined icon-red addCordian">
                 add
                 </span>
                 
@@ -1340,22 +1377,303 @@ videoTrigger? videoTrigger.addEventListener("click", ()=> {
 }) : null
 
 
+// ------------------------------contact maps modal---------------------------------
 
-//slider
 
-setInterval(function () {
-  $(".x")? 
-  $(".x").each(function () {
-      $(this).removeClass('x magicStartLoop').animate({
-          right: $(this).innerWidth()
-      }, 850, function () {
-          $(this).addClass('hidden').removeAttr("style");
-      });
-      $(this).next().removeClass("hidden").addClass("x magicStartLoop");
-      if ($(".sliderContainer").children().last().hasClass("magicStartLoop")) {
-          setTimeout(function () {
-              $(".sliderContainer").children().first().removeClass("hidden").addClass("x magicStartLoop");
-          }, 4000);//you must set this time as the same time for setInterval time
+
+function renderMaps(object){
+
+  const body = document.querySelector("body");
+  const modalMain = document.querySelector(".modal-container");
+  const CitiesMaps = document.querySelectorAll(".map-loc-contact");
+  CitiesMaps.forEach((city)=>{
+    city.addEventListener("mouseover", ()=>{
+      body.style.overflowY="hidden";
+      const cityData = city.getAttribute("data-city");
+      const objectFromDataAddress = object.find(ele=>Object.keys(ele)[0]===cityData)
+      const iframeMap = Object.values(objectFromDataAddress)[0]
+
+      const mapModal = `
+      <div class="modal-container-map">
+        <img class="icon-cross exitModal"src="./imgs/cross.svg" alt=""> 
+        ${iframeMap}
+       
+        
+
+        </div>
+      `
+
+      modalMain.style.display="block"
+      modalMain.innerHTML=mapModal
+
+      const crossCloseModal = document.querySelector(".exitModal");
+      crossCloseModal.addEventListener("click", ()=>{
+        modalMain.style.display="none"
+        body.style.overflowY="scroll";
+      })
+    })
+  })
+}
+
+renderMaps(locationObject)
+
+
+// ------------------------------render single modal feedback card---------------------------------
+
+function renderSingleFeedback(object){
+  const body = document.querySelector("body")
+  const modalContainer = document.querySelector(".modal-container");
+  const feedbackCards = document.querySelectorAll(".feedback-card");
+
+  feedbackCards.forEach(card=>card.addEventListener("click", ()=>{
+    body.style.overflowY="hidden";
+
+    cardIndex = card.getAttribute("data-id")
+    const nameCustomer = object[cardIndex].personName;
+    const feedbackCustomer = object[cardIndex].feedback;
+    const extrafeedbackCustomer = object[cardIndex].feedback;
+    const imgCustomer = object[cardIndex].img;
+
+    modalContainer.style.display="block";
+    modalContainer? modalContainer.innerHTML = ` <div class="feedback-modal-container">
+    <img class="icon-cross exit-window feedback-cross"src="./imgs/cross.svg" alt="">
+    <div class="feedback-modal row">
+      <div class="col-50 col">
+        <h1>What our customers are saying</h1>
+        <p>We appreciate your feedback and will carefully consider your suggestions to improve our services. 
+        Your input is invaluable to us, and it plays a crucial role in helping us enhance our offerings to better meet your needs. </p> 
+        <button class="btn-custom btn-feedback"> leave your feedback </button>
+       
+      </div>
+      <div class="feedback-section-modal col-50">
+        <div class="customer-card-feedback">
+      
+          <img src="${imgCustomer}" alt="">
+          <div class="text-container-modal-feedback">
+            <p>"${feedbackCustomer}"</p>
+       
+            <div class="customer-name-stars-container row">
+              <p>${nameCustomer}</p>
+              <div class="star-card-feedback row">
+                <img class="star-icon" src="./imgs/star.svg">
+                <img class="star-icon" src="./imgs/star.svg">
+                <img class="star-icon" src="./imgs/star.svg">
+                <img class="star-icon" src="./imgs/star.svg">
+                <img class="star-icon" src="./imgs/star.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  ` : null 
+
+  inititateFeedback() //<===change content to form
+
+  const crossCloseModal = document.querySelector(".feedback-cross");
+  crossCloseModal.addEventListener("click", function(){
+    modalContainer.style.display="none"
+      body.style.overflowY="scroll";
+  })
+  }))
+  
+
+ 
+
+}
+
+function inititateFeedback(){
+  const feedbackModalContainer = document.querySelector(".feedback-modal");
+  const triggerButton = document.querySelector(".btn-feedback")
+  const feedbackForm = ` <div class="feedback-leave">
+        <form action="" class="row form-feedback">
+          <div class="col-50 col">
+            <h3 class="title">Rate Your Experience</h3>
+            <div class="row">
+              <div class="container_single_start">
+                <img class="empty_star star_feedback1" src="./imgs/star-empty-icon.svg" alt="">
+              </div>
+              <div class="container_single_start">
+                <img class="empty_star star_feedback2" src="./imgs/star-empty-icon.svg" alt="">
+              </div>
+              <div class="container_single_start">
+                <img class="empty_star star_feedback3" src="./imgs/star-empty-icon.svg" alt="">
+              </div>
+              <div class="container_single_start">
+                  <img class="empty_star star_feedback4" src="./imgs/star-empty-icon.svg" alt="">
+              </div>
+              <div class="container_single_start">
+                  <img class="empty_star star_feedback5" src="./imgs/star-empty-icon.svg" alt="">
+              </div>
+            </div>
+            <div class="col_input_container_default col_input_cont">
+              <div class="input_box row">
+                <div>
+                  <p class="p_feedback">Fullname</p>
+                  <input class="feedback_input" type="text" name="Fullname" id="subject_input"placeholder = "Name">
+                </div>
+                <div class="col_input_container_default col_input">
+                  <p class="p_feedback">Subject</p>
+                  <input class="feedback_input" type="text" name="Fullname" id="subject_input"placeholder = "Subject">
+                </div>
+              </div>
+              <div class="input_box row">
+                  <div>
+                    <p class="p_feedback">Email Adress</p>
+                    <input class="feedback_input" type="text" name="Email" id="subject_input" placeholder="Email">
+                  </div>
+                  <div class="col">
+                    <p class="p_feedback">Upload your photo</p>
+                    <input type="file" id="img" name="img" accept="image/*">
+                  </div>
+              </div>
+  
+            </div>
+          
+          </div>
+  
+          <div class="col-50 col">
+            <div class="col_input_container_default col_input">
+              <p class="p_feedback">FEEDBACK</p>
+              <textarea name="" class="msg_feedback" id="message_container" cols="30" rows="10"></textarea>
+              <button type="submit" id="feedback_button_form" class="btn-custom button_form"form="form1" value="Submit">send</button>
+            </div>
+          </div>
+         
+        </form>
+          
+      </div>`
+     
+    triggerButton.addEventListener("click", ()=>{
+      feedbackModalContainer.innerHTML=feedbackForm
+      changeStart() //<=== stars change function
+    })
+}
+
+// ---CHANGE STAR SOURCE IMG ON CLICK---
+function changeStart() {
+  const start1 = document.querySelector(".star_feedback1")
+  const start2 = document.querySelector(".star_feedback2")
+  const start3 = document.querySelector(".star_feedback3")
+  const start4 = document.querySelector(".star_feedback4")
+  const start5 = document.querySelector(".star_feedback5")
+  const listofstars_about = [start1,start2,start3, start4, start5]
+  const stars_empty_feedback = document.querySelectorAll(".empty_star");
+  stars_empty_feedback.forEach(star=>star.addEventListener("click", function(target){
+      if(star.classList.contains("star_feedback1"))  {
+
+          if(start1.getAttribute("src")==="./imgs/star-full-icon.svg") {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+              start1.src="./imgs/star-empty-icon.svg"
+              }, 1);
+          }
+
+          else {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+                  start1.src="./imgs/star-full-icon.svg"
+
+              }, 1);
+          }
+
       }
-  }) : null
-}, 4000);
+
+
+      if(star.classList.contains("star_feedback2"))  {
+
+          if(start2.getAttribute("src")==="./imgs/star-full-icon.svg") {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+              start1.src="./imgs/star-empty-icon.svg"
+              start2.src="./imgs/star-empty-icon.svg"
+              }, 0.00001);
+          }
+          else {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+                  start1.src="./imgs/star-full-icon.svg"
+                  start2.src="./imgs/star-full-icon.svg"
+
+              }, 0.00001);
+          }
+
+      }
+
+
+      if(star.classList.contains("star_feedback3"))  {
+
+          if(start3.getAttribute("src")==="./imgs/star-full-icon.svg") {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+              start1.src="./imgs/star-empty-icon.svg"
+              start2.src="./imgs/star-empty-icon.svg"
+              start3.src="./imgs/star-empty-icon.svg"
+              }, 0.00001);
+          }
+          else {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+                  start1.src="./imgs/star-full-icon.svg"
+                  start2.src="./imgs/star-full-icon.svg"
+                  start3.src="./imgs/star-full-icon.svg"
+
+              }, 0.00001);
+          }
+
+      }
+
+
+      if(star.classList.contains("star_feedback4"))  {
+
+          if(start4.getAttribute("src")==="./imgs/star-full-icon.svg") {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+              start1.src="./imgs/star-empty-icon.svg"
+              start2.src="./imgs/star-empty-icon.svg"
+              start3.src="./imgs/star-empty-icon.svg"
+              start4.src="./imgs/star-empty-icon.svg"
+              }, 0.00001);
+          }
+          else {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+                  start1.src="./imgs/star-full-icon.svg"
+                  start2.src="./imgs/star-full-icon.svg"
+                  start3.src="./imgs/star-full-icon.svg"
+                  start4.src="./imgs/star-full-icon.svg"
+
+              }, 0.00001);
+          }
+
+      }
+
+      if(star.classList.contains("star_feedback5"))  {
+
+          if(start5.getAttribute("src")==="./imgs/star-full-icon.svg") {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+              start1.src="./imgs/star-empty-icon.svg"
+              start2.src="./imgs/star-empty-icon.svg"
+              start3.src="./imgs/star-empty-icon.svg"
+              start4.src="./imgs/star-empty-icon.svg"
+              start5.src="./imgs/star-empty-icon.svg"
+              }, 0.00001);
+          }
+          else {
+              listofstars_about.forEach(start=>start.src="./imgs/star-empty-icon.svg")
+              setTimeout(() => {
+                  start1.src="./imgs/star-full-icon.svg"
+                  start2.src="./imgs/star-full-icon.svg"
+                  start3.src="./imgs/star-full-icon.svg"
+                  start4.src="./imgs/star-full-icon.svg"
+                  start5.src="./imgs/star-full-icon.svg"
+              }, 0.00001);
+          }
+
+      }
+
+  }))
+
+}
